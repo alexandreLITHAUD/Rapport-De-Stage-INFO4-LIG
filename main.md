@@ -12,23 +12,19 @@ acknowledgments: |+
 
   Enfin, je suis reconnaissant envers Quentin GUILLOTEAU et Adrien FAURE, respectivement doctorant et chercheur au Laboratoire Informatique de Grenoble pour les inestimables conseils et les réponses dispensés lors de mes différentes missions.
 abstract-fr: |+
-  Mon stage de 15 semaines au Laboratoire d'Informatique de Grenoble (LIG) a été axé sur l'utilisation de Nix et NixOS, ainsi que sur la maintenance et l'amélioration de logiciels de recherche tels que OAR et EAR. J'ai également travaillé avec le système Grid5000, une infrastructure distribuée pour la recherche.\newline
+  En 4ème année d'ingénieur en informatique, j'ai eu l'opportunité de faire un stage de 15 semaines au Laboratoire Informatique de Grenoble (LIG), au sein de l'équipe DATAMOVE.\newline
 
-  En utilisant NixOS-compose, j'ai pu déployer et gérer des environnements de développement reproductibles. J'ai acquis une solide compréhension de la gestion des paquets et des environnements isolés. J'ai contribué à la maintenance de logiciels tels que OAR et EAR, améliorant leur stabilité et leurs performances. J'ai également eu l'opportunité de travailler avec le système Grid5000, ce qui m'a permis de tester mes développements dans un environnement réel.\newline
+  Durant ce stage, j'ai eu comme objectif d'utiliser et d'améliorer l'outil NixOS-Compose, ainsi que de créer différentes compositions dans l'optique de les utiliser à une fin de recherche. NixOS-Compose (ou NXC) est un logiciel créé par l’équipe, permettant de décrire une infrastructure complexe de plusieurs nœuds, en mettant l’accent sur la reproductibilité et la simplicité de mise en place. De plus, j'ai été amené à contribuer à la maintenance de logiciels tels que OAR et EAR, améliorant leur stabilité et performances par le biais de mise à jour. Le tout en utilisant le système Grid5000 qui m'a permis de tester mes développements dans un environnement réel.\newline
 
-  Ce stage m'a permis d'acquérir des compétences techniques avancées et de développer des compétences en gestion de projet et en collaboration d'équipe. J'ai apprécié les défis liés à la recherche et au développement de logiciels dans un environnement exigeant.\newline
-
-  Dans l'ensemble, ce stage a été une expérience enrichissante qui a renforcé ma passion pour l'informatique et ouvert de nouvelles perspectives pour ma carrière future dans la recherche et le développement de logiciels avancés.
+  Durant ce rapport, vous allez suivre la création des différentes compositions que j'ai créée dans le but de tester les performances de plusieurs systèmes de fichiers distribués dans le réseau de nœud Grid5000.
 abstract-en: |+
-  My 15-week placement at the Laboratoire d'Informatique de Grenoble (LIG) focused on using Nix and NixOS, as well as maintaining and improving research software such as OAR and EAR. I also worked with the Grid5000 system, a distributed infrastructure for research.\newline
+  In my 4th year as a computer science engineer, I had the opportunity to do a 15-week internship at the IT Laboratory of Grenoble (LIG), in the DATAMOVE team.\newline
 
-  Using NixOS-compose, I was able to deploy and manage reproducible development environments. I gained a solid understanding of package management and isolated environments. I helped maintain software such as OAR and EAR, improving their stability and performance. I also had the opportunity to work with the Grid5000 system, which enabled me to test my developments in a real environment.\newline
+  During this placement, my aim was to use and improve the NixOS-Compose tool, and to create various compositions with a view to using them for research purposes. NixOS-Compose (or NXC) is a piece of software created by the team, enabling a complex infrastructure of several nodes to be described, with the emphasis on reproducibility and simplicity of implementation. I also contributed to the maintenance of software such as OAR and EAR, improving their stability and performance through updates. All this was done using the Grid5000 system, which enabled me to test my developments in a real environment.\newline 
 
-  This placement has enabled me to acquire advanced technical skills and to develop project management and teamwork skills. I enjoyed the challenges of researching and developing software in a demanding environment.\newline
-
-  Overall, this internship has been a rewarding experience that has strengthened my passion for computer science and opened up new prospects for my future career in advanced software research and development.
-keywords-fr: "Nix, Programmation Fonctionnel, NixOS, NixOS-Compose, Grid5000, Systèmes de fichiers, Logiciel de Recherche, Maintenance, HPC, Infrastructure Distribué."
-keywords-en: "Nix, Fonctional Programming, NixOS, NixOS-Compose, Grid5000, File Systems, Research Softwares, Maintenance, HPC, Distributed Infrastructure"
+  In this report, you will follow the creation of the various compositions I created in order to test the performance of several distributed file systems in the Grid5000 node network.
+keywords-fr: "Nix, Programmation Fonctionnel, Laboratoire, NixOS, NixOS-Compose, Grid5000, Systèmes de fichiers, Logiciel de Recherche, Maintenance, HPC, Infrastructure Distribué."
+keywords-en: "Nix, Functional Programming, Laboratory, NixOS, NixOS-Compose, Grid5000, File Systems, Research Softwares, Maintenance, HPC, Distributed Infrastructure"
 company: Laboratoire d’informatique de Grenoble
 address: "Bâtiment IMAG, 700, AV. Centrale, 38401 Saint Martin d’Hères"
 phone: "07.87.30.90.36"
