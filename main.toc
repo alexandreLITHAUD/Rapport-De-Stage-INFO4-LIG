@@ -7,5 +7,5 @@
 \contentsline {paragraph}{Abstract}{2}{section*.3}%
 \babel@toc {french}{}\relax 
 \contentsline {section}{\numberline {1}Introduction}{5}{section.1}%
-\contentsline {section}{\numberline {2}Test de mise en ppage}{6}{section.2}%
+\contentsline {section}{\numberline {2}Test de mise en page}{6}{section.2}%
 \contentsline {section}{\numberline {3}Annexe}{1}{section.3}%
