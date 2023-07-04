@@ -1,0 +1,8 @@
+\babel@toc {english}{}\relax 
+\babel@toc {french}{}\relax 
+\contentsline {paragraph}{Remerciements}{1}{section*.1}%
+\babel@toc {french}{}\relax 
+\contentsline {paragraph}{Résumé}{2}{section*.2}%
+\babel@toc {english}{}\relax 
+\contentsline {paragraph}{Abstract}{2}{section*.3}%
+\babel@toc {french}{}\relax 

@@ -1,0 +1,220 @@
+\documentclass[a4paper,french,12pt, titlepage]{article}
+
+%%%% paquetages %%%%
+\usepackage[french,english]{babel}  %définition de la langue
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc} %définition de l'encodage
+\usepackage{fullpage} %pour réduire les marges
+\usepackage{graphicx} %pour figures
+\usepackage{comment}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{fancyhdr} %headers
+%\usepackage{glossaries}
+\usepackage{todonotes}
+\usepackage[export]{adjustbox}
+
+\usepackage{titling}
+
+\renewcommand{\maketitle}{%
+  \maketitlehooka
+  \maketitlehookb
+  \maketitlehookc
+  \maketitlehookd
+}
+
+\renewcommand{\maketitlehooka}{% 
+    \vspace{-5.5cm}
+    
+    \noindent
+    \raisebox{15ex}{\includegraphics[height=10ex]{logos/logo_polytech_full.png}}
+    \hfill\raisebox{16ex}{\includegraphics[height=10ex]{logos/logo_lig_new.png.png}}
+    \space\space\space
+    \raisebox{12ex}{\includegraphics[height=15ex]{logos/logo_inp_uga.png}}
+    
+    \vfill
+    
+    \bigskip
+    \begin{center} \large
+    $author$
+    
+    INFO4 - Polytech Grenoble
+    
+    Rapport de stage $school-year$
+    
+    \vfill
+    \begin{Large}
+    \textbf{$title$}
+    \end{Large}
+    
+    \vfill
+    
+    Tome Principal
+    
+    \begin{small}
+    ET
+    \end{small}
+    
+    Annexe
+    
+    \end{center}
+}
+
+\renewcommand{\maketitlehookd}{% 
+    \vfill{}  \large\par\noindent  
+    \begin{center}
+    $school-year$\\
+    $date-start$ - $date-end$
+    \end{center}
+    \vspace{-0.5cm}
+}
+
+
+\newcommand{\makefooter}{%
+  \makefooterhooka
+}
+
+\newcommand{\makefooterhooka}{% 
+    \begin{center}
+        \begin{Large}
+        DOS DU RAPPORT
+        \end{Large}
+    \end{center}
+    
+    
+    %\vspace{-5.5cm}
+    %\noindent
+    \textbf{Etudiant} : $author$
+    \hfill \textbf{Année d’étude dans la spécialité :}
+    
+    \hfill INFO4 $school-year$
+    
+    \hfill
+    
+    \textbf{Entreprise} : $company$ 
+
+    \textbf{Adresse complète} : $address$
+
+    \textbf{Téléphone (standard)} : $phone$
+    
+    \hfill
+    
+    \textbf{Responsable administratif} : $respo-admin.name$ 
+
+    \textbf{Téléphone} : $respo-admin.phone$
+
+    \textbf{Courriel} : $respo-admin.email$
+
+    \hfill
+    
+    \textbf{Tuteur de stage (organisme d’accueil)} : $tuteur.name$
+
+    \textbf{Téléphone} : $tuteur.phone$
+
+    \textbf{Courriel} : $tuteur.email$
+    
+    \hfill
+    
+    \textbf{Enseignant-référent} : $referent.name$
+
+    \textbf{Téléphone} : $referent.phone$ 
+
+    \textbf{Courriel} : $referent.email$ 
+
+    \hfill
+    
+    \textbf{Titre} : $title$
+    
+    \hfill
+
+    \textbf{Résumé} : $abstract-fr$
+}
+
+\title{\Huge \bfseries\begin{center}$title$\end{center}}
+\author{$author$}
+\date{$date-start$ - $date-end$}
+
+\lstset{language=C++,
+                basicstyle=\ttfamily,
+                keywordstyle=\color{blue}\ttfamily,
+                stringstyle=\color{red}\ttfamily,
+                showstringspaces=false,
+                %commentstyle=\color{magenta}\ttfamily,
+                morecomment=[l][\color{magenta}]{\#}
+}
+
+\newcommand*\xor{\mathbin{\oplus}}
+\newcommand{\paragraphnewline}[1]{\hypertarget{par#1}{\paragraph{#1}\mbox{}}}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{$author$ - $school-year$}
+\lhead{Rapport de stage}
+\rfoot{Page \thepage}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\setlength{\headheight}{15pt}
+\headsep = 1.0cm
+
+% references
+
+\usepackage{csquotes}
+\usepackage{biblatex}
+\bibliography{$references$}
+
+
+% \makenoidxglossaries
+
+\begin{document}
+\selectlanguage{french}
+
+\begin{titlingpage}
+\maketitle
+\end{titlingpage}
+
+\begin{center}
+    \item \paragraphnewline{Remerciements}
+\end{center}
+
+$acknowledgments$
+
+\newpage
+
+\selectlanguage{french}
+\begin{center}
+    \item \paragraphnewline{Résumé}
+\end{center}
+
+$abstract-fr$
+
+
+\textbf{\textit{mots-clés---}} $keywords-fr$
+
+\selectlanguage{english}
+\begin{center}
+    \item \paragraphnewline{Abstract}
+\end{center}
+
+$abstract-en$
+
+\textbf{\textit{Keywords---}} $keywords-en$
+
+\selectlanguage{french}
+\newpage
+
+\tableofcontents
+\newpage
+
+$body$
+
+\begin{titlingpage}
+\newpage
+\makefooter
+\end{titlingpage}
+
+\end{document}
