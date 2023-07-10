@@ -42,6 +42,10 @@ tuteur:
   email: "olivier.richard@imag.fr"
 ---
 
+\listoffigures
+
+\newpage
+
 # Introduction
 
 Ce rapport va représenter mon expérience de stage au Laboratoire Informatique de Grenoble. Mon stage de 15 semaines à débuter le 17 avril 2023. Au cours de cette période j'ai eu l'opportunité de travailler sur divers projet informatiques en lien avec les technologies de Nix, NixOS et le HPC (*High performance computing*). Ainsi que sur la maintenance et l'amélioration de logiciel et recherche tels que OAR et EAR. Cette opportunité m'a donné l'occasion de travailler avec le système Grid5000, qui offre une infrastructure distribuée pour l’exécution de travaux de recherche à grande échelle.\newline
@@ -54,22 +58,29 @@ De plus, j'ai eu l'opportunité de travailler en utilisant le système Grid5000,
 
 Dans ce rapport, je décrirai en détail les différentes tâches et projets auxquels j'ai participé tout au long de mon stage, en mettant l'accent sur les compétences acquises, les résultats obtenus et les leçons apprises. Je présenterai également une analyse critique de mes réalisations, ainsi que des suggestions pour des améliorations futures. Ce rapport témoigne de ma progression en tant que professionnel de l'informatique et des contributions significatives que j'ai apportées au sein du LIG.\newline
 
-Test de citation \cite{grid5000} je fait des test ici\newline
-
 \newpage
+
+<!-- Test de citation \cite{grid5000} je fait des test ici\newline -->
 <!-- \begin{figure}
 \centering
 \includegraphics[scale=1]{logos/logo-uga.png}
 \caption{Test image et table}
 \end{figure} -->
 
-# Test de mise en page
+# Contexte du stage
+
+## Le Laboratoire Informatique de Grenoble
+
+Test \gls{latex} test
+
+## L'équipe DATAMOVE
+
+## Le Projet NixOS-Compose 
 
 \newpage
 
 # Annexe
 
-\listoffigures
-
 \printbibliography
 
+\printglossaries

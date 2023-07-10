@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/nixos.org) (preloaded format=pdflatex 1980.1.1)  4 JUL 2023 10:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/nixos.org) (preloaded format=pdflatex 1980.1.1)  10 JUL 2023 15:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -757,9 +757,8 @@ Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
 \f@nch@O@orf=\skip63
 )
 (/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
-exmfdist/tex/latex/todonotes/todonotes.sty
-Package: todonotes 2023/01/31 v1.1.6 Todonotes source and documentation.
-Package: todonotes 2023/01/31
+exmfdist/tex/latex/glossaries/base/glossaries.sty
+Package: glossaries 2022/11/03 v4.52 (NLCT)
 
 (/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
 exmfdist/tex/latex/base/ifthen.sty
@@ -780,6 +779,196 @@ exmfdist/tex/generic/xkeyval/xkvutils.tex
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
+exmfdist/tex/latex/mfirstuc/mfirstuc.sty
+Package: mfirstuc 2022/10/14 v2.08 (NLCT)
+
+(/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
+exmfdist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count322
+)
+\@glsmfirst=\toks41
+\@glsmrest=\toks42
+)
+(/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
+exmfdist/tex/latex/xfor/xfor.sty
+Package: xfor 2009/02/05 v1.05 (NLCT)
+)
+(/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
+exmfdist/tex/latex/datatool/datatool-base.sty
+Package: datatool-base 2019/09/27 v2.32 (NLCT)
+
+(/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
+exmfdist/tex/latex/substr/substr.sty
+Package: substr 2009/10/20 v1.2 Handle substrings
+\c@su@anzahl=\count323
+)
+(/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
+exmfdist/tex/latex/datatool/datatool-fp.sty
+Package: datatool-fp 2019/09/27 v2.32 (NLCT)
+
+(/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
+exmfdist/tex/latex/fp/fp.sty
+Package: fp 1995/04/02
+
+`Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
+(/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
+exmfdist/tex/latex/fp/defpattern.sty
+Package: defpattern 1994/10/12
+\actioncount=\count324
+)
+(/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
+exmfdist/tex/latex/fp/fp-basic.sty
+Package: fp-basic 1996/05/13
+\FP@xs=\count325
+\FP@xia=\count326
+\FP@xib=\count327
+\FP@xfa=\count328
+\FP@xfb=\count329
+\FP@rega=\count330
+\FP@regb=\count331
+\FP@regs=\count332
+\FP@times=\count333
+)
+(/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
+exmfdist/tex/latex/fp/fp-addons.sty
+Package: fp-addons 1995/03/15
+)
+(/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
+exmfdist/tex/latex/fp/fp-snap.sty
+Package: fp-snap 1995/04/05
+)
+(/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
+exmfdist/tex/latex/fp/fp-exp.sty
+Package: fp-exp 1995/04/03
+)
+(/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
+exmfdist/tex/latex/fp/fp-trigo.sty
+Package: fp-trigo 1995/04/14
+)
+(/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
+exmfdist/tex/latex/fp/fp-pas.sty
+Package: fp-pas 1994/08/29
+)
+(/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
+exmfdist/tex/latex/fp/fp-random.sty
+Package: fp-random 1995/02/23
+\FPseed=\count334
+)
+(/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
+exmfdist/tex/latex/fp/fp-eqn.sty
+Package: fp-eqn 1995/04/03
+)
+(/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
+exmfdist/tex/latex/fp/fp-upn.sty
+Package: fp-upn 1996/10/21
+)
+(/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
+exmfdist/tex/latex/fp/fp-eval.sty
+Package: fp-eval 1995/04/03
+)))
+\@dtl@toks=\toks43
+\@dtl@tmpcount=\count335
+\dtl@tmplength=\skip64
+\dtl@sortresult=\count336
+\@dtl@numgrpsepcount=\count337
+\@dtl@datatype=\count338
+\dtl@codeA=\count339
+\dtl@codeB=\count340
+\@dtl@foreach@level=\count341
+)
+(/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
+exmfdist/tex/latex/tracklang/tracklang.sty
+Package: tracklang 2022/12/13 v1.6.1 (NLCT) Track Languages
+
+(/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
+exmfdist/tex/generic/tracklang/tracklang.tex))
+(/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
+exmfdist/tex/latex/translator/translator.sty
+Package: translator 2021-05-31 v1.12d Easy translation of strings in LaTeX
+)
+(/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
+exmfdist/tex/latex/glossaries-french/glossaries-french.ldf
+File: glossaries-french.ldf 2016/12/12 v1.1
+)
+\gls@level=\count342
+\@gls@tmpb=\toks44
+\gls@tmplen=\skip65
+\glskeylisttok=\toks45
+\glslabeltok=\toks46
+\glsshorttok=\toks47
+\glslongtok=\toks48
+
+(/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
+exmfdist/tex/latex/glossaries/styles/glossary-hypernav.sty
+Package: glossary-hypernav 2022/11/03 v4.52 (NLCT)
+)
+(/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
+exmfdist/tex/latex/glossaries/styles/glossary-list.sty
+Package: glossary-list 2022/11/03 v4.52 (NLCT)
+\glslistdottedwidth=\skip66
+)
+(/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
+exmfdist/tex/latex/glossaries/styles/glossary-long.sty
+Package: glossary-long 2022/11/03 v4.52 (NLCT)
+
+(/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
+exmfdist/tex/latex/tools/longtable.sty
+Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
+\LTleft=\skip67
+\LTright=\skip68
+\LTpre=\skip69
+\LTpost=\skip70
+\LTchunksize=\count343
+\LTcapwidth=\dimen278
+\LT@head=\box67
+\LT@firsthead=\box68
+\LT@foot=\box69
+\LT@lastfoot=\box70
+\LT@gbox=\box71
+\LT@cols=\count344
+\LT@rows=\count345
+\c@LT@tables=\count346
+\c@LT@chunks=\count347
+\LT@p@ftn=\toks49
+)
+\glsdescwidth=\skip71
+\glspagelistwidth=\skip72
+)
+(/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
+exmfdist/tex/latex/glossaries/styles/glossary-super.sty
+Package: glossary-super 2022/11/03 v4.52 (NLCT)
+
+(/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
+exmfdist/tex/latex/supertabular/supertabular.sty
+Package: supertabular 2020/02/02 v4.1g the supertabular environment
+\c@tracingst=\count348
+\ST@wd=\dimen279
+\ST@rightskip=\skip73
+\ST@leftskip=\skip74
+\ST@parfillskip=\skip75
+\ST@pageleft=\dimen280
+\ST@headht=\dimen281
+\ST@tailht=\dimen282
+\ST@pagesofar=\dimen283
+\ST@pboxht=\dimen284
+\ST@lineht=\dimen285
+\ST@prevht=\dimen286
+\ST@toadd=\dimen287
+\ST@dimen=\dimen288
+\ST@pbox=\box72
+))
+(/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
+exmfdist/tex/latex/glossaries/styles/glossary-tree.sty
+Package: glossary-tree 2022/11/03 v4.52 (NLCT)
+\glstreeindent=\skip76
+))
+(/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
+exmfdist/tex/latex/todonotes/todonotes.sty
+Package: todonotes 2023/01/31 v1.1.6 Todonotes source and documentation.
+Package: todonotes 2023/01/31
+
+(/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
 exmfdist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.co
 de.tex
 File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
@@ -787,18 +976,18 @@ File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
 exmfdist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count322
-\calc@Bcount=\count323
-\calc@Adimen=\dimen278
-\calc@Bdimen=\dimen279
-\calc@Askip=\skip64
-\calc@Bskip=\skip65
+\calc@Acount=\count349
+\calc@Bcount=\count350
+\calc@Adimen=\dimen289
+\calc@Bdimen=\dimen290
+\calc@Askip=\skip77
+\calc@Bskip=\skip78
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count324
-\calc@Cskip=\skip66
+\calc@Ccount=\count351
+\calc@Cskip=\skip79
 )
-\c@@todonotes@numberoftodonotes=\count325
+\c@@todonotes@numberoftodonotes=\count352
 )
 (/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
 exmfdist/tex/latex/adjustbox/adjustbox.sty
@@ -816,47 +1005,53 @@ Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
 (/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
 exmfdist/tex/latex/collectbox/collectbox.sty
 Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
-\collectedbox=\box67
+\collectedbox=\box73
 )
-\tc@llx=\dimen280
-\tc@lly=\dimen281
-\tc@urx=\dimen282
-\tc@ury=\dimen283
+\tc@llx=\dimen291
+\tc@lly=\dimen292
+\tc@urx=\dimen293
+\tc@ury=\dimen294
 Package trimclip Info: Using driver 'tc-pdftex.def'.
 
 (/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
 exmfdist/tex/latex/adjustbox/tc-pdftex.def
 File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 ))
-\adjbox@Width=\dimen284
-\adjbox@Height=\dimen285
-\adjbox@Depth=\dimen286
-\adjbox@Totalheight=\dimen287
-\adjbox@pwidth=\dimen288
-\adjbox@pheight=\dimen289
-\adjbox@pdepth=\dimen290
-\adjbox@ptotalheight=\dimen291
+\adjbox@Width=\dimen295
+\adjbox@Height=\dimen296
+\adjbox@Depth=\dimen297
+\adjbox@Totalheight=\dimen298
+\adjbox@pwidth=\dimen299
+\adjbox@pheight=\dimen300
+\adjbox@pdepth=\dimen301
+\adjbox@ptotalheight=\dimen302
 
 (/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
 exmfdist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
-\c@checkoddpage=\count326
+\c@checkoddpage=\count353
 )
 (/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
 exmfdist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box68
-\sift@deathcycles=\count327
-\@vwid@loff=\dimen292
-\@vwid@roff=\dimen293
+\@vwid@box=\box74
+\sift@deathcycles=\count354
+\@vwid@loff=\dimen303
+\@vwid@roff=\dimen304
 ))
 (/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
 exmfdist/tex/latex/titling/titling.sty
 Package: titling 2009/09/04 v2.1d maketitle typesetting
-\thanksmarkwidth=\skip67
-\thanksmargin=\skip68
-\droptitle=\skip69
+\thanksmarkwidth=\skip80
+\thanksmargin=\skip81
+\droptitle=\skip82
 )
+\glswrite=\write5
+\glo@main@file=\write6
+\openout6 = `main.glo'.
+
+Package glossaries Info: Writing glossary file main.glo on input line 23.
+
 (/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
 exmfdist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
@@ -872,19 +1067,13 @@ File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 (/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
 exmfdist/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2022-09-14 v5.2n context-sensitive quotations (JAW)
-
-(/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
-exmfdist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count328
-)
-\csq@reset=\count329
-\csq@gtype=\count330
-\csq@glevel=\count331
-\csq@qlevel=\count332
-\csq@maxlvl=\count333
-\csq@tshold=\count334
-\csq@ltx@everypar=\toks41
+\csq@reset=\count355
+\csq@gtype=\count356
+\csq@glevel=\count357
+\csq@qlevel=\count358
+\csq@maxlvl=\count359
+\csq@tshold=\count360
+\csq@ltx@everypar=\toks50
 
 (/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
 exmfdist/tex/latex/csquotes/csquotes.def
@@ -904,69 +1093,69 @@ Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
 (/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
 exmfdist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count335
+\lrq@indent=\count361
 
 (/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
 exmfdist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count336
-\c@listtotal=\count337
-\c@listcount=\count338
-\c@liststart=\count339
-\c@liststop=\count340
-\c@citecount=\count341
-\c@citetotal=\count342
-\c@multicitecount=\count343
-\c@multicitetotal=\count344
-\c@instcount=\count345
-\c@maxnames=\count346
-\c@minnames=\count347
-\c@maxitems=\count348
-\c@minitems=\count349
-\c@citecounter=\count350
-\c@maxcitecounter=\count351
-\c@savedcitecounter=\count352
-\c@uniquelist=\count353
-\c@uniquename=\count354
-\c@refsection=\count355
-\c@refsegment=\count356
-\c@maxextratitle=\count357
-\c@maxextratitleyear=\count358
-\c@maxextraname=\count359
-\c@maxextradate=\count360
-\c@maxextraalpha=\count361
-\c@abbrvpenalty=\count362
-\c@highnamepenalty=\count363
-\c@lownamepenalty=\count364
-\c@maxparens=\count365
-\c@parenlevel=\count366
-\blx@tempcnta=\count367
-\blx@tempcntb=\count368
-\blx@tempcntc=\count369
-\c@blx@maxsection=\count370
-\blx@maxsegment@0=\count371
-\blx@notetype=\count372
-\blx@parenlevel@text=\count373
-\blx@parenlevel@foot=\count374
-\blx@sectionciteorder@0=\count375
-\blx@sectionciteorderinternal@0=\count376
-\blx@entrysetcounter=\count377
-\blx@biblioinstance=\count378
-\labelnumberwidth=\skip70
-\labelalphawidth=\skip71
-\biblabelsep=\skip72
-\bibitemsep=\skip73
-\bibnamesep=\skip74
-\bibinitsep=\skip75
-\bibparsep=\skip76
-\bibhang=\skip77
+\c@tabx@nest=\count362
+\c@listtotal=\count363
+\c@listcount=\count364
+\c@liststart=\count365
+\c@liststop=\count366
+\c@citecount=\count367
+\c@citetotal=\count368
+\c@multicitecount=\count369
+\c@multicitetotal=\count370
+\c@instcount=\count371
+\c@maxnames=\count372
+\c@minnames=\count373
+\c@maxitems=\count374
+\c@minitems=\count375
+\c@citecounter=\count376
+\c@maxcitecounter=\count377
+\c@savedcitecounter=\count378
+\c@uniquelist=\count379
+\c@uniquename=\count380
+\c@refsection=\count381
+\c@refsegment=\count382
+\c@maxextratitle=\count383
+\c@maxextratitleyear=\count384
+\c@maxextraname=\count385
+\c@maxextradate=\count386
+\c@maxextraalpha=\count387
+\c@abbrvpenalty=\count388
+\c@highnamepenalty=\count389
+\c@lownamepenalty=\count390
+\c@maxparens=\count391
+\c@parenlevel=\count392
+\blx@tempcnta=\count393
+\blx@tempcntb=\count394
+\blx@tempcntc=\count395
+\c@blx@maxsection=\count396
+\blx@maxsegment@0=\count397
+\blx@notetype=\count398
+\blx@parenlevel@text=\count399
+\blx@parenlevel@foot=\count400
+\blx@sectionciteorder@0=\count401
+\blx@sectionciteorderinternal@0=\count402
+\blx@entrysetcounter=\count403
+\blx@biblioinstance=\count404
+\labelnumberwidth=\skip83
+\labelalphawidth=\skip84
+\biblabelsep=\skip85
+\bibitemsep=\skip86
+\bibnamesep=\skip87
+\bibinitsep=\skip88
+\bibparsep=\skip89
+\bibhang=\skip90
 \blx@bcfin=\read4
-\blx@bcfout=\write5
+\blx@bcfout=\write7
 \blx@langwohyphens=\language88
-\c@mincomprange=\count379
-\c@maxcomprange=\count380
-\c@mincompwidth=\count381
+\c@mincomprange=\count405
+\c@maxcomprange=\count406
+\c@mincompwidth=\count407
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -976,88 +1165,88 @@ File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count382
-\c@savedafterword=\count383
-\c@annotator=\count384
-\c@savedannotator=\count385
-\c@author=\count386
-\c@savedauthor=\count387
-\c@bookauthor=\count388
-\c@savedbookauthor=\count389
-\c@commentator=\count390
-\c@savedcommentator=\count391
-\c@editor=\count392
-\c@savededitor=\count393
-\c@editora=\count394
-\c@savededitora=\count395
-\c@editorb=\count396
-\c@savededitorb=\count397
-\c@editorc=\count398
-\c@savededitorc=\count399
-\c@foreword=\count400
-\c@savedforeword=\count401
-\c@holder=\count402
-\c@savedholder=\count403
-\c@introduction=\count404
-\c@savedintroduction=\count405
-\c@namea=\count406
-\c@savednamea=\count407
-\c@nameb=\count408
-\c@savednameb=\count409
-\c@namec=\count410
-\c@savednamec=\count411
-\c@translator=\count412
-\c@savedtranslator=\count413
-\c@shortauthor=\count414
-\c@savedshortauthor=\count415
-\c@shorteditor=\count416
-\c@savedshorteditor=\count417
-\c@labelname=\count418
-\c@savedlabelname=\count419
-\c@institution=\count420
-\c@savedinstitution=\count421
-\c@lista=\count422
-\c@savedlista=\count423
-\c@listb=\count424
-\c@savedlistb=\count425
-\c@listc=\count426
-\c@savedlistc=\count427
-\c@listd=\count428
-\c@savedlistd=\count429
-\c@liste=\count430
-\c@savedliste=\count431
-\c@listf=\count432
-\c@savedlistf=\count433
-\c@location=\count434
-\c@savedlocation=\count435
-\c@organization=\count436
-\c@savedorganization=\count437
-\c@origlocation=\count438
-\c@savedoriglocation=\count439
-\c@origpublisher=\count440
-\c@savedorigpublisher=\count441
-\c@publisher=\count442
-\c@savedpublisher=\count443
-\c@language=\count444
-\c@savedlanguage=\count445
-\c@origlanguage=\count446
-\c@savedoriglanguage=\count447
-\c@pageref=\count448
-\c@savedpageref=\count449
-\shorthandwidth=\skip78
-\shortjournalwidth=\skip79
-\shortserieswidth=\skip80
-\shorttitlewidth=\skip81
-\shortauthorwidth=\skip82
-\shorteditorwidth=\skip83
-\locallabelnumberwidth=\skip84
-\locallabelalphawidth=\skip85
-\localshorthandwidth=\skip86
-\localshortjournalwidth=\skip87
-\localshortserieswidth=\skip88
-\localshorttitlewidth=\skip89
-\localshortauthorwidth=\skip90
-\localshorteditorwidth=\skip91
+\c@afterword=\count408
+\c@savedafterword=\count409
+\c@annotator=\count410
+\c@savedannotator=\count411
+\c@author=\count412
+\c@savedauthor=\count413
+\c@bookauthor=\count414
+\c@savedbookauthor=\count415
+\c@commentator=\count416
+\c@savedcommentator=\count417
+\c@editor=\count418
+\c@savededitor=\count419
+\c@editora=\count420
+\c@savededitora=\count421
+\c@editorb=\count422
+\c@savededitorb=\count423
+\c@editorc=\count424
+\c@savededitorc=\count425
+\c@foreword=\count426
+\c@savedforeword=\count427
+\c@holder=\count428
+\c@savedholder=\count429
+\c@introduction=\count430
+\c@savedintroduction=\count431
+\c@namea=\count432
+\c@savednamea=\count433
+\c@nameb=\count434
+\c@savednameb=\count435
+\c@namec=\count436
+\c@savednamec=\count437
+\c@translator=\count438
+\c@savedtranslator=\count439
+\c@shortauthor=\count440
+\c@savedshortauthor=\count441
+\c@shorteditor=\count442
+\c@savedshorteditor=\count443
+\c@labelname=\count444
+\c@savedlabelname=\count445
+\c@institution=\count446
+\c@savedinstitution=\count447
+\c@lista=\count448
+\c@savedlista=\count449
+\c@listb=\count450
+\c@savedlistb=\count451
+\c@listc=\count452
+\c@savedlistc=\count453
+\c@listd=\count454
+\c@savedlistd=\count455
+\c@liste=\count456
+\c@savedliste=\count457
+\c@listf=\count458
+\c@savedlistf=\count459
+\c@location=\count460
+\c@savedlocation=\count461
+\c@organization=\count462
+\c@savedorganization=\count463
+\c@origlocation=\count464
+\c@savedoriglocation=\count465
+\c@origpublisher=\count466
+\c@savedorigpublisher=\count467
+\c@publisher=\count468
+\c@savedpublisher=\count469
+\c@language=\count470
+\c@savedlanguage=\count471
+\c@origlanguage=\count472
+\c@savedoriglanguage=\count473
+\c@pageref=\count474
+\c@savedpageref=\count475
+\shorthandwidth=\skip91
+\shortjournalwidth=\skip92
+\shortserieswidth=\skip93
+\shorttitlewidth=\skip94
+\shortauthorwidth=\skip95
+\shorteditorwidth=\skip96
+\locallabelnumberwidth=\skip97
+\locallabelalphawidth=\skip98
+\localshorthandwidth=\skip99
+\localshortjournalwidth=\skip100
+\localshortserieswidth=\skip101
+\localshorttitlewidth=\skip102
+\localshortauthorwidth=\skip103
+\localshorteditorwidth=\skip104
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
@@ -1071,19 +1260,19 @@ Package biblatex Info: ... file 'biblatex.def' found.
 (/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
 exmfdist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
-\c@textcitecount=\count450
-\c@textcitetotal=\count451
-\c@textcitemaxnames=\count452
-\c@biburlbigbreakpenalty=\count453
-\c@biburlbreakpenalty=\count454
-\c@biburlnumpenalty=\count455
-\c@biburlucpenalty=\count456
-\c@biburllcpenalty=\count457
+\c@textcitecount=\count476
+\c@textcitetotal=\count477
+\c@textcitemaxnames=\count478
+\c@biburlbigbreakpenalty=\count479
+\c@biburlbreakpenalty=\count480
+\c@biburlnumpenalty=\count481
+\c@biburlucpenalty=\count482
+\c@biburllcpenalty=\count483
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count458
+\c@smartand=\count484
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
@@ -1097,8 +1286,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 (/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
 exmfdist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count459
-\c@bbx:relatedtotal=\count460
+\c@bbx:relatedcount=\count485
+\c@bbx:relatedtotal=\count486
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -1135,8 +1324,8 @@ Package: expl3 2023-02-22 L3 programming layer (loader)
 (/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
 exmfdist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count461
-\l__pdf_internal_box=\box69
+\l__color_backend_stack_int=\count487
+\l__pdf_internal_box=\box75
 ))
 Package biblatex Info: ... and expl3
 (biblatex)             2023-02-22 L3 programming layer (loader) 
@@ -1158,41 +1347,41 @@ Package csquotes Info: Redefining alias 'default' -> 'english'.
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 193.
-LaTeX Font Info:    ... okay on input line 193.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 193.
-LaTeX Font Info:    ... okay on input line 193.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 193.
-LaTeX Font Info:    ... okay on input line 193.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 193.
-LaTeX Font Info:    ... okay on input line 193.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 193.
-LaTeX Font Info:    ... okay on input line 193.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 193.
-LaTeX Font Info:    ... okay on input line 193.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 193.
-LaTeX Font Info:    ... okay on input line 193.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 193.
-LaTeX Font Info:    ... okay on input line 193.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 193.
-LaTeX Font Info:    ... okay on input line 193.
-LaTeX Info: Redefining \degres on input line 193.
-LaTeX Info: Redefining \up on input line 193.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 208.
+LaTeX Font Info:    ... okay on input line 208.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 208.
+LaTeX Font Info:    ... okay on input line 208.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 208.
+LaTeX Font Info:    ... okay on input line 208.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 208.
+LaTeX Font Info:    ... okay on input line 208.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 208.
+LaTeX Font Info:    ... okay on input line 208.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 208.
+LaTeX Font Info:    ... okay on input line 208.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 208.
+LaTeX Font Info:    ... okay on input line 208.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 208.
+LaTeX Font Info:    ... okay on input line 208.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 208.
+LaTeX Font Info:    ... okay on input line 208.
+LaTeX Info: Redefining \degres on input line 208.
+LaTeX Info: Redefining \up on input line 208.
 
 (/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
 exmfdist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count462
-\scratchdimen=\dimen294
-\scratchbox=\box70
-\nofMPsegments=\count463
-\nofMParguments=\count464
-\everyMPshowfont=\toks42
-\MPscratchCnt=\count465
-\MPscratchDim=\dimen295
-\MPnumerator=\count466
-\makeMPintoPDFobject=\count467
-\everyMPtoPDFconversion=\toks43
+\scratchcounter=\count488
+\scratchdimen=\dimen305
+\scratchbox=\box76
+\nofMPsegments=\count489
+\nofMParguments=\count490
+\everyMPshowfont=\toks51
+\MPscratchCnt=\count491
+\MPscratchDim=\dimen306
+\MPnumerator=\count492
+\makeMPintoPDFobject=\count493
+\everyMPtoPDFconversion=\toks52
 )
 (/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
 exmfdist/tex/latex/epstopdf-pkg/epstopdf-base.sty
@@ -1205,18 +1394,18 @@ exmfdist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count468
-Package hyperref Info: Link coloring OFF on input line 193.
+\c@lstlisting=\count494
+Package hyperref Info: Link coloring OFF on input line 208.
  (./main.out) (./main.out)
-\@outlinefile=\write6
-\openout6 = `main.out'.
+\@outlinefile=\write8
+\openout8 = `main.out'.
 
 
 
 Package todonotes Warning: The length marginparwidth is less than 2cm and will 
 most likely cause issues with the appearance of inserted todonotes. The issue c
 an be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to 
-loading the todonotes package. on input line 193.
+loading the todonotes package. on input line 208.
 
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
@@ -1235,39 +1424,41 @@ File: french.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout5 = `main.bcf'.
+\openout7 = `main.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 193.
-Package biblatex Info: Reference segment=0 on input line 193.
-<logos/logo_polytech_full.png, id=19, 172.4625pt x 53.5455pt>
+Package biblatex Info: Reference section=0 on input line 208.
+Package biblatex Info: Reference segment=0 on input line 208.
+<logos/logo_polytech_full.png, id=31, 172.4625pt x 53.5455pt>
 File: logos/logo_polytech_full.png Graphic file (type png)
 <use logos/logo_polytech_full.png>
-Package pdftex.def Info: logos/logo_polytech_full.png  used on input line 197.
+Package pdftex.def Info: logos/logo_polytech_full.png  used on input line 212.
 (pdftex.def)             Requested size: 166.37524pt x 51.65405pt.
-<logos/logo_lig_new.png.png, id=20, 212.795pt x 145.54375pt>
+<logos/logo_lig_new.png.png, id=32, 212.795pt x 145.54375pt>
 File: logos/logo_lig_new.png.png Graphic file (type png)
 <use logos/logo_lig_new.png.png>
-Package pdftex.def Info: logos/logo_lig_new.png.png  used on input line 197.
+Package pdftex.def Info: logos/logo_lig_new.png.png  used on input line 212.
 (pdftex.def)             Requested size: 75.52164pt x 51.65405pt.
-<logos/logo_inp_uga.png, id=22, 33.0033pt x 28.908pt>
+<logos/logo_inp_uga.png, id=34, 33.0033pt x 28.908pt>
 File: logos/logo_inp_uga.png Graphic file (type png)
 <use logos/logo_inp_uga.png>
-Package pdftex.def Info: logos/logo_inp_uga.png  used on input line 197.
+Package pdftex.def Info: logos/logo_inp_uga.png  used on input line 212.
 (pdftex.def)             Requested size: 88.46243pt x 77.48108pt.
  [1
+
+\openout5 = `main.ist'.
 
 {/nix/store/ixfwxsa3dwcdysk4s0pshkcgkss2kyyz-texlive-combined-full-2022-final/s
 hare/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./logos/logo_polytech_full.
 png> <./logos/logo_lig_new.png.png> <./logos/logo_inp_uga.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 204--208
+Underfull \hbox (badness 10000) in paragraph at lines 219--223
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 209--214
+Underfull \hbox (badness 10000) in paragraph at lines 224--229
 
  []
 
@@ -1276,102 +1467,95 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.220 \newpage
+l.235 \newpage
                [1]
-Underfull \hbox (badness 10000) in paragraph at lines 227--230
+Underfull \hbox (badness 10000) in paragraph at lines 242--245
 
  []
 
 
-Overfull \hbox (2.26518pt too wide) in paragraph at lines 231--241
+Overfull \hbox (2.26518pt too wide) in paragraph at lines 246--256
 []\T1/cmr/m/n/12 Durant ce stage, j'ai eu comme ob-jec-tif d'uti-li-ser et d'am
 é-lio-rer l'ou-til NixOS-Compose,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 231--241
+Underfull \hbox (badness 10000) in paragraph at lines 246--256
 
  []
 
 
-Overfull \hbox (1.6789pt too wide) in paragraph at lines 248--251
+Overfull \hbox (1.6789pt too wide) in paragraph at lines 263--266
 []\T1/cmr/bx/it/12 mots-clés--- \T1/cmr/m/n/12 Nix, Pro-gram-ma-tion Fonc-tion-
 nel, La-bo-ra-toire, NixOS, NixOS-Compose,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 257--260
+Underfull \hbox (badness 10000) in paragraph at lines 272--275
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 261--270
+Underfull \hbox (badness 10000) in paragraph at lines 276--285
 
  []
 
 [2] (./main.toc)
-\tf@toc=\write7
-\openout7 = `main.toc'.
+\tf@toc=\write9
+\openout9 = `main.toc'.
 
- [3]
-Underfull \hbox (badness 10000) in paragraph at lines 288--297
+ [3] (./main.lof)
+\tf@lof=\write10
+\openout10 = `main.lof'.
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 298--309
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 310--319
+ [4]
+Underfull \hbox (badness 10000) in paragraph at lines 307--316
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 320--327
+Underfull \hbox (badness 10000) in paragraph at lines 317--328
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--336
+Underfull \hbox (badness 10000) in paragraph at lines 329--338
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--338
+Underfull \hbox (badness 10000) in paragraph at lines 339--346
 
  []
 
-[4] [5] (./main.lof)
-\tf@lof=\write8
-\openout8 = `main.lof'.
 
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
-51.
+Underfull \hbox (badness 10000) in paragraph at lines 347--355
 
-(/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-t
-exmfdist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
-)
+ []
+
+[5] [6]
+
+LaTeX Warning: Empty bibliography on input line 378.
+
+(./main.gls)
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.354 \newpage
+l.383 \newpage
                [1]
-Underfull \hbox (badness 10000) in paragraph at lines 355--355
+Underfull \hbox (badness 10000) in paragraph at lines 384--384
 
  []
 
 
-Overfull \hbox (2.26518pt too wide) in paragraph at lines 355--355
+Overfull \hbox (2.26518pt too wide) in paragraph at lines 384--384
 []\T1/cmr/m/n/12 Durant ce stage, j'ai eu comme ob-jec-tif d'uti-li-ser et d'am
 é-lio-rer l'ou-til NixOS-Compose,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 355--355
+Underfull \hbox (badness 10000) in paragraph at lines 384--384
 
  []
 
@@ -1380,31 +1564,31 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.356 \end{titlingpage}
+l.385 \end{titlingpage}
                         [2] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 7BDD2076694ECA0B4DEE1B21B4C4B3B9;331.
+(rerunfilecheck)             Checksum: 4E131496853E58F8DB2DD77839C87AF8;900.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32866 strings out of 476024
- 638915 string characters out of 5764067
+ 38597 strings out of 476024
+ 757893 string characters out of 5764067
  1860388 words of memory out of 5000000
- 52780 multiletter control sequences out of 15000+600000
- 522690 words of font info for 54 fonts, out of 8000000 for 9000
+ 58399 multiletter control sequences out of 15000+600000
+ 522477 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 88i,11n,100p,698b,2076s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 98i,11n,100p,2276b,2090s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final
 -texmfdist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</nix/store/0kvrd6v7fsbb0sr
 5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-texmfdist/fonts/type1/public
 /cm-super/sfbi1200.pfb></nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-com
 bined-full-2022-final-texmfdist/fonts/type1/public/cm-super/sfbx1200.pfb></nix/
 store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-texmfdi
-st/fonts/type1/public/cm-super/sfbx1728.pfb></nix/store/0kvrd6v7fsbb0sr5fbzlnyb
+st/fonts/type1/public/cm-super/sfbx1440.pfb></nix/store/0kvrd6v7fsbb0sr5fbzlnyb
 j3kxzh22y-texlive-combined-full-2022-final-texmfdist/fonts/type1/public/cm-supe
-r/sfcc1200.pfb></nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-fu
+r/sfbx1728.pfb></nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-fu
 ll-2022-final-texmfdist/fonts/type1/public/cm-super/sfrm1095.pfb></nix/store/0k
 vrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-texmfdist/fonts
 /type1/public/cm-super/sfrm1200.pfb></nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22
@@ -1412,12 +1596,11 @@ y-texlive-combined-full-2022-final-texmfdist/fonts/type1/public/cm-super/sfrm14
 40.pfb></nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-
 final-texmfdist/fonts/type1/public/cm-super/sfrm1728.pfb></nix/store/0kvrd6v7fs
 bb0sr5fbzlnybj3kxzh22y-texlive-combined-full-2022-final-texmfdist/fonts/type1/p
-ublic/cm-super/sfti1200.pfb></nix/store/0kvrd6v7fsbb0sr5fbzlnybj3kxzh22y-texliv
-e-combined-full-2022-final-texmfdist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on main.pdf (8 pages, 232880 bytes).
+ublic/cm-super/sfti1200.pfb>
+Output written on main.pdf (9 pages, 214417 bytes).
 PDF statistics:
- 135 PDF objects out of 1000 (max. 8388607)
- 100 compressed objects within 1 object stream
- 22 named destinations out of 1000 (max. 500000)
- 52 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 154 PDF objects out of 1000 (max. 8388607)
+ 119 compressed objects within 2 object streams
+ 30 named destinations out of 1000 (max. 500000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
 

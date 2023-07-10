@@ -14,11 +14,26 @@
 \usepackage{hyperref}
 \usepackage{wrapfig}
 \usepackage{fancyhdr} %headers
-%\usepackage{glossaries}
+\usepackage{glossaries}
 \usepackage{todonotes}
 \usepackage[export]{adjustbox}
 
 \usepackage{titling}
+
+\makeglossaries
+
+\newglossaryentry{latex}
+{
+    name=latex,
+    description={Is a markup language specially suited 
+    for scientific documents}
+}
+
+\newglossaryentry{maths}
+{
+    name=mathematics,
+    description={Mathematics is what mathematicians do}
+}
 
 \renewcommand{\maketitle}{%
   \maketitlehooka
@@ -282,6 +297,10 @@ Maintenance, HPC, Distributed Infrastructure
 \tableofcontents
 \newpage
 
+\listoffigures
+
+\newpage
+
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}
 
@@ -334,21 +353,31 @@ Ce rapport témoigne de ma progression en tant que professionnel de
 l'informatique et des contributions significatives que j'ai apportées au
 sein du LIG.\newline
 
-Test de citation \cite{grid5000} je fait des test ici\newline
-
 \newpage
 
-\hypertarget{test-de-mise-en-page}{%
-\section{Test de mise en page}\label{test-de-mise-en-page}}
+\hypertarget{contexte-du-stage}{%
+\section{Contexte du stage}\label{contexte-du-stage}}
+
+\hypertarget{le-laboratoire-informatique-de-grenoble}{%
+\subsection{Le Laboratoire Informatique de
+Grenoble}\label{le-laboratoire-informatique-de-grenoble}}
+
+Test \gls{latex} test
+
+\hypertarget{luxe9quipe-datamove}{%
+\subsection{L'équipe DATAMOVE}\label{luxe9quipe-datamove}}
+
+\hypertarget{le-projet-nixos-compose}{%
+\subsection{Le Projet NixOS-Compose}\label{le-projet-nixos-compose}}
 
 \newpage
 
 \hypertarget{annexe}{%
 \section{Annexe}\label{annexe}}
 
-\listoffigures
-
 \printbibliography
+
+\printglossaries
 
 \begin{titlingpage}
 \newpage

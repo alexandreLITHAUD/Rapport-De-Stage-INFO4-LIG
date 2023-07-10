@@ -14,11 +14,26 @@
 \usepackage{hyperref}
 \usepackage{wrapfig}
 \usepackage{fancyhdr} %headers
-%\usepackage{glossaries}
+\usepackage{glossaries}
 \usepackage{todonotes}
 \usepackage[export]{adjustbox}
 
 \usepackage{titling}
+
+\makeglossaries
+
+\newglossaryentry{latex}
+{
+    name=latex,
+    description={Is a markup language specially suited 
+    for scientific documents}
+}
+
+\newglossaryentry{maths}
+{
+    name=mathematics,
+    description={Mathematics is what mathematicians do}
+}
 
 \renewcommand{\maketitle}{%
   \maketitlehooka

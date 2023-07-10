@@ -6,6 +6,9 @@
 \babel@toc {english}{}\relax 
 \contentsline {paragraph}{Abstract}{2}{section*.3}%
 \babel@toc {french}{}\relax 
-\contentsline {section}{\numberline {1}Introduction}{4}{section.1}%
-\contentsline {section}{\numberline {2}Test de mise en page}{5}{section.2}%
+\contentsline {section}{\numberline {1}Introduction}{5}{section.1}%
+\contentsline {section}{\numberline {2}Contexte du stage}{6}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Le Laboratoire Informatique de Grenoble}{6}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}L'équipe DATAMOVE}{6}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Le Projet NixOS-Compose}{6}{subsection.2.3}%
 \contentsline {section}{\numberline {3}Annexe}{1}{section.3}%
