@@ -66,12 +66,31 @@ Dans ce rapport, je décrirai en détail les différentes tâches et projets aux
 \includegraphics[scale=1]{logos/logo-uga.png}
 \caption{Test image et table}
 \end{figure} -->
+<!-- Test \gls{latex} test -->
 
 # Contexte du stage
 
 ## Le Laboratoire Informatique de Grenoble
 
-Test \gls{latex} test
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{images/imag.png}
+\caption{bâtiment IMAG}
+\end{figure}
+
+Mon stage s'est déroulé au LIG ou laboratoire informatique de Grenoble, ce laboratoire ainsi que certains autres sont situés dans le bâtiment IMAG, situé au centre de Saint-martin-d'Heres. Il est le réceptacle de nombreux projets de recherches et de recherche.
+Durant mon temps au LIG, j'ai eu la possibilité de rencontrer de nombreux professionnels, représentant des différents laboratoires présent dans le bâtiment.\newline
+
+Le bâtiment est organisé de la sorte :
+
+- 1er et 2ème étage : Gricad, AMIES, LJK : **Mathématiques** 
+
+- 3ème et 4ème : LIG : **Informatiques**\newline
+
+Durant mon stage j'ai eu l'occasion d'assister à de nombreuses conférences réalisées par des professionnels du sujet, comme une conférence sur les FPGA ou sur les stratégies de test dans le monde du HPC. 
+J'ai aussi la chance d’animer un cours d'informatique débranché destiné à deux classes de seconde, afin de les faire réfléchir sur des problématiques d'informatique sans l’interférence d'un ordinateur.\newline
+
+En outre, mon stage au laboratoire ma permis de faire de nombreuses découvertes et expériences en plus de toutes les connaissances que j'ai pu accumuler.
 
 ## L'équipe DATAMOVE
 
