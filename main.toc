@@ -10,5 +10,9 @@
 \contentsline {section}{\numberline {2}Contexte du stage}{6}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Le Laboratoire Informatique de Grenoble}{6}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}L'équipe DATAMOVE}{7}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Le Projet NixOS-Compose}{7}{subsection.2.3}%
-\contentsline {section}{\numberline {3}Annexe}{1}{section.3}%
+\contentsline {section}{\numberline {3}Missions au sein de l'équipe DATAMOVE}{9}{section.3}%
+\contentsline {subsection}{\numberline {3.1}L'environnement Nix et NixOS}{9}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Nix}{9}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}NixOS}{9}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.3}Nixpkgs et Nur-Kapack}{9}{subsubsection.3.1.3}%
+\contentsline {section}{\numberline {4}Annexe}{1}{section.4}%

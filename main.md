@@ -56,17 +56,17 @@ En parallèle, j'ai participé à la maintenance et à l'amélioration de logici
 
 De plus, j'ai eu l'opportunité de travailler en utilisant le système Grid5000, qui m'a permis de déployer et de tester mes compositions directement dans un environnement réel et reproductible. Cette expérience m'a offert une compréhension bien plus poussé sur les méthodes de déploiement de logiciel, à l'importance de d'évolutivité et à la gestion des ressources et à la fiabilité des systèmes distribués.\newline
 
-Dans ce rapport, je décrirai en détail les différentes tâches et projets auxquels j'ai participé tout au long de mon stage, en mettant l'accent sur les compétences acquises, les résultats obtenus et les leçons apprises. Je présenterai également une analyse critique de mes réalisations, ainsi que des suggestions pour des améliorations futures. Ce rapport témoigne de ma progression en tant que professionnel de l'informatique et des contributions significatives que j'ai apportées au sein du LIG.\newline
+Dans ce rapport, je décrirai en détail les différentes tâches et projets auxquels j'ai participé tout au long de mon stage, en mettant l'accent sur les compétences acquises, les résultats obtenus et les leçons apprises. Je présenterai également une analyse critique de mes réalisations, ainsi que des suggestions pour des améliorations futures. Ce rapport témoigne de ma progression en tant que professionnel de l'informatique et des contributions significatives que j'ai apportées au sein du LIG.
 
 \newpage
 
-<!-- Test de citation \cite{grid5000} je fait des test ici\newline -->
+<!-- Bibliography test de citation \cite{grid5000} je fait des test ici\newline -->
 <!-- \begin{figure}
 \centering
 \includegraphics[scale=1]{logos/logo-uga.png}
 \caption{Test image et table}
 \end{figure} -->
-<!-- Test \gls{latex} test -->
+<!-- Glossaire test \gls{latex} test -->
 
 # Contexte du stage
 
@@ -83,9 +83,11 @@ Durant mon temps au LIG, j'ai eu la possibilité de rencontrer de nombreux profe
 
 Le bâtiment est organisé de la sorte :
 
-- 1er et 2ème étage : Gricad, AMIES, LJK : **Mathématiques** 
+- 1er étage : AMIES, LJK, MAIMOSINE : **Mathématique**
 
-- 3ème et 4ème : LIG : **Informatiques**\newline
+- 2ème étage : GRICAD, LIG, VERIMAG : **Informatique** 
+
+- 3ème et 4ème étages: LIG : **Informatiques**\newline
 
 Durant mon stage j'ai eu l'occasion d'assister à de nombreuses conférences réalisées par des professionnels du sujet, comme une conférence sur les FPGA ou sur les stratégies de test dans le monde du HPC. 
 J'ai aussi la chance d’animer un cours d'informatique débranché destiné à deux classes de seconde, afin de les faire réfléchir sur des problématiques d'informatique sans l’interférence d'un ordinateur.\newline
@@ -94,7 +96,51 @@ En outre, mon stage au laboratoire ma permis de faire de nombreuses découvertes
 
 ## L'équipe DATAMOVE
 
-## Le Projet NixOS-Compose 
+L'équipe de recherche DATAMOVE du Laboratoire d'Informatique de Grenoble (LIG) se consacre à l'étude et au développement de techniques innovantes dans le domaine du traitement et de la gestion des données. Leur objectif est de relever les défis liés à la croissance exponentielle des données et de proposer des solutions efficaces pour leur manipulation, leur analyse et leur exploitation.\newline
+
+L'équipe est spécialisée dans les piles logicielles distribuées, généralement dans un environnement de High Performance Computing. Dans ce laboratoire, le sujet de la reproductibilité est majeur grâce à la complexité des piles logiciels créées.\newline
+
+La reproductibilité est une notion essentielle en recherche, en effet cela consiste à pouvoir réaliser une expérience à l'identique de la version d'origine afin d’obtenir le même résultat. Cette approche permet de garantir l'intégrité et la crédibilité des résultats scientifique.
+Il n'est cependant pas aisé de rendre une expérience reproductible en informatique à cause de l'omniprésence d'états qui peuvent être changés d'une exécution à une autre. De plus, il peut y avoir des problèmes de version de logiciel, disparition de ressource ou encore la présence d'une variable aléatoire. Tous ces problèmes, engendre un problème de reproductibilité des logiciels.\newline
+
+Dans le domaine du HPC, la reproductibilité présente plusieurs avantages. Tout d'abord, elle permet de valider les méthodes de modélisation et de simulation, garantissant ainsi que les résultats obtenus sont fiables et précis. Cela renforce la confiance dans les résultats de recherche et facilite la collaboration et la comparaison des résultats entre différents chercheurs et laboratoires. De plus, dans ce genre d’environnement ou les chercheurs déploie des simulations complexes avec des quantités massives de données à analyser, il est essentiel que ces résultats puissent être déterministes, ne serait-ce que pour pouvoir assurer de la rigueur de la recherche.\newline
+
+C'est dans cette optique que des outils de mise en place de pile logicielle comme NixOS-Compose ont été mis en place dans l'équipe.\newline
+
+**L'équipe**\newline
+
+En ce jour l'équipe DATAMOVE est composé de 34 personnes :
+
+- 10 chercheurs
+
+- 16 étudiants en thèse
+
+- 5 ingénieurs
+
+- 3 assistants\newline
+
+Cette équipe est dirigée par Monsieur Bruno RAFFIN. Olivier RICHARD, Quentin QUILLOTEAU et Adrrien FAURE sont tous membres de cette équipe. Respectivement en tant que chercheur, étudiant en thèse et ingénieur.\newline
+
+
+**Quelques projets phares de l'équipe**\newline
+
+OAR est un gestionnaire de ressources distribuées conçu pour les environnements de calcul intensif. Il permet aux chercheurs de planifier, de contrôler et d'optimiser l'utilisation des ressources informatiques, telles que les clusters de calcul, les grilles de calcul et les infrastructures de cloud computing. OAR offre une gestion fine des tâches, des files d'attente et des politiques de priorité, permettant ainsi une utilisation efficace et équitable des ressources. Cet outil facilite la planification des travaux de recherche, améliore les performances des applications et optimise l'utilisation des infrastructures informatiques. Cet outil est notamment utilisé dans Grid5000 pour la réservation et l'allocation des ressources.\newline
+
+Melissa, quant à lui, est un framework pour le développement d'applications parallèles et distribuées. Il fournit une infrastructure logicielle permettant aux chercheurs de concevoir et d'exécuter des applications haute performance sur des environnements hétérogènes et distribués. Melissa simplifie le processus de développement en fournissant des abstractions de haut niveau pour la programmation parallèle, l'orchestration des tâches et la gestion des données distribuées. Cet outil permet aux chercheurs de tirer pleinement parti des ressources informatiques disponibles et de développer des applications performantes et évolutives.\newline
+
+NixOS-Compose est un outil conçu pour les expériences dans les systèmes distribués. Il génère des environnements distribués reproductibles afin d'être déployés sur une plateforme physique ou virtualisé. C'est le logiciel auquel j'ai le principalement contribué et utilisé lors de ce stage.
+
+\newpage
+
+# Missions au sein de l'équipe DATAMOVE
+
+## L'environnement Nix et NixOS
+
+### Nix
+
+### NixOS
+
+### Nixpkgs et Nur-Kapack
 
 \newpage
 
