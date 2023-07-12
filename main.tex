@@ -667,8 +667,91 @@ résultat reproductible.\newline
 \hypertarget{nixos}{%
 \subsubsection{NixOS}\label{nixos}}
 
+NixOS est une distribution Linux entièrement basé sur Nix. Il utilise
+une approche déclarative pour effectuer la configuration système.
+L'intégralité de la configuration est définie par le biais du fichier
+configuration.nix. C'est un principe très agréable, car cela permet de
+très simplement stocker et versionné la configuration du système afin de
+pouvoir par exemple la réutiliser dans une architecture
+similaire.\newline
+
+NixOS utilise Nix pour s'occuper de la gestion des paquets. Donc, chaque
+paquet est traité manière fonctionnelle. NixOS suit un modèle de mise à
+jour sous le nom de \emph{Rolling Release}. Cela consiste à fournir des
+mises à jour de manière incrémentale et régulière. Dans le cas de NixOS,
+tous les 6 mois. Enfin, le système d'exploitation stocke la
+configuration système après chaque changement, permettant de retourner à
+tout moment à une configuration précédente en cas de problème.\newline
+
+Pour résumer, NixOS est un Système d'Exploitation innovant et sûr, je
+suis ravie d'avoir réalisé l'intégralité de mon stage dans cet
+environnement, sur une machine dédié. Cette utilisation intensive de cet
+OS m'a permis de développer des compétences système importantes. Le
+Système d'Exploitation NixOS a été pour moi une très belle
+surprise.\newline
+
+Cependant, il n'est évidemment pas parfait. NixOs utilisant un système
+de \emph{Rolling Release} semestriel, il faut souvent réparer la
+configuration du système qui s'est vu être modifié par la mise à jour.
+De plus, le store Nix propose beaucoup d'atout, mais n'est pas très
+efficace quand il faut mettre à jour des paquets régulièrement, comme
+Visual Studio Code par exemple. Le store étant immuable, il faut donc
+forcer la configuration à utiliser une source plus récente si l'on veut
+une version stable de l'application utilisée.\newline
+
 \hypertarget{nixpkgs-et-nur-kapack}{%
 \subsubsection{Nixpkgs et Nur-Kapack}\label{nixpkgs-et-nur-kapack}}
+
+\newpage
+
+\hypertarget{les-outils-uxe0-disposition-pour-la-recherche}{%
+\subsection{Les outils à disposition pour la
+recherche}\label{les-outils-uxe0-disposition-pour-la-recherche}}
+
+\newpage
+
+\hypertarget{loutils-nixos-compose}{%
+\subsection{L'outils NixOS-Compose}\label{loutils-nixos-compose}}
+
+\newpage
+
+\hypertarget{duxe9veloppement-de-composition-nixos-compose}{%
+\subsection{Développement de Composition
+NixOS-Compose}\label{duxe9veloppement-de-composition-nixos-compose}}
+
+\hypertarget{fonctionnement-et-composition-simple}{%
+\subsubsection{Fonctionnement et Composition
+Simple}\label{fonctionnement-et-composition-simple}}
+
+\hypertarget{workflow}{%
+\subsubsection{Workflow}\label{workflow}}
+
+\hypertarget{grid5000}{%
+\subsubsection{Grid5000}\label{grid5000}}
+
+\hypertarget{file-systems}{%
+\subsubsection{File Systems}\label{file-systems}}
+
+\hypertarget{mes-contributions-au-projet}{%
+\subsubsection{Mes contributions au
+projet}\label{mes-contributions-au-projet}}
+
+\newpage
+
+\hypertarget{perspective-du-projet-de-nixos-compose}{%
+\subsection{Perspective du projet de
+NixOS-Compose}\label{perspective-du-projet-de-nixos-compose}}
+
+\newpage
+
+\hypertarget{conclusion}{%
+\section{Conclusion}\label{conclusion}}
+
+\hypertarget{bilan-personnel}{%
+\subsection{Bilan personnel}\label{bilan-personnel}}
+
+\hypertarget{bilan-professionnel}{%
+\subsection{Bilan professionnel}\label{bilan-professionnel}}
 
 \newpage
 
