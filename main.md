@@ -138,6 +138,72 @@ NixOS-Compose est un outil conçu pour les expériences dans les systèmes distr
 
 ### Nix
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.2\textwidth,height=0.2\textheight,keepaspectratio]{logos/nixlogo.png}
+\caption{Logo Nix}
+\end{figure}
+
+Nix a été la technologie clé de mon stage. C'est la technologie phare que j'ai été amené à développer et à comprendre tout au long de mon stage au Laboratoire Informatique de Grenoble.\newline
+
+Nix est un gestionnaire de paquet fonctionnel et un outil de déploiement d'environnement reproductible. Il permet la gestion des dépendances logicielles de manière déclarative et garantit la reproductibilité des environnements de développement, et ce, en utilisant son propre langage, le *Nix Expression Language*, communément appelé Nix. Le langage Nix est pure, fonctionnel à évaluation paresseuse. Comme dit précédemment, le mot clé de Nix est reproductibilité. Son langage, sa gestion des paquets et son évaluation paresseuse lui permettent d’obtenir un résultat toujours identique pour des conditions identiques.\newline
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{images/codebasenixdark.png}
+\caption{Code nix basique}
+\end{figure}
+
+La particularité de Nix réside dans son approche fonctionnelle. En effet, Nix ne dépend pas de l'installation globale des paquets dans le système d'exploitation. À la place, chaque paquet est traité comme une fonction pure qui prend en entrée une version spécifique du paquet et de ses dépendances et retourne en sortie une version spécifique du paquet. Grâce à ce système, on met de côté le problème de *Depedency Hell* si commun dans la plupart des gestionnaires de paquet et l'on s'assure que chaque paquet ait la version requise et demandée.\newline
+
+Enfin, Nix est aussi capable de générer des environnements isolés configurables. Il est possible de créer des environnements shell possédant des dépendances spécifiques. Cela évite les conflits entre les différentes versions d'un paquet utilisé par des applications, mais aussi, permet de faciliter la portabilité, car une dépendance peut être utilisée sans avoir été installé par l'utilisateur (c'est ce que j'ai fait pour compiler ce rapport par exemple !).\newline
+
+**Le Nix-Store**\newline
+
+Le store Nix est un composant essentiel pour assurer le bon fonctionnement et la reproductibilité du système de gestion de paquet Nix. Il fonctionne sous forme de système de fichier hiérarchique qui stocke tous les paquets présents dans la machine dans un dossier spécifique nommé store. La gestion diffère donc des gestionnaires de paquet classique comme apt ou pacman qui stocke tout en utilisant un système de fichier standard.\newline
+
+Le store Nix repose sur 5 principes clés :
+
+- **Hashing des paquets** : Chaque paquet ou dépendance dans store est identifié par un hachage spécifique parfait basé sur son contenu. Grâce à ce système, deux paquets identiques ne seront stockés qu'une seule fois. De plus, il est donc possible de stocker plusieurs versions d'un même paquet.
+
+- **Immutabilité des fichiers** : Les paquets présents dans le store sont immuables. Il est impossible d'en effectuer une modification après leur création. C'est un avantage considérable, car cela assure l'intégrité des paquets et limite les effets de bord néfaste.
+
+- **Liens symboliques** : Les fichiers, dossier et dérivations présent dans le store sont référencés par des liens symboliques, permettant au utilisateur de pouvoir utiliser les paquets présent dans le store sans avoir besoin de mettre à jour le PATH ou de connaitre le chemin exact (et donc le hash) du paquet.
+
+- **Gestion des dépendances** : Les paquets présents dans le store utilisent des liens symboliques référençant chaque dépendance qu'il possède. Cela permet de nous assurer que chaque paquet utilise la bonne version de chaque dépendance.
+
+- **Garbage Collection** : Enfin, le store possède un système de garbage collection basé sur des *Garbage root*. C'est-à-dire que les paquets installés et donc devant être gardé sont stockées en tant que garbage root. À la garbage collection (`nix-collect-garbage`) les garbage root et leurs dépendances sont gardés et le reste est élagué par le système. Ce système est important, car chaque dépendance est téléchargée et stockée dans le store. Ce qui peut rendre le store très lourd.\newline
+
+Tous ces principes permettent la reproductibilité des environnements de développement ainsi que des paquets et application du système. On s'assure donc une cohérence générale et une prédictibilité du système.\newline
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{images/store.png}
+\caption{Exemple d'architecture de store multi user}
+\end{figure}
+
+Comme on peut le voir avec cet exemple, il est donc possible avec ce système de posséder plusieurs versions d'un même paquet. De plus, avec le système de profil Nix, il est possible de définir quel utilisateur utilisent quel paquet et donc séparer les utilisateurs. Cependant, peu importe le nombre d'usagés de la machine, il n'y aura toujours qu'un seul store global.\newline
+
+**Les Nix Flakes**\newline
+
+Les flakes sont une fonctionnalité encore expérimentale de Nix qui vise à d'autant plus améliorer la reproductibilité, la modularité et la gestion des dépendances dans Nix. Il permet de définir une interface commune pour importation de ressource extérieure. Bien que toujours en phase expérimentale, les flakes sont massivement utilisés par la communauté grâce aux ajouts importants qui permet. Ils sont régulièrement considérés par la communauté des utilisateurs de nix comme un ajout essentiel au bon fonctionnement actuel de nix et à sa prospérité.\newline
+
+Afin de réaliser un flake, il suffit de créer un fichier flake.nix. Un flake ne prend pas de paramètre d'entrée comme pourrait le faire un script nix classique. À la place, il récupère des ressources sous forme d'input et les utilisent pour y créer une sortie. Ces paramètres d'entrées peuvent être un dépôt distant Git ou un autre flake par exemple.\newline
+
+Comme il ne prend pas de paramètre d'entrée, il ne dépend aucunement de la configuration de la machine actuelle. À la compilation, un flake crée un fichier flake.lock qui définie les versions, le type du dépôt, la dernière date de modification, etc. Ce fichier permet donc d'avoir une trace des versions utilisées et de pouvoir les réutiliser de la même manière. Ce système est appelé *peeling*.\newline
+
+En outre, les nix flakes est un élément essentiel à Nix et est une technologie que j'ai massivement utilisée lors de mon stage et qui est utilisée dans de nombreux systèmes tels que NixOS-Compose par exemple.\newline
+
+**Exemple d'environnement nix**\newline
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{images/flakebasenix.png}
+\caption{Script nix de creation d'environnement latex}
+\end{figure}
+
+Voici un exemple de création d'environnement isole Nix en utilisant les flakes nix. Ce script ne marche que sur les architectures x86_64-linux, car il ne récupère les dépendances que de ce système d’exploitation ci. Ce script rajoute dans la PATH du terminal en cours les applications mise dans les buildInputs, c'est-à-dire dans ce cas pandoc, rubber et biber. À la fin de cette session, le PATH sera remis à défaut. Pour l'exécuter, il faut effectuer la commande `nix develop .` ou "." est le chemin vers le flake. C'est ce genre de configuration que j'ai été amené à utiliser et à créer afin d'avoir un environnement et un résultat reproductible.\newline
+
 ### NixOS
 
 ### Nixpkgs et Nur-Kapack
