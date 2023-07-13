@@ -1,0 +1,14 @@
+\glossaryentry{Nix?\glossentry{nix}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{NixOS?\glossentry{nixos}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{HPC?\glossentry{hpc}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{OAR?\glossentry{oar}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{Grid5000?\glossentry{grid5000}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{NixOS-Compose?\glossentry{nixos-compose}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{Composition?\glossentry{composition}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{Reproductibilité?\glossentry{reproductibilité}|setentrycounter[]{page}"\glsnumberformat}{7}
+\glossaryentry{HPC?\glossentry{hpc}|setentrycounter[]{page}"\glsnumberformat}{7}
+\glossaryentry{NixOS-Compose?\glossentry{nixos-compose}|setentrycounter[]{page}"\glsnumberformat}{7}
+\glossaryentry{OAR?\glossentry{oar}|setentrycounter[]{page}"\glsnumberformat}{8}
+\glossaryentry{Depedency-Hell?\glossentry{depedency-hell}|setentrycounter[]{page}"\glsnumberformat}{9}
+\glossaryentry{Garbage-Collection?\glossentry{garbage-collection}|setentrycounter[]{page}"\glsnumberformat}{10}
+\glossaryentry{Pinning?\glossentry{pinning}|setentrycounter[]{page}"\glsnumberformat}{11}

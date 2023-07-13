@@ -25,91 +25,85 @@
 \newglossaryentry{grid5000}
 {
     name=Grid5000,
-    description={}
+    description={Réseaux de noeuds hébergé un peux partout en France destiné à réalisé des essais pour la recherche dans le domaine de l'informatique distribué et parallèle.}
 }
 
 \newglossaryentry{hpc}
 {
     name=HPC,
-    description={}
+    description={Branche de l'informatique qui cherche à traiter des données et à effectuer des calculs complexe à grande vitesse.}
 }
 
 \newglossaryentry{oar}
 {
     name=OAR,
-    description={}
-}
-
-\newglossaryentry{ear}
-{
-    name=EAR,
-    description={}
+    description={Logiciel d’ordonnancement de ressources informatique.}
 }
 
 \newglossaryentry{reproductibilité}
 {
     name=Reproductibilité,
-    description={}
+    description={Qualité d'une mesure qui donne les mêmes résultats si on la répète dans des conditions différentes et à des époques différentes.}
 }
 
 \newglossaryentry{nix}
 {
     name=Nix,
-    description={}
+    description={Gestionnaire de paquet fonctionnel et language de programmation fonctionnel permettant la description de paquet.}
 }
 
 \newglossaryentry{nixos}
 {
     name=NixOS,
-    description={}
+    description={Système d'exploitation utilisant Nix, son langage et son gestionnaire de paquet.}
 }
 
 \newglossaryentry{nix-store}
 {
     name=Nix-store,
-    description={}
+    description={Système de gestion des paquet dans Nix}
 }
 
 \newglossaryentry{nixos-compose}
 {
     name=NixOS-Compose,
-    description={}
+    description={Logiciel permettant de créer et déployer des infrastructures distribué simplement et de manière reproductible en Nix}
 }
 
 \newglossaryentry{composition}
 {
     name=Composition,
-    description={}
+    description={Description d'une infrastructure distribué en Nix, compilable et deployable par NixOS-Compose}
 }
 
 \newglossaryentry{depedency-hell}
 {
     name=Depedency-Hell,
-    description={}
+    description={Terme familier désignant le problème ou des applications dépendent de certaines version spécifique d'application, bloquant donc le système.}
 }
 
 \newglossaryentry{nixpkgs}
 {
     name=Nixpkgs,
-    description={}
+    description={Dépôt principal de paquet dans l'environnement Nix}
 }
 
 \newglossaryentry{nur}
 {
     name=NUR,
-    description={}
+    description={Dépôt supplémentaire de paquet Nix permettant le partage simple de dérivations}
 }
 
 \newglossaryentry{garbage-collection}
 {
     name=Garbage-Collection,
-    description={}
+    description={Processus consistant à faire de la place dans la mémoire d'un ordinateur en supprimant les données qui ne sont plus nécessaires ou utilisées.}
 }
 
 \newglossaryentry{pinning}
 {
     name=Pinning,
-    description={}
+    description={Processus de fixation des versions des ressources externes, telles que les paquets ou les dépendances à des versions ou révisions spécifiques.}
 }
 
 \renewcommand{\maketitle}{%
@@ -389,24 +383,26 @@ Research Softwares, Maintenance, HPC, Distributed Infrastructure
 Ce rapport va représenter mon expérience de stage au Laboratoire
 Informatique de Grenoble. Mon stage de 15 semaines à débuter le 17 avril
 2023. Au cours de cette période j'ai eu l'opportunité de travailler sur
-divers projet informatiques en lien avec les technologies de Nix, NixOS
-et le HPC (\emph{High performance computing}). Ainsi que sur la
-maintenance et l'amélioration de logiciel et recherche tels que OAR et
-EAR. Cette opportunité m'a donné l'occasion de travailler avec le
-système Grid5000, qui offre une infrastructure distribuée pour
-l'exécution de travaux de recherche à grande échelle.\newline
+divers projet informatiques en lien avec les technologies de \Gls{nix},
+\Gls{nixos} et le \Gls{hpc} (\emph{High performance computing}). Ainsi
+que sur la maintenance et l'amélioration de logiciel et recherche tels
+que \Gls{oar} et EAR. Cette opportunité m'a donné l'occasion de
+travailler avec le système \Gls{grid5000}, qui offre une infrastructure
+distribuée pour l'exécution de travaux de recherche à grande
+échelle.\newline
 
 L'objectif principal de mon stage était, en premier lieu, de contribuer
-au projet NixOS-Compose, un outils puissant qui facilite le déploiement
-et la gestion d'environnement de développement reproductible spécialisé
-pour le HPC en déployant directement plusieurs machines sur Grid5000 à
-la manière de Docker Compose. Afin de pourvoir réaliser cette tache il
-était important de monter en compétences sur le gestionnaire de paquet
-fonctionnel Nix et NixOS. Grâce à cette expérience, j'ai pu approfondir
-ma compréhension des principes fondamentaux de la gestion des paquets et
-des environnements isolés, la configuration de système basé NixOS, le
-paradigme de programmation fonctionnelle ainsi que le déploiement
-d'application fonctionnelle dans un environnement d'HPC.\newline
+au projet \Gls{nixos-compose}, un outils puissant qui facilite le
+déploiement et la gestion d'environnement de développement reproductible
+spécialisé pour le HPC en déployant directement plusieurs machines sur
+Grid5000 à la manière de Docker Compose. Afin de pourvoir réaliser cette
+tache il était important de monter en compétences sur le gestionnaire de
+paquet fonctionnel Nix et NixOS. Grâce à cette expérience, j'ai pu
+approfondir ma compréhension des principes fondamentaux de la gestion
+des paquets et des environnements isolés, la configuration de système
+basé NixOS, le paradigme de programmation fonctionnelle ainsi que le
+déploiement d'application fonctionnelle dans un environnement
+d'HPC.\newline
 
 En parallèle, j'ai participé à la maintenance et à l'amélioration de
 logiciel de recherche tels que OAR et EAR en les mettant à jour avec la
@@ -420,12 +416,12 @@ développement du laboratoire.\newline
 
 De plus, j'ai eu l'opportunité de travailler en utilisant le système
 Grid5000, qui m'a permis de déployer et de tester mes
-compositions,c'est-à-dire des descriptions de système distribué fait en
-Nix et ce directement dans un environnement réel et reproductible. Cette
-expérience m'a offert une compréhension bien plus poussé sur les
-méthodes de déploiement de logiciel, à l'importance de d'évolutivité et
-à la gestion des ressources et à la fiabilité des systèmes
-distribués.\newline
+\glspl{composition},c'est-à-dire des descriptions de système distribué
+fait en Nix et ce directement dans un environnement réel et
+reproductible. Cette expérience m'a offert une compréhension bien plus
+poussé sur les méthodes de déploiement de logiciel, à l'importance de
+d'évolutivité et à la gestion des ressources et à la fiabilité des
+systèmes distribués.\newline
 
 Dans ce rapport, je décrirai en détail les différentes tâches et projets
 auxquels j'ai participé tout au long de mon stage, en mettant l'accent
@@ -494,8 +490,8 @@ leur analyse et leur exploitation.\newline
 
 L'équipe est spécialisée dans les piles logicielles distribuées et
 l'ordonnancement, généralement dans un environnement de High Performance
-Computing. Dans ce laboratoire, le sujet de la reproductibilité est
-majeur grâce à la complexité des piles logiciels créées.\newline
+Computing. Dans ce laboratoire, le sujet de la \gls{reproductibilité}
+est majeur grâce à la complexité des piles logiciels créées.\newline
 
 La reproductibilité est une notion essentielle en recherche, en effet
 cela consiste à pouvoir réaliser une expérience à l'identique de la
@@ -509,7 +505,7 @@ calcul ou encore la présence d'une variable aléatoire. Tous ces
 problèmes, engendre un problème de reproductibilité des
 logiciels.\newline
 
-Dans le domaine du HPC, la reproductibilité présente plusieurs
+Dans le domaine du \Gls{hpc}, la reproductibilité présente plusieurs
 avantages. Tout d'abord, elle permet de valider les méthodes de
 modélisation et de simulation, garantissant ainsi que les résultats
 obtenus sont fiables et précis, même si il peux être incorrect. Cela
@@ -522,7 +518,7 @@ puissent être déterministes, ne serait-ce que pour pouvoir assurer de la
 rigueur de la recherche.\newline
 
 C'est dans cette optique que des outils de mise en place de pile
-logicielle comme NixOS-Compose ont été mis en place dans
+logicielle comme \Gls{nixos-compose} ont été mis en place dans
 l'équipe.\newline
 
 \textbf{L'équipe}\newline
@@ -547,7 +543,7 @@ ingénieur.\newline
 
 \textbf{Quelques projets phares de l'équipe}\newline
 
-OAR est un gestionnaire de ressources distribuées conçu pour les
+\Gls{oar} est un gestionnaire de ressources distribuées conçu pour les
 environnements de calcul intensif. Il permet aux chercheurs de
 planifier, de contrôler, répondre et alloué des ressources demandé par
 un utilisateur dans des environnements telles que les clusters de
@@ -621,7 +617,7 @@ effet, Nix ne dépend pas de l'installation globale des paquets dans le
 système d'exploitation. À la place, chaque paquet est traité comme une
 fonction pure qui prend en entrée une version spécifique du paquet et de
 ses dépendances et retourne en sortie une version spécifique du paquet.
-Grâce à ce système, on met de côté le problème de \emph{Depedency Hell}
+Grâce à ce système, on met de côté le problème de \Gls{depedency-hell}
 si commun dans la plupart des gestionnaires de paquet et l'on s'assure
 que chaque paquet ait la version requise et demandée.\newline
 
@@ -671,9 +667,9 @@ Le store Nix repose sur 5 principes clés :
   bonne version de chaque dépendance.
 \item
   \textbf{Garbage Collection} : Enfin, le store possède un système de
-  garbage collection basé sur des \emph{Garbage root}. C'est-à-dire que
-  les paquets installés et donc devant être gardé sont stockées en tant
-  que garbage root. À la garbage collection
+  \gls{garbage-collection} basé sur des \emph{Garbage root}.
+  C'est-à-dire que les paquets installés et donc devant être gardé sont
+  stockées en tant que garbage root. À la garbage collection
   (\texttt{nix-collect-garbage}) les garbage root et leurs dépendances
   sont gardés et le reste est élagué par le système. Ce système est
   important, car chaque dépendance est téléchargée et stockée dans le
@@ -722,7 +718,7 @@ la configuration de la machine actuelle. À la compilation, un flake crée
 un fichier \texttt{flake.lock} qui définie les versions, le type du
 dépôt, la dernière date de modification, etc. Ce fichier permet donc
 d'avoir une trace des versions utilisées et de pouvoir les réutiliser de
-la même manière. Ce système est appelé \emph{pinning}.\newline
+la même manière. Ce système est appelé \gls{pinning}.\newline
 
 En outre, les nix flakes est un élément essentiel à Nix et est une
 technologie que j'ai massivement utilisée lors de mon stage et qui est
