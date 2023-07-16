@@ -237,6 +237,9 @@ Durant ce stage, j'ai rajouté des paquets dans des dépôts, afin de les rendre
 
 ## Les outils à disposition pour la recherche
 
+
+Test de fonctionnement.
+
 \newpage
 
 ## L'outils NixOS-Compose
