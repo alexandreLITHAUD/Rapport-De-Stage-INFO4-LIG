@@ -237,20 +237,23 @@ Durant ce stage, j'ai rajouté des paquets dans des dépôts, afin de les rendre
 
 ## Les outils à disposition pour la recherche
 
-**TODO**\newline
+La communication est un élément essentiel au bon fonctionnement d'une équipe de recherche. Il est donc nécessaire dans ce type d'encadrement d'utiliser des outils adapté et efficace afin de pouvoir communiquer avec les autres membres du laboratoire et potentiellement pour pouvoir poser des questions à propos de certaines technologies.\newline
 
-- **Mail** -> Conférences, informations, et communication 
+**Mail**\newline
 
-- **Telegram** -> communication, aide Nix, NixOs-Compose
+Le système de mail était important pour le bon fonctionnement du LIG. Il était vecteur de message et d'information essentiel pour tous les membres du laboratoire. J'avais à ma disposition une adresse mail INRIA. Les mails sont particulièrement importants afin de recevoir des informations pour les prochaines conférence et séminaire présent dans le bâtiment IMAG. Ces conférences ont été importantes, car elle était vectrice de nombreuses connaissances et permutait d'exacerber ma curiosité sur le domaine de l'informatique en général.\newline
 
-- **Gitlab** -> issues, repo, README, Doc\newline
+**Telegram**\newline
 
+Le réseaux de communication Telegram était utilisé par l’équipe de recherche afin de pouvoir créer des salons de discussion sur des domaines précis. Ce moyen de communication est bien plus rapide et moins formel que l'utilisation de mail. Ce qui permet de facilité la discussion entre les membres de l'équipe.\newline
 
-\cite{grid5000} test
+**Gitlab et Github**\newline
+
+L'utilisation d'un gestionnaire de version git est une évidence et parfaitement essentiel dans n'importe quel type de projet informatique. Il permet de s'assurer de la pérennisation du code. Lors de mon stage, j'ai utilisé massivement le Gitlab de l'Inria afin d'y entreposé les dépôts que j'ai créés pour chacune de mes compositions. J'ai également fait partie du groupe de développeur oar sur GitHub. Ce système ma permis de centralisé la documentation que j'ai écrite. Enfin, git permet de communiquer et de discuter de certain problème par le biais des issues git. Les issues sont une partie essentielle du bon fonctionnement d'un projet, surtout dans un domaine si précis que celui de la recherche.
 
 \newpage
 
-## L'outils NixOS-Compose
+## L'outil NixOS-Compose
 
 \Gls{nixos-compose} (ou NXC) est l'outil principal que j'ai utilisé durant mon stage. C'est un outil de déploiement d'environnement distribué, reproductible et éphémère.\newline
 
@@ -343,7 +346,7 @@ J'ai eu le plaisir de contribué à l'évolution de NixOS-Compose et de découvr
 
 ## Bilan professionnel
 
-Sur un plan professionnel, ce stage m'a permis de découvrir et d'expériencer le travail en laboratoire. Ainsi que les spécialités du travail dans une équipe de recherche tel que DATAMOVE.
+Sur un plan professionnel, ce stage m'a permis de découvrir et d'expérimenter le travail en laboratoire. Ainsi que les spécialités du travail dans une équipe de recherche tel que DATAMOVE.
 
 J'ai grandement apprécié le système de fonctionnement de l'équipe. En effet, dans cet environnement de travail, l'entraide et la communication était omniprésente. J'ai donc eu le plaisir de développer au sein de l'équipe des compétences de travail d'équipe et de coordinations avec les différents membres du laboratoire. De plus, les différents séminaires assistés et tâche réalisés me permirent de développer ma curiosité notamment dans le domaine système de l'informatique tout en développement mon bagage de connaissance et mon expérience technique.
 
