@@ -12,6 +12,9 @@
 *.cb2
 .*.lb
 
+## Rubber
+*.rubbercache
+
 ## Intermediate documents:
 *.dvi
 *.xdv
