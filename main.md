@@ -237,8 +237,13 @@ Durant ce stage, j'ai rajouté des paquets dans des dépôts, afin de les rendre
 
 ## Les outils à disposition pour la recherche
 
+**TODO**\newline
 
-Test de fonctionnement 2.
+- **Mail** -> Conférences, informations, et communication 
+
+- **Telegram** -> communication, aide Nix, NixOs-Compose
+
+- **Gitlab** -> issues, repo, README, Doc
 
 \newpage
 
@@ -326,6 +331,12 @@ J'ai été amené à utiliser et à comprendre le fonctionnement de chacune des 
 # Conclusion
 
 ## Bilan personnel
+
+Ce stage m'a permis de découvrir le monde de la recherche de manière poussé. De plus, j'ai développé une méthode de travail efficace. J'ai découvert les problématiques qu'une équipe de recherche telle que DATAMOVE peuvent poser.
+
+Ce stage m'a permis de rencontrer des experts dans le sujet. Ces interattractions ont été essentielles tout au long du stage. Ainsi, elle était le vecteur de nouvelle connaissance et de la découverte de nouveaux outils qui font maintenant partie de mon quotidien d'ingénieur (zsh, obsidian, fzf, tmux, ...) en plus de découvrir des nouvelles méthodes de travail adapté au travail et efficace.
+
+J'ai eu le plaisir de contribué à l'évolution de NixOS-Compose et de découvrir des technologies puissantes comme Nix et NixOS qui m'ont permis de m'améliorer sur des concepts important dans l'informatique actuel comme le calcul de performance, la reproductibilité et le déploiement de système distribué.\newline
 
 ## Bilan professionnel
 
