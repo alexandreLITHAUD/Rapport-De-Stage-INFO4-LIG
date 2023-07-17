@@ -12,3 +12,4 @@
 \glossaryentry{Depedency-Hell?\glossentry{depedency-hell}|setentrycounter[]{page}"\glsnumberformat}{9}
 \glossaryentry{Garbage-Collection?\glossentry{garbage-collection}|setentrycounter[]{page}"\glsnumberformat}{10}
 \glossaryentry{Pinning?\glossentry{pinning}|setentrycounter[]{page}"\glsnumberformat}{11}
+\glossaryentry{NixOS-Compose?\glossentry{nixos-compose}|setentrycounter[]{page}"\glsnumberformat}{16}

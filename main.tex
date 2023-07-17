@@ -827,12 +827,137 @@ rajouter des fonctionnalités et des paquets.
 \subsection{Les outils à disposition pour la
 recherche}\label{les-outils-uxe0-disposition-pour-la-recherche}}
 
-Test de fonctionnement.
+Test de fonctionnement 2.
 
 \newpage
 
 \hypertarget{loutils-nixos-compose}{%
 \subsection{L'outils NixOS-Compose}\label{loutils-nixos-compose}}
+
+\Gls{nixos-compose} (ou NXC) est l'outil principal que j'ai utilisé
+durant mon stage. C'est un outil de déploiement d'environnement
+distribué, reproductible et éphémère.\newline
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{images/shema-nxc.png}
+\caption{Schéma de fonctionnement de NXC}
+\end{figure}
+
+NixOS-Compose permet de créer des compositions déployables. Une
+composition est une description d'une architecture distribuée, et ce, de
+manière fonctionnel. En effet, chaque composition est écrite en
+utilisant le langage de programmation Nix. Une composition permet de
+décrire plusieurs \textbf{rôles}. Ces rôles correspondent à une
+configuration d'une machine Nix. Il est Donc possible grâce à cet outil
+de déployer directement un environnement de machine distribué configuré
+en utilisant Nix d'une façon spécifique et déclarative.\newline
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{images/coposition-nfs.png}
+\caption{Exemple de composition}
+\end{figure}
+
+La figure 7 correspond à un exemple simple de composition Nix dans
+lequel nous créons 2 rôles différents : \texttt{node}, \texttt{serveur}.
+Le node possède des outils de calcul de performances, ior et htop. Le
+server quant à lui initialise le service nfs qui automatiquement présent
+dans le langage nix car créé par la communauté dans le dépôt
+nixpkgs.\newline
+
+Chacun de ces rôles sont configurés en utilisant le Nix et permettent en
+quelques lignes de créer deux noeuds, directement en communication, et
+ce, de manière éphémère et reproductible. Il semble donc évidement de
+comprendre l'intérêt d'un tel outil dans le monde la recherche. La
+création simple de noeud reproductible et éphémère permet de créer des
+conditions de recherche optimal, et ce, dans de nombreuses
+conditions.\newline
+
+\textbf{Le déploiement}\newline
+
+À la fin de la compilation de la composition (commande
+\texttt{nxc\ build}), NXC créer un fichier json stockant en son sein les
+informations importantes pour chaque rôle. L'utilisateur est libre du
+nombre de noeud ou machines qui vont utiliser la configuration d'un
+rôle. Ainsi, dans l'exemple de la figure 7 il est possible à
+l'utilisateur de choisir lu nombre de machines utilisant le rôle
+\texttt{node} ou \texttt{serveur}.\newline
+
+À la base, il faillait directement définir le nombre de noeud voulu dans
+la composition. Cette solution, bien que très fonctionnel, force
+l'utilisateur de recompiler à chaque changement de cette valeur, ce qui
+est une perte sèche de performance.\newline
+
+Maintenant, il est possible de déployer (commande \texttt{nxc\ start})
+directement le nombre de machines voulu à la phase de déploiement par le
+biais d'un fichier YAML (\emph{YAML Ain't Markup Language}). Cette
+amélioration permet d'augmenter massivement les performances de NXC lors
+de calcul de performance par exemple, car le test ne va devoir compiler
+que les rôles NXC de base et déployer les noeuds.\newline
+
+\textbf{Les flavours}\newline
+
+Comme vu dans la figure 6, NixOS-Compose permet en plus de déployer les
+compositions écrites dans plusieurs environnements différent, choisi
+lors du build de la composition. Ces différents choient d'environnement
+de déploiement sont appelés des flavours.\newline
+
+Il existe un certain nombre de flavours disponible avec NixOS-Compose
+:\newline
+
+\begin{itemize}
+\item
+  VM, qui créer une image locale utilisable dans un système de machine
+  virtuelle QEMU.
+\item
+  Docker, qui créer un système de conteneurisation en utilisant Docker
+  et Docker-Compose.
+\item
+  G5K-ramdisk, qui va créer une image ramdisk, cette solution est
+  lourde.
+\item
+  G5K-nsf-store, qui va utiliser nfs pour faire du partage de paquet
+  dans le store nix.
+\item
+  G5K-image, qui va créer une image déployable selon des configurations
+  différentes.\newline
+\end{itemize}
+
+Les flavours G5K sont celle qui est utilisables dans l'environnement
+Grid5000 qui utilise Kameleon pour pouvoir créer et déployer de cette
+architecture.\newline
+
+Il est donc possible de tester des compositions sur plusieurs
+environnement afin de pouvoir s'assurer du bon fonctionnement du système
+et de calculer les performances dans des conditions différentes. Les
+flavours sont un point essentiel de l'importance de l'outil
+NixOS-Compose.\newline
+
+\textbf{Les test NixOS}\newline
+
+NixOS possède un système de test unitaire capable de définir un
+environnement dans un fichier de configuration et d'utiliser des scripts
+python afin de pouvoir tester le fonctionnement de ce système. Ce type
+de fichier est commun et couramment utilisé dans la communauté Nix. De
+nombreux fichiers de tests unitaires sont disponibles dans le dépôt de
+paquet Nixpkgs.\newline
+
+Les compositions NixOS-Compose réutilisent la structure pré-établie par
+les tests NixOS. Cela permet de facilement passé de Test NixOS à
+composition NXC afin de pouvoir rapidement tester une technologie dans
+un environnement distribué. En effet, la syntaxe des tests sont
+similaires et servent généralement de base à la composition s'ils sont
+présents dans nixpkgs. NixOS-Compose reprend donc pour ces compositions
+la syntaxe des tests, mais NXC permet de répondre à des problèmes que
+les tests NixOS serait incapable de réaliser.\newline
+
+Le lien avec ces tests permet à NixOS-Compose d'être plus accessible
+pour la communauté des utilisateurs de Nix en plus de facilité la
+transition entre test simple et composition avancé.\newline
+
+J'ai été amené à utiliser et à comprendre le fonctionnement de chacune
+des particularités de cet outil tout au long de ce stage.\newline
 
 \newpage
 
