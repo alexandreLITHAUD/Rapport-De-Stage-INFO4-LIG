@@ -1,9 +1,0 @@
-[0] Config.pm:307> INFO - This is Biber 2.19
-[1] Config.pm:310> INFO - Logfile is 'template.blg'
-[134] biber:340> INFO - === lun. juil.  3, 2023, 14:35:43
-[172] Biber.pm:419> INFO - Reading 'template.bcf'
-[283] Biber.pm:979> INFO - Found 0 citekeys in bib section 0
-[317] bbl.pm:660> INFO - Writing 'template.bbl' with encoding 'UTF-8'
-[317] bbl.pm:763> INFO - Output to template.bbl
-[317] Biber.pm:131> WARN - The file 'template.bcf' does not contain any citations!
-[317] Biber.pm:133> INFO - WARNINGS: 1
