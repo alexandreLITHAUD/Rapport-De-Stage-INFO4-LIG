@@ -16,5 +16,140 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{grid5000}{incollection}{}
+      \name{author}{15}{}{%
+        {{hash=3b5af3e745918960c58fcc2826ba5f7f}{%
+           family={Balouek},
+           familyi={B\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=a152eba1a969bbba7378cd2a31857691}{%
+           family={Carpen\bibnamedelima Amarie},
+           familyi={C\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={Alexandra},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1ae1340bec42a38ba9a6d4e74445521a}{%
+           family={Charrier},
+           familyi={C\bibinitperiod},
+           given={Ghislain},
+           giveni={G\bibinitperiod}}}%
+        {{hash=859de268b42242fb5af5efd9928cb4e4}{%
+           family={Desprez},
+           familyi={D\bibinitperiod},
+           given={Frédéric},
+           giveni={F\bibinitperiod}}}%
+        {{hash=18d7d497c7e12d00353b8f3218112674}{%
+           family={Jeannot},
+           familyi={J\bibinitperiod},
+           given={Emmanuel},
+           giveni={E\bibinitperiod}}}%
+        {{hash=575fed69b99972df29d373cad9857621}{%
+           family={Jeanvoine},
+           familyi={J\bibinitperiod},
+           given={Emmanuel},
+           giveni={E\bibinitperiod}}}%
+        {{hash=70bee3c42229e5888a37515fa0fe83b7}{%
+           family={Lèbre},
+           familyi={L\bibinitperiod},
+           given={Adrien},
+           giveni={A\bibinitperiod}}}%
+        {{hash=05678e75a0890bfa6a4c365134f4ba16}{%
+           family={Margery},
+           familyi={M\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=105096b7e90eaa37ad663717d5bf260a}{%
+           family={Niclausse},
+           familyi={N\bibinitperiod},
+           given={Nicolas},
+           giveni={N\bibinitperiod}}}%
+        {{hash=73e6f631da4caf2633dae3c71c56dac3}{%
+           family={Nussbaum},
+           familyi={N\bibinitperiod},
+           given={Lucas},
+           giveni={L\bibinitperiod}}}%
+        {{hash=2152192a057d0150252171c09d5c6bbf}{%
+           family={Richard},
+           familyi={R\bibinitperiod},
+           given={Olivier},
+           giveni={O\bibinitperiod}}}%
+        {{hash=5fcb48aa9c0f5ceb5393d33c246814d6}{%
+           family={Pérez},
+           familyi={P\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+        {{hash=027e2a19f6c126f6e5e1ad6b1951aebe}{%
+           family={Quesnel},
+           familyi={Q\bibinitperiod},
+           given={Flavien},
+           giveni={F\bibinitperiod}}}%
+        {{hash=94b2600c9dbf36fae71a495d341675c8}{%
+           family={Rohr},
+           familyi={R\bibinitperiod},
+           given={Cyril},
+           giveni={C\bibinitperiod}}}%
+        {{hash=3b18819c3efc8b1facd089bb5de43ae9}{%
+           family={Sarzyniec},
+           familyi={S\bibinitperiod},
+           given={Luc},
+           giveni={L\bibinitperiod}}}%
+      }
+      \name{editor}{4}{}{%
+        {{hash=c0f7fa5c54cafae8c699f7d494fb3d3f}{%
+           family={Ivanov},
+           familyi={I\bibinitperiod},
+           given={Ivan\bibnamedelima I.},
+           giveni={I\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=9631b80ab26c25eba6a704ea56b81e05}{%
+           family={Sinderen},
+           familyi={S\bibinitperiod},
+           given={Marten},
+           giveni={M\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+        {{hash=415e2bec5763afbeeeadd2e0c4bd0696}{%
+           family={Leymann},
+           familyi={L\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod}}}%
+        {{hash=0a7644150b21dbfd47f5517c17f06769}{%
+           family={Shan},
+           familyi={S\bibinitperiod},
+           given={Tony},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{7f90d14bdd16b27b3f42b8b90c60b9ce}
+      \strng{fullhash}{78c24548e96375cd0ae8a4703bfb2a94}
+      \strng{bibnamehash}{7f90d14bdd16b27b3f42b8b90c60b9ce}
+      \strng{authorbibnamehash}{7f90d14bdd16b27b3f42b8b90c60b9ce}
+      \strng{authornamehash}{7f90d14bdd16b27b3f42b8b90c60b9ce}
+      \strng{authorfullhash}{78c24548e96375cd0ae8a4703bfb2a94}
+      \strng{editorbibnamehash}{344e7720b17339e93cb6d78710c29b20}
+      \strng{editornamehash}{344e7720b17339e93cb6d78710c29b20}
+      \strng{editorfullhash}{4103619fc5563ae4fed87880a288861c}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Cloud Computing and Services Science}
+      \field{isbn}{978-3-319-04518-4}
+      \field{series}{Communications in Computer and Information Science}
+      \field{title}{Adding Virtualization Capabilities to the {Grid'5000} Testbed}
+      \field{volume}{367}
+      \field{year}{2013}
+      \field{pages}{3\bibrangedash 20}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1007/978-3-319-04519-1\_1
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 

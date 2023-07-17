@@ -243,7 +243,10 @@ Durant ce stage, j'ai rajouté des paquets dans des dépôts, afin de les rendre
 
 - **Telegram** -> communication, aide Nix, NixOs-Compose
 
-- **Gitlab** -> issues, repo, README, Doc
+- **Gitlab** -> issues, repo, README, Doc\newline
+
+
+\cite{grid5000} test
 
 \newpage
 
@@ -340,10 +343,20 @@ J'ai eu le plaisir de contribué à l'évolution de NixOS-Compose et de découvr
 
 ## Bilan professionnel
 
+Sur un plan professionnel, ce stage m'a permis de découvrir et d'expériencer le travail en laboratoire. Ainsi que les spécialités du travail dans une équipe de recherche tel que DATAMOVE.
+
+J'ai grandement apprécié le système de fonctionnement de l'équipe. En effet, dans cet environnement de travail, l'entraide et la communication était omniprésente. J'ai donc eu le plaisir de développer au sein de l'équipe des compétences de travail d'équipe et de coordinations avec les différents membres du laboratoire. De plus, les différents séminaires assistés et tâche réalisés me permirent de développer ma curiosité notamment dans le domaine système de l'informatique tout en développement mon bagage de connaissance et mon expérience technique.
+
+Toutes ces expériences me seront à coup sûr très utile et valorisant dans le projet professionnel de devops que je souhaite entreprendre.
+
+Je suis reconnaissant d'avoir eu la possibilité de contribué à ce projet en y rajoutant des compositions qui pourront servir de base recherche sur le calcul de performance de File System Distribué dans un environnement virtualisé tel que Grid5000. Je suis heureux d'avoir aidé à la maintenance et au bon fonctionnement général de l'outils NixOs-Compose qui sera sans aucun doute d'un importance majeur dans la cadre de la recherche.\newline
+
 \newpage
 
 # Annexe
 
 \printbibliography
+
+<!-- ANNEXE IMAGE HERE -->
 
 \printglossaries
