@@ -1,86 +1,137 @@
 @inproceedings{dolstra2004nix,
-  title={Nix: A Safe and Policy-Free System for Software Deployment.},
-  author={Dolstra, Eelco and De Jonge, Merijn and Visser, Eelco and others},
-  booktitle={LISA},
-  volume={4},
-  pages={79--92},
-  year={2004}
+  title     = {Nix: A Safe and Policy-Free System for Software Deployment.},
+  author    = {Dolstra, Eelco and De Jonge, Merijn and Visser, Eelco and others},
+  booktitle = {LISA},
+  volume    = {4},
+  pages     = {79--92},
+  year      = {2004}
 }
 @article{collberg2015repeatability,
-  title={Repeatability and benefaction in computer systems research},
-  author={Collberg, Christian and Proebsting, Todd and Warren, Alex M},
-  journal={University of Arizona TR},
-  volume={14},
-  number={4},
-  year={2015}
+  title   = {Repeatability and benefaction in computer systems research},
+  author  = {Collberg, Christian and Proebsting, Todd and Warren, Alex M},
+  journal = {University of Arizona TR},
+  volume  = {14},
+  number  = {4},
+  year    = {2015}
 }
-@incollection{binnie2016supercharged,
-  title={Supercharged systemd},
-  author={Binnie, Chris},
-  booktitle={Practical Linux Topics},
-  pages={21--32},
-  year={2016},
-  publisher={Springer}
+
+%%%%% NEW ONE %%%%%
+@inproceedings{oar2005,
+  author    = {Capit, N. and Da Costa, G. and Georgiou, Y. and Huard, G. and Martin, C. and Mounie, G. and Neyron, P. and Richard, O.},
+  booktitle = {CCGrid 2005. IEEE International Symposium on Cluster Computing and the Grid, 2005.},
+  title     = {A batch scheduler with high level components},
+  year      = {2005},
+  volume    = {2},
+  number    = {},
+  pages     = {776-783 Vol. 2},
+  doi       = {10.1109/CCGRID.2005.1558641}
 }
-@inproceedings{zhang:hal-01475635,
-  TITLE = {{Hadoop-Benchmark: Rapid Prototyping and Evaluation of Self-Adaptive Behaviors in Hadoop Clusters}},
-  AUTHOR = {Zhang, Bo and Krikava, Filip and Rouvoy, Romain and Seinturier, Lionel},
-  URL = {https://hal.inria.fr/hal-01475635},
-  BOOKTITLE = {{12th International Symposium on Software Engineering for Adaptive and Self-Managing Systems (SEAMS'17)}},
-  ADDRESS = {Buenos Aires, Argentina},
-  EDITOR = {Javier Camara and Bashar Nuseibeh and David Garlan},
-  SERIES = {Proceedings of the 12th International Symposium on Software Engineering for Adaptive and Self-Managing Systems (SEAMS)},
-  PAGES = {6},
-  YEAR = {2017},
-  MONTH = May,
-  KEYWORDS = {Hadoop ;  artefact ;  self-adaptation},
-  PDF = {https://hal.inria.fr/hal-01475635/file/seams17.pdf},
-  HAL_ID = {hal-01475635},
-  HAL_VERSION = {v1},
+
+@inproceedings{nix2017,
+  author    = {Bzeznik, Bruno and Henriot, Oliver and Reis, Valentin and Richard, Olivier and Tavard, Laure},
+  title     = {Nix as HPC Package Management System},
+  year      = {2017},
+  isbn      = {9781450351300},
+  publisher = {Association for Computing Machinery},
+  address   = {New York, NY, USA},
+  url       = {https://doi.org/10.1145/3152493.3152556},
+  doi       = {10.1145/3152493.3152556},
+  abstract  = {Modern High Performance Computing systems are becoming larger and more heterogeneous. The proper management of software for the users of such systems poses a significant challenge. These users run very diverse applications that may be compiled with proprietary tools for specialized hardware. Moreover, the application life-cycle of these software may exceed the lifetime of the HPC systems themselves. These difficulties motivate the use of specialized package management systems. In this paper, we outline an approach to HPC package development, deployment, management, sharing, and reuse based on the Nix functional package manager. We report our experience with this approach inside the GRICAD HPC center[GRICAD 2017a] in Grenoble over a 12 month period and compare it to other existing approaches.},
+  booktitle = {Proceedings of the Fourth International Workshop on HPC User Support Tools},
+  articleno = {4},
+  numpages  = {6},
+  keywords  = {High Performance Computing, Package Management System, Nix},
+  location  = {Denver, CO, USA},
+  series    = {HUST'17}
 }
+
+@article{dockercompose2021,
+  author   = {Ibrahim, Md Hasan
+              and Sayagh, Mohammed
+              and Hassan, Ahmed E.},
+  title    = {A study of how Docker Compose is used to compose multi-component systems},
+  journal  = {Empirical Software Engineering},
+  year     = {2021},
+  month    = {Sep},
+  day      = {23},
+  volume   = {26},
+  number   = {6},
+  pages    = {128},
+  abstract = {Many modern software applications are composed of several components (e.g., a web application is composed of a web server component and a database component). Each of these components can be instantiated as a container from a Docker image. Each Docker image corresponds to a software package (e.g, Apache or MySQL) along with various configuration details. Such containerization simplifies, speeds up, and enables the systematic deployment and maintenance of components at scale. As a natural progression of Docker, applications are now using ``Docker Compose'' to compose multi-component (aka. multi-container) applications by specifying the various components and their relations -- in turn simplifying the deployment and maintenance of complex multi-component applications. This paper reports on a study of 4,103 open-source Github projects that use Docker Compose. Our primary goal is to better understand how it is used in the wild. We observe that over a quarter (26.8{\%}) of the studied projects use Docker Compose for single-component applications. The Docker Compose file for an application is infrequently updated with 30{\%} of such files never changed. We also observe that most of the composed applications leverage basic Docker Compose options instead of using advanced options (e.g., just 4.3{\%} of the multi-component applications use a security related option). While Docker Compose has evolved over the years (it is currently at version 3), applications rarely adopt the new versions and 2.4{\%} of the studied projects downgraded to an earlier version due to platform and option compatibility issues. Our study highlights that while applications are using Docker Compose, they appear to be content with its basic options and earlier versions in many instances. Future studies are needed to better understand how to improve the uptake of the more advanced aspects of Docker Compose, if they are needed at all.},
+  issn     = {1573-7616},
+  doi      = {10.1007/s10664-021-10025-1},
+  url      = {https://doi.org/10.1007/s10664-021-10025-1}
+}
+
+@article{nixos2010,
+  title     = {NixOS: A purely functional Linux distribution},
+  volume    = {20},
+  doi       = {10.1017/S0956796810000195},
+  number    = {5-6},
+  journal   = {Journal of Functional Programming},
+  publisher = {Cambridge University Press},
+  author    = {DOLSTRA, EELCO and LÖH, ANDRES and PIERRON, NICOLAS},
+  year      = {2010},
+  pages     = {577-615}
+}
+
+@inproceedings{nixoscompose2022,
+  author    = {Guilloteau, Quentin and Bleuzen, Jonathan and Poquet, Millian and Richard, Olivier},
+  booktitle = {2022 IEEE International Conference on Cluster Computing (CLUSTER)},
+  title     = {Painless Transposition of Reproducible Distributed Environments with NixOS Compose},
+  year      = {2022},
+  volume    = {},
+  number    = {},
+  pages     = {1-12},
+  doi       = {10.1109/CLUSTER51413.2022.00051}
+}
+
+@inproceedings{grid5000-2005,
+  author    = {Cappello, F. and Caron, E. and Dayde, M. and Desprez, F. and Jegou, Y. and Primet, P. and Jeannot, E. and Lanteri, S. and Leduc, J. and Melab, N. and Mornet, G. and Namyst, R. and Quetier, B. and Richard, O.},
+  booktitle = {The 6th IEEE/ACM International Workshop on Grid Computing, 2005.},
+  title     = {Grid'5000: a large scale and highly reconfigurable grid experimental testbed},
+  year      = {2005},
+  volume    = {},
+  number    = {},
+  pages     = {8 pp.-},
+  doi       = {10.1109/GRID.2005.1542730}
+}
+
+@inproceedings{reproductibility2017,
+  title     = {Enjeux et d{\'e}fis de la recherche reproductible},
+  author    = {Hinsen, Konrad},
+  booktitle = {Journ{\'e}e MaDICS-ReproVirtuFlow 2017},
+  year      = {2017}
+}
+
+%%%%%%
+
 @inproceedings{bellard2005qemu,
-  title={QEMU, a fast and portable dynamic translator.},
-  author={Bellard, Fabrice},
-  booktitle={USENIX annual technical conference, FREENIX Track},
-  volume={41},
-  pages={46},
-  year={2005},
-  organization={Califor-nia, USA}
+  title        = {QEMU, a fast and portable dynamic translator.},
+  author       = {Bellard, Fabrice},
+  booktitle    = {USENIX annual technical conference, FREENIX Track},
+  volume       = {41},
+  pages        = {46},
+  year         = {2005},
+  organization = {Califor-nia, USA}
 }
 @incollection{grid5000,
-   title = {Adding Virtualization Capabilities to the {Grid'5000} Testbed},
-   author = {Balouek, Daniel and Carpen Amarie, Alexandra and Charrier, Ghislain and Desprez, Fr{\'e}d{\'e}ric and Jeannot, Emmanuel and Jeanvoine, Emmanuel and L{\`e}bre, Adrien and Margery, David and Niclausse, Nicolas and Nussbaum, Lucas and Richard, Olivier and P{\'e}rez, Christian and Quesnel, Flavien and Rohr, Cyril and Sarzyniec, Luc},
-   booktitle = {Cloud Computing and Services Science},
-   publisher = {Springer International Publishing},
-   pages = {3-20},
-   volume = {367},
-   editor = {Ivanov, Ivan I. and van Sinderen, Marten and Leymann, Frank and Shan, Tony },
-   series = {Communications in Computer and Information Science },
-   isbn = {978-3-319-04518-4 },
-   doi = {10.1007/978-3-319-04519-1\_1 },
-   year = {2013},
+  title     = {Adding Virtualization Capabilities to the {Grid'5000} Testbed},
+  author    = {Balouek, Daniel and Carpen Amarie, Alexandra and Charrier, Ghislain and Desprez, Fr{\'e}d{\'e}ric and Jeannot, Emmanuel and Jeanvoine, Emmanuel and L{\`e}bre, Adrien and Margery, David and Niclausse, Nicolas and Nussbaum, Lucas and Richard, Olivier and P{\'e}rez, Christian and Quesnel, Flavien and Rohr, Cyril and Sarzyniec, Luc},
+  booktitle = {Cloud Computing and Services Science},
+  publisher = {Springer International Publishing},
+  pages     = {3-20},
+  volume    = {367},
+  editor    = {Ivanov, Ivan I. and van Sinderen, Marten and Leymann, Frank and Shan, Tony },
+  series    = {Communications in Computer and Information Science },
+  isbn      = {978-3-319-04518-4 },
+  doi       = {10.1007/978-3-319-04519-1\_1 },
+  year      = {2013}
 }
-@inproceedings{fathoni2019performance,
-  title={Performance comparison of lightweight kubernetes in edge devices},
-  author={Fathoni, Halim and Yang, Chao-Tung and Chang, Chih-Hung and Huang, Chin-Yin},
-  booktitle={International Symposium on Pervasive Systems, Algorithms and Networks},
-  pages={304--309},
-  year={2019},
-  organization={Springer}
-}
+
 @phdthesis{mercier2019contribution,
-  title={Contribution to High Performance Computing and Big Data Infrastructure Convergence},
-  author={Mercier, Michael},
-  year={2019},
-  school={Universit{\'e} Grenoble Alpes}
-}
-
-
-
-@online{example,
-  author = {MultiMedia LLC},
-  title = {{MS Windows NT} Kernel Description},
-  year = 1999,
-  url = {http://web.archive.org/web/20080207010024/http://www.808multimedia.com/winnt/kernel.htm},
-  urldate = {2010-09-30}
+  title  = {Contribution to High Performance Computing and Big Data Infrastructure Convergence},
+  author = {Mercier, Michael},
+  year   = {2019},
+  school = {Universit{\'e} Grenoble Alpes}
 }
