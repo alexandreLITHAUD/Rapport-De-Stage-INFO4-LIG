@@ -223,15 +223,16 @@ l'opportunité de faire un stage de 15 semaines au Laboratoire
 Informatique de Grenoble (LIG), au sein de l'équipe DATAMOVE.\newline
 
 Durant ce stage, j'ai eu comme objectif d'utiliser et d'améliorer
-l'outil NixOS-Compose, ainsi que de créer différentes compositions dans
-l'optique de les utiliser à une fin de recherche. NixOS-Compose (ou NXC)
-est un logiciel créé par l'équipe, permettant de décrire une
-infrastructure complexe de plusieurs nœuds, en mettant l'accent sur la
-reproductibilité et la simplicité de mise en place. De plus, j'ai été
-amené à contribuer à la maintenance de logiciels tels que OAR et EAR,
-améliorant leur stabilité par le biais de mise à jour. Le tout en
-utilisant le système Grid5000 qui m'a permis de tester mes
-développements dans un environnement réel.\newline
+l'outil NixOS-Compose, ainsi que de créer différentes description
+d'architecture distribué, nommé compositions dans l'optique de les
+utiliser à une fin de recherche. NixOS-Compose (ou NXC) est un logiciel
+créé par l'équipe, permettant de décrire une infrastructure complexe de
+plusieurs machines, en mettant l'accent sur la reproductibilité et la
+simplicité de mise en place. De plus, j'ai été amené à contribuer à la
+maintenance de logiciels tels que OAR et EAR, améliorant leur stabilité
+par le biais de mise à jour. Le tout en utilisant le système Grid5000
+qui m'a permis de tester mes développements dans un environnement
+réel.\newline
 
 Durant ce rapport, vous allez suivre la création des différentes
 compositions que j'ai créée dans le but de tester les performances de
@@ -292,8 +293,8 @@ Grenoble et tous ces membres pour l'accueil chaleureux que j'ai reçu à
 mon arrivée au laboratoire ainsi que pour l'ambiance générale du stage
 qui a été exemplaire.\newline
 
-Je remercie également Monsieur Olivier Richard et Monsieur Nicolas
-Palix, respectivement mon tuteur et mon référent de stage pour leurs
+Je remercie également Monsieur Olivier RICHARD et Monsieur Nicolas
+PALIX, respectivement mon tuteur et mon référent de stage pour leurs
 conseils ainsi que leurs pédagogies qui m'ont permis de réaliser mes
 missions dans les meilleures conditions possibles et de grandement
 monter en compétence durant ce stage.\newline
@@ -303,7 +304,7 @@ reçu et pour les explications avancé sur le fonctionnement de
 Grid5000.\newline
 
 Enfin, je suis reconnaissant envers Quentin GUILLOTEAU et Adrien FAURE,
-respectivement doctorant et chercheur au Laboratoire Informatique de
+respectivement doctorant et ingénieur au Laboratoire Informatique de
 Grenoble pour les inestimables conseils et les réponses dispensés lors
 de mes différentes missions.
 
@@ -319,15 +320,16 @@ faire un stage de 15 semaines au Laboratoire Informatique de Grenoble
 (LIG), au sein de l'équipe DATAMOVE.\newline
 
 Durant ce stage, j'ai eu comme objectif d'utiliser et d'améliorer
-l'outil NixOS-Compose, ainsi que de créer différentes compositions dans
-l'optique de les utiliser à une fin de recherche. NixOS-Compose (ou NXC)
-est un logiciel créé par l'équipe, permettant de décrire une
-infrastructure complexe de plusieurs nœuds, en mettant l'accent sur la
-reproductibilité et la simplicité de mise en place. De plus, j'ai été
-amené à contribuer à la maintenance de logiciels tels que OAR et EAR,
-améliorant leur stabilité par le biais de mise à jour. Le tout en
-utilisant le système Grid5000 qui m'a permis de tester mes
-développements dans un environnement réel.\newline
+l'outil NixOS-Compose, ainsi que de créer différentes description
+d'architecture distribué, nommé compositions dans l'optique de les
+utiliser à une fin de recherche. NixOS-Compose (ou NXC) est un logiciel
+créé par l'équipe, permettant de décrire une infrastructure complexe de
+plusieurs machines, en mettant l'accent sur la reproductibilité et la
+simplicité de mise en place. De plus, j'ai été amené à contribuer à la
+maintenance de logiciels tels que OAR et EAR, améliorant leur stabilité
+par le biais de mise à jour. Le tout en utilisant le système Grid5000
+qui m'a permis de tester mes développements dans un environnement
+réel.\newline
 
 Durant ce rapport, vous allez suivre la création des différentes
 compositions que j'ai créée dans le but de tester les performances de
@@ -350,9 +352,10 @@ do a 15-week internship at the IT Laboratory of Grenoble (LIG), in the
 DATAMOVE team.\newline
 
 During this placement, my aim was to use and improve the NixOS-Compose
-tool, and to create various compositions with a view to using them for
-research purposes. NixOS-Compose (or NXC) is a piece of software created
-by the team, enabling a complex infrastructure of several nodes to be
+tool, and to create various different distributed architecture
+descriptions, called compositions with a view to using them for research
+purposes. NixOS-Compose (or NXC) is a piece of software created by the
+team, enabling a complex infrastructure of several machines to be
 described, with the emphasis on reproducibility and simplicity of
 implementation. I also contributed to the maintenance of software such
 as OAR and EAR, improving their stability through updates. All this was
@@ -388,9 +391,9 @@ divers projet informatiques en lien avec les technologies de \Gls{nix}
 performance computing}). Ainsi que sur la maintenance et l'amélioration
 de logiciel et recherche tels que \Gls{oar} \cite{oar2005} et EAR. Cette
 opportunité m'a donné l'occasion de travailler avec le système
-\Gls{grid5000} \cite{grid5000-2005}, qui offre une infrastructure
-distribuée pour l'exécution de travaux de recherche à grande
-échelle.\newline
+\Gls{grid5000} \cite{grid5000-2005}, qui offre une plateforme
+d'expérimentale distribuée pour l'exécution de travaux de recherche à
+grande échelle.\newline
 
 L'objectif principal de mon stage était, en premier lieu, de contribuer
 au projet \Gls{nixos-compose} \cite{nixoscompose2022}, un outils
@@ -399,19 +402,19 @@ développement reproductible spécialisé pour le HPC en déployant
 directement plusieurs machines sur Grid5000 à la manière de Docker
 Compose \cite{dockercompose2021}. Afin de pourvoir réaliser cette tache
 il était important de monter en compétences sur le gestionnaire de
-paquet fonctionnel Nix et NixOS. Grâce à cette expérience, j'ai pu
-approfondir ma compréhension des principes fondamentaux de la gestion
-des paquets et des environnements isolés, la configuration de système
-basé NixOS, le paradigme de programmation fonctionnelle ainsi que le
-déploiement d'application fonctionnelle dans un environnement
-d'HPC.\newline
+paquet fonctionnel Nix et le système d'exploitation NixOS. Grâce à cette
+expérience, j'ai pu approfondir ma compréhension des principes
+fondamentaux de la gestion des paquets et des environnements isolés, la
+configuration de système basé NixOS, le paradigme de programmation
+fonctionnelle ainsi que le déploiement d'application fonctionnelle dans
+un environnement d'HPC.\newline
 
 En parallèle, j'ai participé à la maintenance et à l'amélioration de
 logiciel de recherche tels que OAR et EAR en les mettant à jour avec la
 dernière version de Nix par exemple. OAR joue un role crucial dans la
 planification de travaux de recherche sur des infrastructures distribué
 comme Grid5000 notamment. EAR quant à lui, permet d'instrumenter et donc
-de quantifié les performances d'applications distribuées.J'ai pu
+de quantifié les performances d'applications distribuées. J'ai pu
 contribuer à l'amélioration de leur stabilité, de leurs performances et
 de leurs fonctionnalités, en collaborant étroitement avec l'équipe de
 développement du laboratoire.\newline
@@ -431,7 +434,7 @@ sur les compétences acquises, les résultats obtenus et les leçons
 apprises. Je présenterai également une analyse critique de mes
 réalisations, ainsi que des suggestions pour des améliorations futures.
 Ce rapport témoigne de ma progression en tant que professionnel de
-l'informatique et des contributions significatives que j'ai apportées au
+l'informatique et des contributions significatives que j'ai apportés au
 sein du LIG.
 
 \newpage
@@ -483,12 +486,13 @@ pu accumuler.
 \hypertarget{luxe9quipe-datamove}{%
 \subsection{L'équipe DATAMOVE}\label{luxe9quipe-datamove}}
 
-L'équipe de recherche DATAMOVE du Laboratoire d'Informatique de Grenoble
-(LIG) se consacre à l'étude et au développement de techniques innovantes
-dans le domaine du traitement et de la gestion des données. Leur
-objectif est de relever les défis liés à la croissance exponentielle des
-données et de proposer des solutions efficaces pour leur manipulation,
-leur analyse et leur exploitation.\newline
+L'équipe de recherche \href{https://www.inria.fr/fr/datamove}{DATAMOVE}
+du Laboratoire d'Informatique de Grenoble (LIG) se consacre à l'étude et
+au développement de techniques innovantes dans le domaine du traitement
+et de la gestion des données. Leur objectif est de relever les défis
+liés à la croissance exponentielle des données et de proposer des
+solutions efficaces pour leur manipulation, leur analyse et leur
+exploitation.\newline
 
 L'équipe est spécialisée dans les piles logicielles distribuées et
 l'ordonnancement, généralement dans un environnement de High Performance
@@ -529,17 +533,17 @@ En ce jour l'équipe DATAMOVE est composé de 34 personnes :
 
 \begin{itemize}
 \item
-  10 chercheurs
+  10 chercheur.e.s
 \item
-  16 étudiants en thèse
+  16 étudiant.e.s en thèse
 \item
   5 ingénieurs
 \item
-  3 assistants\newline
+  3 assistant.e.s\newline
 \end{itemize}
 
-Cette équipe est dirigée par Monsieur Bruno RAFFIN. Olivier RICHARD,
-Quentin QUILLOTEAU et Adrien FAURE sont tous membres de cette équipe.
+Cette équipe est dirigée par Bruno RAFFIN. Olivier RICHARD, Quentin
+QUILLOTEAU et Adrien FAURE sont tous membres de cette équipe.
 Respectivement en tant que chercheur, étudiant en thèse et
 ingénieur.\newline
 
@@ -637,17 +641,18 @@ Le store Nix est un composant essentiel pour assurer le bon
 fonctionnement et la reproductibilité du système de gestion de paquet
 Nix. Il fonctionne sous forme de système de fichier hiérarchique qui
 stocke tous les paquets présents dans la machine dans un dossier
-spécifique nommé store. La gestion diffère donc des gestionnaires de
-paquet classique comme apt ou pacman qui stocke tout en utilisant un
-système de fichier standard.\newline
+spécifique nommé \texttt{store}. La gestion diffère donc des
+gestionnaires de paquets classiques comme apt ou pacman qui stocke tout
+en utilisant un système de fichier standard
+(\texttt{usr/bin},\texttt{usr/lib}).\newline
 
 Le store Nix repose sur 5 principes clés :
 
 \begin{itemize}
 \item
   \textbf{Hashing des paquets} : Chaque paquet ou dépendances dans le
-  store est identifié par un hachage spécifique parfait basé sur son
-  contenu. Grâce à ce système, deux paquets identiques ne seront stockés
+  store est identifié par un hachage spécifique parfait basé sur ses
+  entrées. Grâce à ce système, deux paquets identiques ne seront stockés
   qu'une seule fois. De plus, il est donc possible de stocker plusieurs
   versions d'un même paquet.
 \item
@@ -686,11 +691,11 @@ système.\newline
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{images/store.png}
-\caption{Exemple d'architecture de store multi user}
+\caption{Exemple d'architecture de store multi utilisateur}
 \end{figure}
 
 Comme on peut le voir dans la figure 4, il est donc possible avec ce
-système de posséder plusieurs versions d'un même paquet. De plus, avec
+système de posséder plusieurs subversion d'un même paquet. De plus, avec
 le système de profil Nix, il est possible de définir quel utilisateur
 utilisent quel paquet et donc séparer les utilisateurs. Cependant, peu
 importe le nombre d'usagés de la machine, il n'y aura toujours qu'un
@@ -735,16 +740,17 @@ exemple.\newline
 \caption{Script nix de creation d'environnement latex}
 \end{figure}
 
-Voici un exemple de création d'environnement isole Nix en utilisant les
-flakes nix. Ce script ne marche que sur les architectures x86\_64-linux,
-car il ne récupère les dépendances que de ce système d'exploitation ci.
-Ce script rajoute dans la PATH du terminal en cours les applications
-mise dans les buildInputs, c'est-à-dire dans ce cas pandoc, rubber et
-biber. À la fin de cette session, le PATH sera remis à défaut. Pour
-l'exécuter, il faut effectuer la commande \texttt{nix\ develop\ .} ou
-``.'' est le chemin vers le flake. C'est ce genre de configuration que
-j'ai été amené à utiliser et à créer afin d'avoir un environnement et un
-résultat reproductible.\newline
+Voici un exemple de création d'environnement isolé Nix en utilisant les
+flakes Nix. Ce script ne marche que sur les architectures
+\texttt{x86\_64-linux}, car il ne récupère les dépendances que de cet
+ordinateur. Ce script rajoute dans la PATH du terminal en cours les
+applications mise dans les \texttt{buildInputs}, c'est-à-dire dans ce
+cas \texttt{pandoc}, \texttt{rubber} et \texttt{biber}. À la fin de
+cette session, le PATH sera remis à défaut. Pour l'exécuter, il faut
+effectuer la commande \texttt{nix\ develop\ .} ou ``.'' est le chemin
+vers le flake. C'est ce genre de configuration que j'ai été amené à
+utiliser et à créer afin d'avoir un environnement et un résultat
+reproductible.\newline
 
 \hypertarget{nixos}{%
 \subsubsection{NixOS}\label{nixos}}
@@ -752,9 +758,9 @@ résultat reproductible.\newline
 NixOS est une distribution Linux entièrement basé sur Nix. Il utilise
 une approche déclarative pour effectuer la configuration système.
 L'intégralité de la configuration est définie par le biais du fichier
-configuration.nix. C'est un principe très agréable, car cela permet de
-très simplement stocker et versionné la configuration du système afin de
-pouvoir par exemple la réutiliser dans une architecture
+\texttt{configuration.nix}. C'est un principe très agréable, car cela
+permet de très simplement stocker et versionner la configuration du
+système afin de pouvoir par exemple la réutiliser dans une architecture
 similaire.\newline
 
 NixOS utilise Nix pour s'occuper de la gestion des paquets. Donc, chaque
@@ -793,13 +799,15 @@ communauté Nix.\newline
 
 \textbf{Nixpkgs}\newline
 
-Nixpkgs est le dépôt principal de paquet Nix, il est automatiquement
-référencé en tan que tel dans une machine NixOS. Il contient l'un des
-plus grands nombres de paquets pour un package manager. plus de 80 000.
-Ces paquets peuvent être des outils de développement, des bibliothèques,
-des applications, etc. Les paquets disponibles sont ajoutés et maintenus
-par la communauté et sont constamment mis à jour afin d'assurer que les
-logiciels soient toujours dans une version correcte.\newline
+\href{https://github.com/NixOS/nixpkgs}{Nixpkgs} est le dépôt principal
+de paquet Nix, il est automatiquement référencé en tant que tel dans une
+machine NixOS. Il contient l'un des plus grands nombres de paquets pour
+un package manager. plus de 80 000. Ces paquets peuvent être des outils
+de développement, des bibliothèques, des applications, etc. Les paquets
+disponibles sont ajoutés et maintenus par la communauté et sont
+constamment mis à jour afin d'assurer que les logiciels soient toujours
+dans une version correcte. Ce qui permet à Nix d'être la distribution la
+plus à jour.\newline
 
 \textbf{NUR}\newline
 
@@ -817,11 +825,12 @@ manière fonctionnel. C'est un élément essentiel de la réussite de Nix et
 NixOS.\newline
 
 Durant ce stage, j'ai rajouté des paquets dans des dépôts, afin de les
-rendre utilisable par la communauté. Notamment sur le dépôt Nur-kapack
-un sous dépôt de NUR, créé par l'équipe DATAMOVE pour y stocké les
-paquets important pour la recherche au laboratoire. J'ai eu l'occasion
-de comprendre son fonctionnement, tester certain des paquets et donc y
-rajouter des fonctionnalités et des paquets.
+rendre utilisable par la communauté. Notamment sur le dépôt
+\href{https://github.com/oar-team/nur-kapack}{Nur-kapack} un sous dépôt
+de NUR, créé par l'équipe DATAMOVE pour y stocké les paquets important
+pour la recherche au laboratoire. J'ai eu l'occasion de comprendre son
+fonctionnement, tester certain des paquets et donc y rajouter des
+fonctionnalités et des paquets.
 
 \newpage
 
@@ -842,8 +851,8 @@ Le système de mail était important pour le bon fonctionnement du LIG. Il
 membres du laboratoire. J'avais à ma disposition une adresse mail INRIA.
 Les mails sont particulièrement importants afin de recevoir des
 informations pour les prochaines conférence et séminaire présent dans le
-bâtiment IMAG. Ces conférences ont été importantes, car elle était
-vectrice de nombreuses connaissances et permutait d'exacerber ma
+bâtiment IMAG. Ces conférences ont été importantes, car elles étaient
+vectrices de nombreuses connaissances et permettait d'exacerber ma
 curiosité sur le domaine de l'informatique en général.\newline
 
 \textbf{Telegram}\newline
@@ -862,11 +871,28 @@ Il permet de s'assurer de la pérennisation du code. Lors de mon stage,
 j'ai utilisé massivement le Gitlab de l'Inria afin d'y entreposé les
 dépôts que j'ai créés pour chacune de mes compositions. J'ai également
 fait partie du groupe de développeur oar sur GitHub. Ce système ma
-permis de centralisé la documentation que j'ai écrite. Enfin, git permet
-de communiquer et de discuter de certain problème par le biais des
-issues git. Les issues sont une partie essentielle du bon fonctionnement
-d'un projet, surtout dans un domaine si précis que celui de la
-recherche.
+permis de centraliser la documentation que j'ai écrite. Enfin, git
+permet de communiquer et de discuter de certain problème par le biais
+des issues git. Les issues sont une partie essentielle du bon
+fonctionnement d'un projet, surtout dans un domaine si précis que celui
+de la recherche.
+
+Voici les projet que j'ai plus particulièrement contribué :
+
+\begin{itemize}
+\item
+  \href{https://github.com/oar-team/nur-kapack}{Nur-Kapack}
+\item
+  Rajout de composition de Files System distribué dans le
+  \href{https://gitlab.inria.fr/nixos-compose/hpc-io}{groupe HPC-IO}
+\item
+  \href{https://gricad-gitlab.univ-grenoble-alpes.fr/regale/tools/regale-nixos-compose}{Regale}
+\item
+  \href{https://gitlab.inria.fr/nixos-compose/nixos-compose}{NixOS-Compose}
+\item
+  Le \href{https://gitlab.inria.fr/nixos-compose/stages/alithaud}{dépot
+  de stockage des ressources du stage}
+\end{itemize}
 
 \newpage
 
@@ -883,14 +909,16 @@ distribué, reproductible et éphémère.\newline
 \caption{Schéma de fonctionnement de NXC}
 \end{figure}
 
-NixOS-Compose permet de créer des compositions déployables. Une
+NixOS-Compose permet de créer de déployer des compositions, c'est-à-dire
+une description fonctionnelle d'un environnement distribué. Une
 composition est une description d'une architecture distribuée, et ce, de
 manière fonctionnel. En effet, chaque composition est écrite en
 utilisant le langage de programmation Nix. Une composition permet de
 décrire plusieurs \textbf{rôles}. Ces rôles correspondent à une
-configuration d'une machine Nix. Il est Donc possible grâce à cet outil
-de déployer directement un environnement de machine distribué configuré
-en utilisant Nix d'une façon spécifique et déclarative.\newline
+configuration d'une machine NixOS. Il est donc possible grâce à cet
+outil de déployer directement un environnement de machines distribuées
+configuré en utilisant NixOS d'une façon spécifique et
+déclarative.\newline
 
 \begin{figure}[h]
 \centering
@@ -901,9 +929,9 @@ en utilisant Nix d'une façon spécifique et déclarative.\newline
 La figure 7 correspond à un exemple simple de composition Nix dans
 lequel nous créons 2 rôles différents : \texttt{node}, \texttt{serveur}.
 Le node possède des outils de calcul de performances, ior et htop. Le
-server quant à lui initialise le service nfs qui automatiquement présent
-dans le langage nix car créé par la communauté dans le dépôt
-nixpkgs.\newline
+server quant à lui initialise le service \texttt{nfs}, de partage de
+fichier, qui est présent dans le langage Nix car créé par la communauté
+dans le dépôt nixpkgs.\newline
 
 Chacun de ces rôles sont configurés en utilisant le Nix et permettent en
 quelques lignes de créer deux noeuds, directement en communication, et
@@ -921,7 +949,8 @@ informations importantes pour chaque rôle. L'utilisateur est libre du
 nombre de noeud ou machines qui vont utiliser la configuration d'un
 rôle. Ainsi, dans l'exemple de la figure 7 il est possible à
 l'utilisateur de choisir lu nombre de machines utilisant le rôle
-\texttt{node} ou \texttt{serveur}.\newline
+\texttt{node} ou \texttt{serveur}, et ce sans avoir besoin de recompiler
+les rôles.\newline
 
 À la base, il faillait directement définir le nombre de noeud voulu dans
 la composition. Cette solution, bien que très fonctionnel, force
@@ -953,11 +982,11 @@ Il existe un certain nombre de flavours disponible avec NixOS-Compose
   Docker, qui créer un système de conteneurisation en utilisant Docker
   et Docker-Compose.
 \item
-  G5K-ramdisk, qui va créer une image ramdisk, cette solution est
-  lourde.
+  G5K-ramdisk, qui va créer une image ramdisk, et donc va stocker en sen
+  sein l'intégralité du store, ce qui rend cette technique très lourde.
 \item
-  G5K-nsf-store, qui va utiliser nfs pour faire du partage de paquet
-  dans le store nix.
+  G5K-nfs-store, qui va utiliser nfs pour faire du partage de paquet
+  dans le store nix et donc limiter la taille globale de l'image.
 \item
   G5K-image, qui va créer une image déployable selon des configurations
   différentes.\newline
@@ -980,7 +1009,8 @@ environnement dans un fichier de configuration et d'utiliser des scripts
 python afin de pouvoir tester le fonctionnement de ce système. Ce type
 de fichier est commun et couramment utilisé dans la communauté Nix. De
 nombreux fichiers de tests unitaires sont disponibles dans le dépôt de
-paquet Nixpkgs.\newline
+paquet
+\href{https://github.com/NixOS/nixpkgs/tree/master/nixos/tests}{Nixpkgs}.\newline
 
 Les compositions NixOS-Compose réutilisent la structure pré-établie par
 les tests NixOS. Cela permet de facilement passé de Test NixOS à
@@ -989,7 +1019,7 @@ un environnement distribué. En effet, la syntaxe des tests sont
 similaires et servent généralement de base à la composition s'ils sont
 présents dans nixpkgs. NixOS-Compose reprend donc pour ces compositions
 la syntaxe des tests, mais NXC permet de répondre à des problèmes que
-les tests NixOS serait incapable de réaliser.\newline
+les tests NixOS seraient incapables de réaliser.\newline
 
 Le lien avec ces tests permet à NixOS-Compose d'être plus accessible
 pour la communauté des utilisateurs de Nix en plus de facilité la
@@ -1041,8 +1071,8 @@ découvert les problématiques qu'une équipe de recherche telle que
 DATAMOVE peuvent poser.
 
 Ce stage m'a permis de rencontrer des experts dans le sujet. Ces
-interattractions ont été essentielles tout au long du stage. Ainsi, elle
-était le vecteur de nouvelle connaissance et de la découverte de
+interactions ont été essentielles tout au long du stage. Ainsi, elle
+était le vecteur de nouvelles connaissances et de la découverte de
 nouveaux outils qui font maintenant partie de mon quotidien d'ingénieur
 (zsh, obsidian, fzf, tmux, \ldots) en plus de découvrir des nouvelles
 méthodes de travail adapté au travail et efficace.
@@ -1069,13 +1099,13 @@ séminaires assistés et tâche réalisés me permirent de développer ma
 curiosité notamment dans le domaine système de l'informatique tout en
 développement mon bagage de connaissance et mon expérience technique.
 
-Toutes ces expériences me seront à coup sûr très utile et valorisant
-dans le projet professionnel de devops que je souhaite entreprendre.
+Toutes ces expériences me seront à coup sûr très utiles et valorisant
+dans le projet professionnel de DevOps que je souhaite entreprendre.
 
 Je suis reconnaissant d'avoir eu la possibilité de contribué à ce projet
 en y rajoutant des compositions qui pourront servir de base recherche
-sur le calcul de performance de File System Distribué dans un
-environnement virtualisé tel que Grid5000. Je suis heureux d'avoir aidé
+sur le calcul de performance de File System Distribués dans une
+plateforme expérimentale tel que Grid5000. Je suis heureux d'avoir aidé
 à la maintenance et au bon fonctionnement général de l'outils
 NixOs-Compose qui sera sans aucun doute d'un importance majeur dans la
 cadre de la recherche.\newline

@@ -113,15 +113,15 @@ C'est dans cette optique que des outils de mise en place de pile logicielle comm
 
 En ce jour l'équipe DATAMOVE est composé de 34 personnes :
 
-- 10 chercheurs
+- 10 chercheur.e.s
 
-- 16 étudiants en thèse
+- 16 étudiant.e.s en thèse
 
 - 5 ingénieurs
 
-- 3 assistants\newline
+- 3 assistant.e.s\newline
 
-Cette équipe est dirigée par Monsieur Bruno RAFFIN. Olivier RICHARD, Quentin QUILLOTEAU et Adrien FAURE sont tous membres de cette équipe. Respectivement en tant que chercheur, étudiant en thèse et ingénieur.\newline
+Cette équipe est dirigée par Bruno RAFFIN. Olivier RICHARD, Quentin QUILLOTEAU et Adrien FAURE sont tous membres de cette équipe. Respectivement en tant que chercheur, étudiant en thèse et ingénieur.\newline
 
 
 **Quelques projets phares de l'équipe**\newline
@@ -162,11 +162,11 @@ Enfin, Nix est aussi capable de générer des environnements isolés configurabl
 
 **Le Nix-Store**\newline
 
-Le store Nix est un composant essentiel pour assurer le bon fonctionnement et la reproductibilité du système de gestion de paquet Nix. Il fonctionne sous forme de système de fichier hiérarchique qui stocke tous les paquets présents dans la machine dans un dossier spécifique nommé store. La gestion diffère donc des gestionnaires de paquet classique comme apt ou pacman qui stocke tout en utilisant un système de fichier standard.\newline
+Le store Nix est un composant essentiel pour assurer le bon fonctionnement et la reproductibilité du système de gestion de paquet Nix. Il fonctionne sous forme de système de fichier hiérarchique qui stocke tous les paquets présents dans la machine dans un dossier spécifique nommé `store`. La gestion diffère donc des gestionnaires de paquets classiques comme apt ou pacman qui stocke tout en utilisant un système de fichier standard (`usr/bin`,`usr/lib`).\newline
 
 Le store Nix repose sur 5 principes clés :
 
-- **Hashing des paquets** : Chaque paquet ou dépendances dans le store est identifié par un hachage spécifique parfait basé sur son contenu. Grâce à ce système, deux paquets identiques ne seront stockés qu'une seule fois. De plus, il est donc possible de stocker plusieurs versions d'un même paquet.
+- **Hashing des paquets** : Chaque paquet ou dépendances dans le store est identifié par un hachage spécifique parfait basé sur ses entrées. Grâce à ce système, deux paquets identiques ne seront stockés qu'une seule fois. De plus, il est donc possible de stocker plusieurs versions d'un même paquet.
 
 - **Immutabilité des fichiers** : Les paquets présents dans le store sont immuables. Il est impossible d'en effectuer une modification après leur création. C'est un avantage considérable, car cela assure l'intégrité des paquets et limite les effets de bord néfaste.
 
@@ -181,10 +181,10 @@ Tous ces principes permettent la reproductibilité des environnements de dévelo
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{images/store.png}
-\caption{Exemple d'architecture de store multi user}
+\caption{Exemple d'architecture de store multi utilisateur}
 \end{figure}
 
-Comme on peut le voir dans la figure 4, il est donc possible avec ce système de posséder plusieurs versions d'un même paquet. De plus, avec le système de profil Nix, il est possible de définir quel utilisateur utilisent quel paquet et donc séparer les utilisateurs. Cependant, peu importe le nombre d'usagés de la machine, il n'y aura toujours qu'un seul store global.\newline
+Comme on peut le voir dans la figure 4, il est donc possible avec ce système de posséder plusieurs subversion d'un même paquet. De plus, avec le système de profil Nix, il est possible de définir quel utilisateur utilisent quel paquet et donc séparer les utilisateurs. Cependant, peu importe le nombre d'usagés de la machine, il n'y aura toujours qu'un seul store global.\newline
 
 **Les Nix Flakes**\newline
 
@@ -204,11 +204,11 @@ En outre, les nix flakes est un élément essentiel à Nix et est une technologi
 \caption{Script nix de creation d'environnement latex}
 \end{figure}
 
-Voici un exemple de création d'environnement isole Nix en utilisant les flakes nix. Ce script ne marche que sur les architectures x86_64-linux, car il ne récupère les dépendances que de ce système d’exploitation ci. Ce script rajoute dans la PATH du terminal en cours les applications mise dans les buildInputs, c'est-à-dire dans ce cas pandoc, rubber et biber. À la fin de cette session, le PATH sera remis à défaut. Pour l'exécuter, il faut effectuer la commande `nix develop .` ou "." est le chemin vers le flake. C'est ce genre de configuration que j'ai été amené à utiliser et à créer afin d'avoir un environnement et un résultat reproductible.\newline
+Voici un exemple de création d'environnement isolé Nix en utilisant les flakes Nix. Ce script ne marche que sur les architectures `x86_64-linux`, car il ne récupère les dépendances que de cet ordinateur. Ce script rajoute dans la PATH du terminal en cours les applications mise dans les `buildInputs`, c'est-à-dire dans ce cas `pandoc`, `rubber` et `biber`. À la fin de cette session, le PATH sera remis à défaut. Pour l'exécuter, il faut effectuer la commande `nix develop .` ou "." est le chemin vers le flake. C'est ce genre de configuration que j'ai été amené à utiliser et à créer afin d'avoir un environnement et un résultat reproductible.\newline
 
 ### NixOS
 
-NixOS est une distribution Linux entièrement basé sur Nix. Il utilise une approche déclarative pour effectuer la configuration système. L'intégralité de la configuration est définie par le biais du fichier configuration.nix. C'est un principe très agréable, car cela permet de très simplement stocker et versionné la configuration du système afin de pouvoir par exemple la réutiliser dans une architecture similaire.\newline
+NixOS est une distribution Linux entièrement basé sur Nix. Il utilise une approche déclarative pour effectuer la configuration système. L'intégralité de la configuration est définie par le biais du fichier `configuration.nix`. C'est un principe très agréable, car cela permet de très simplement stocker et versionner la configuration du système afin de pouvoir par exemple la réutiliser dans une architecture similaire.\newline
 
 NixOS utilise Nix pour s'occuper de la gestion des paquets. Donc, chaque paquet est traité manière fonctionnelle. NixOS suit un modèle de mise à jour sous le nom de *Rolling Release*. Cela consiste à fournir des mises à jour de manière incrémentale et régulière. Dans le cas de NixOS, tous les 6 mois. Enfin, le système d'exploitation stocke la configuration système après chaque changement, permettant de retourner à tout moment à une configuration précédente en cas de problème.\newline
 
@@ -223,7 +223,7 @@ Durant mon stage, j'ai eu la possibilité de rajouter des paquets dans certain d
 
 **Nixpkgs**\newline
 
-Nixpkgs est le dépôt principal de paquet Nix, il est automatiquement référencé en tan que tel dans une machine NixOS. Il contient l'un des plus grands nombres de paquets pour un package manager. plus de 80 000. Ces paquets peuvent être des outils de développement, des bibliothèques, des applications, etc. Les paquets disponibles sont ajoutés et maintenus par la communauté et sont constamment mis à jour afin d'assurer que les logiciels soient toujours dans une version correcte.\newline
+[Nixpkgs](https://github.com/NixOS/nixpkgs) est le dépôt principal de paquet Nix, il est automatiquement référencé en tant que tel dans une machine NixOS. Il contient l'un des plus grands nombres de paquets pour un package manager. plus de 80 000. Ces paquets peuvent être des outils de développement, des bibliothèques, des applications, etc. Les paquets disponibles sont ajoutés et maintenus par la communauté et sont constamment mis à jour afin d'assurer que les logiciels soient toujours dans une version correcte. Ce qui permet à Nix d'être la distribution la plus à jour.\newline
 
 **NUR**\newline
 
@@ -231,7 +231,7 @@ Nur est un dépôt de paquet supplémentaire à Nix, il est maintenu par des uti
 
 Le fonctionnement de ces outils dépend de la collaboration de la communauté. Cette collaboration permet à Nix de posséder le plus grand nombre de paquets disponible dans un gestionnaire de paquet. Et ce de manière fonctionnel. C'est un élément essentiel de la réussite de Nix et NixOS.\newline
 
-Durant ce stage, j'ai rajouté des paquets dans des dépôts, afin de les rendre utilisable par la communauté. Notamment sur le dépôt Nur-kapack un sous dépôt de NUR, créé par l'équipe DATAMOVE pour y stocké les paquets important pour la recherche au laboratoire. J'ai eu l'occasion de comprendre son fonctionnement, tester certain des paquets et donc y rajouter des fonctionnalités et des paquets.
+Durant ce stage, j'ai rajouté des paquets dans des dépôts, afin de les rendre utilisable par la communauté. Notamment sur le dépôt [Nur-kapack](https://github.com/oar-team/nur-kapack) un sous dépôt de NUR, créé par l'équipe DATAMOVE pour y stocké les paquets important pour la recherche au laboratoire. J'ai eu l'occasion de comprendre son fonctionnement, tester certain des paquets et donc y rajouter des fonctionnalités et des paquets.
 
 \newpage
 
@@ -241,7 +241,7 @@ La communication est un élément essentiel au bon fonctionnement d'une équipe 
 
 **Mail**\newline
 
-Le système de mail était important pour le bon fonctionnement du LIG. Il était vecteur de message et d'information essentiel pour tous les membres du laboratoire. J'avais à ma disposition une adresse mail INRIA. Les mails sont particulièrement importants afin de recevoir des informations pour les prochaines conférence et séminaire présent dans le bâtiment IMAG. Ces conférences ont été importantes, car elle était vectrice de nombreuses connaissances et permutait d'exacerber ma curiosité sur le domaine de l'informatique en général.\newline
+Le système de mail était important pour le bon fonctionnement du LIG. Il était vecteur de message et d'information essentiel pour tous les membres du laboratoire. J'avais à ma disposition une adresse mail INRIA. Les mails sont particulièrement importants afin de recevoir des informations pour les prochaines conférence et séminaire présent dans le bâtiment IMAG. Ces conférences ont été importantes, car elles étaient vectrices de nombreuses connaissances et permettait d'exacerber ma curiosité sur le domaine de l'informatique en général.\newline
 
 **Telegram**\newline
 
@@ -249,7 +249,19 @@ Le réseaux de communication Telegram était utilisé par l’équipe de recherc
 
 **Gitlab et Github**\newline
 
-L'utilisation d'un gestionnaire de version git est une évidence et parfaitement essentiel dans n'importe quel type de projet informatique. Il permet de s'assurer de la pérennisation du code. Lors de mon stage, j'ai utilisé massivement le Gitlab de l'Inria afin d'y entreposé les dépôts que j'ai créés pour chacune de mes compositions. J'ai également fait partie du groupe de développeur oar sur GitHub. Ce système ma permis de centralisé la documentation que j'ai écrite. Enfin, git permet de communiquer et de discuter de certain problème par le biais des issues git. Les issues sont une partie essentielle du bon fonctionnement d'un projet, surtout dans un domaine si précis que celui de la recherche.
+L'utilisation d'un gestionnaire de version git est une évidence et parfaitement essentiel dans n'importe quel type de projet informatique. Il permet de s'assurer de la pérennisation du code. Lors de mon stage, j'ai utilisé massivement le Gitlab de l'Inria afin d'y entreposé les dépôts que j'ai créés pour chacune de mes compositions. J'ai également fait partie du groupe de développeur oar sur GitHub. Ce système ma permis de centraliser la documentation que j'ai écrite. Enfin, git permet de communiquer et de discuter de certain problème par le biais des issues git. Les issues sont une partie essentielle du bon fonctionnement d'un projet, surtout dans un domaine si précis que celui de la recherche.
+
+Voici les projet que j'ai plus particulièrement contribué :
+
+- [Nur-Kapack](https://github.com/oar-team/nur-kapack)
+
+- Rajout de composition de Files System distribué dans le [groupe HPC-IO](https://gitlab.inria.fr/nixos-compose/hpc-io)
+
+- [Regale](https://gricad-gitlab.univ-grenoble-alpes.fr/regale/tools/regale-nixos-compose)
+
+- [NixOS-Compose](https://gitlab.inria.fr/nixos-compose/nixos-compose)
+
+- Le [dépot de stockage des ressources du stage](https://gitlab.inria.fr/nixos-compose/stages/alithaud)
 
 \newpage
 
@@ -263,7 +275,7 @@ L'utilisation d'un gestionnaire de version git est une évidence et parfaitement
 \caption{Schéma de fonctionnement de NXC}
 \end{figure}
 
-NixOS-Compose permet de créer des compositions déployables. Une composition est une description d'une architecture distribuée, et ce, de manière fonctionnel. En effet, chaque composition est écrite en utilisant le langage de programmation Nix. Une composition permet de décrire plusieurs **rôles**. Ces rôles correspondent à une configuration d'une machine Nix. Il est Donc possible grâce à cet outil de déployer directement un environnement de machine distribué configuré en utilisant Nix d'une façon spécifique et déclarative.\newline
+NixOS-Compose permet de créer de déployer des compositions, c'est-à-dire une description fonctionnelle d'un environnement distribué. Une composition est une description d'une architecture distribuée, et ce, de manière fonctionnel. En effet, chaque composition est écrite en utilisant le langage de programmation Nix. Une composition permet de décrire plusieurs **rôles**. Ces rôles correspondent à une configuration d'une machine NixOS. Il est donc possible grâce à cet outil de déployer directement un environnement de machines distribuées configuré en utilisant NixOS d'une façon spécifique et déclarative.\newline
 
 \begin{figure}[h]
 \centering
@@ -271,13 +283,13 @@ NixOS-Compose permet de créer des compositions déployables. Une composition es
 \caption{Exemple de composition}
 \end{figure}
 
-La figure 7 correspond à un exemple simple de composition Nix dans lequel nous créons 2 rôles différents : `node`, `serveur`. Le node possède des outils de calcul de performances, ior et htop. Le server quant à lui initialise le service nfs qui automatiquement présent dans le langage nix car créé par la communauté dans le dépôt nixpkgs.\newline
+La figure 7 correspond à un exemple simple de composition Nix dans lequel nous créons 2 rôles différents : `node`, `serveur`. Le node possède des outils de calcul de performances, ior et htop. Le server quant à lui initialise le service `nfs`, de partage de fichier, qui est présent dans le langage Nix car créé par la communauté dans le dépôt nixpkgs.\newline
 
 Chacun de ces rôles sont configurés en utilisant le Nix et permettent en quelques lignes de créer deux noeuds, directement en communication, et ce, de manière éphémère et reproductible. Il semble donc évidement de comprendre l’intérêt d'un tel outil dans le monde la recherche. La création simple de noeud reproductible et éphémère permet de créer des conditions de recherche optimal, et ce, dans de nombreuses conditions.\newline
 
 **Le déploiement**\newline
 
-À la fin de la compilation de la composition (commande `nxc build`), NXC créer un fichier json stockant en son sein les informations importantes pour chaque rôle. L'utilisateur est libre du nombre de noeud ou machines qui vont utiliser la configuration d'un rôle. Ainsi, dans l'exemple de la figure 7 il est possible à l'utilisateur de choisir lu nombre de machines utilisant le rôle `node` ou `serveur`.\newline
+À la fin de la compilation de la composition (commande `nxc build`), NXC créer un fichier json stockant en son sein les informations importantes pour chaque rôle. L'utilisateur est libre du nombre de noeud ou machines qui vont utiliser la configuration d'un rôle. Ainsi, dans l'exemple de la figure 7 il est possible à l'utilisateur de choisir lu nombre de machines utilisant le rôle `node` ou `serveur`, et ce sans avoir besoin de recompiler les rôles.\newline
 
 À la base, il faillait directement définir le nombre de noeud voulu dans la composition. Cette solution, bien que très fonctionnel, force l'utilisateur de recompiler à chaque changement de cette valeur, ce qui est une perte sèche de performance.\newline
 
@@ -293,9 +305,9 @@ Il existe un certain nombre de flavours disponible avec NixOS-Compose :\newline
 
 - Docker, qui créer un système de conteneurisation en utilisant Docker et Docker-Compose.
 
-- G5K-ramdisk, qui va créer une image ramdisk, cette solution est lourde.
+- G5K-ramdisk, qui va créer une image ramdisk, et donc va stocker en sen sein l'intégralité du store, ce qui rend cette technique très lourde.
 
-- G5K-nsf-store, qui va utiliser nfs pour faire du partage de paquet dans le store nix.
+- G5K-nfs-store, qui va utiliser nfs pour faire du partage de paquet dans le store nix et donc limiter la taille globale de l'image.
 
 - G5K-image, qui va créer une image déployable selon des configurations différentes.\newline
 
@@ -305,9 +317,9 @@ Il est donc possible de tester des compositions sur plusieurs environnement afin
 
 **Les test NixOS**\newline
 
-NixOS possède un système de test unitaire capable de définir un environnement dans un fichier de configuration et d'utiliser des scripts python afin de pouvoir tester le fonctionnement de ce système. Ce type de fichier est commun et couramment utilisé dans la communauté Nix. De nombreux fichiers de tests unitaires sont disponibles dans le dépôt de paquet Nixpkgs.\newline
+NixOS possède un système de test unitaire capable de définir un environnement dans un fichier de configuration et d'utiliser des scripts python afin de pouvoir tester le fonctionnement de ce système. Ce type de fichier est commun et couramment utilisé dans la communauté Nix. De nombreux fichiers de tests unitaires sont disponibles dans le dépôt de paquet [Nixpkgs](https://github.com/NixOS/nixpkgs/tree/master/nixos/tests).\newline
 
-Les compositions NixOS-Compose réutilisent la structure pré-établie par les tests NixOS. Cela permet de facilement passé de Test NixOS à composition NXC afin de pouvoir rapidement tester une technologie dans un environnement distribué. En effet, la syntaxe des tests sont similaires et servent généralement de base à la composition s'ils sont présents dans nixpkgs. NixOS-Compose reprend donc pour ces compositions la syntaxe des tests, mais NXC permet de répondre à des problèmes que les tests NixOS serait incapable de réaliser.\newline
+Les compositions NixOS-Compose réutilisent la structure pré-établie par les tests NixOS. Cela permet de facilement passé de Test NixOS à composition NXC afin de pouvoir rapidement tester une technologie dans un environnement distribué. En effet, la syntaxe des tests sont similaires et servent généralement de base à la composition s'ils sont présents dans nixpkgs. NixOS-Compose reprend donc pour ces compositions la syntaxe des tests, mais NXC permet de répondre à des problèmes que les tests NixOS seraient incapables de réaliser.\newline
 
 Le lien avec ces tests permet à NixOS-Compose d'être plus accessible pour la communauté des utilisateurs de Nix en plus de facilité la transition entre test simple et composition avancé.\newline
 
@@ -340,7 +352,7 @@ J'ai été amené à utiliser et à comprendre le fonctionnement de chacune des 
 
 Ce stage m'a permis de découvrir le monde de la recherche de manière poussé. De plus, j'ai développé une méthode de travail efficace. J'ai découvert les problématiques qu'une équipe de recherche telle que DATAMOVE peuvent poser.
 
-Ce stage m'a permis de rencontrer des experts dans le sujet. Ces interattractions ont été essentielles tout au long du stage. Ainsi, elle était le vecteur de nouvelle connaissance et de la découverte de nouveaux outils qui font maintenant partie de mon quotidien d'ingénieur (zsh, obsidian, fzf, tmux, ...) en plus de découvrir des nouvelles méthodes de travail adapté au travail et efficace.
+Ce stage m'a permis de rencontrer des experts dans le sujet. Ces interactions ont été essentielles tout au long du stage. Ainsi, elle était le vecteur de nouvelles connaissances et de la découverte de nouveaux outils qui font maintenant partie de mon quotidien d'ingénieur (zsh, obsidian, fzf, tmux, ...) en plus de découvrir des nouvelles méthodes de travail adapté au travail et efficace.
 
 J'ai eu le plaisir de contribué à l'évolution de NixOS-Compose et de découvrir des technologies puissantes comme Nix et NixOS qui m'ont permis de m'améliorer sur des concepts important dans l'informatique actuel comme le calcul de performance, la reproductibilité et le déploiement de système distribué.\newline
 
@@ -350,9 +362,9 @@ Sur un plan professionnel, ce stage m'a permis de découvrir et d'expérimenter 
 
 J'ai grandement apprécié le système de fonctionnement de l'équipe. En effet, dans cet environnement de travail, l'entraide et la communication était omniprésente. J'ai donc eu le plaisir de développer au sein de l'équipe des compétences de travail d'équipe et de coordinations avec les différents membres du laboratoire. De plus, les différents séminaires assistés et tâche réalisés me permirent de développer ma curiosité notamment dans le domaine système de l'informatique tout en développement mon bagage de connaissance et mon expérience technique.
 
-Toutes ces expériences me seront à coup sûr très utile et valorisant dans le projet professionnel de devops que je souhaite entreprendre.
+Toutes ces expériences me seront à coup sûr très utiles et valorisant dans le projet professionnel de DevOps que je souhaite entreprendre.
 
-Je suis reconnaissant d'avoir eu la possibilité de contribué à ce projet en y rajoutant des compositions qui pourront servir de base recherche sur le calcul de performance de File System Distribué dans un environnement virtualisé tel que Grid5000. Je suis heureux d'avoir aidé à la maintenance et au bon fonctionnement général de l'outils NixOs-Compose qui sera sans aucun doute d'un importance majeur dans la cadre de la recherche.\newline
+Je suis reconnaissant d'avoir eu la possibilité de contribué à ce projet en y rajoutant des compositions qui pourront servir de base recherche sur le calcul de performance de File System Distribués dans une plateforme expérimentale tel que Grid5000. Je suis heureux d'avoir aidé à la maintenance et au bon fonctionnement général de l'outils NixOs-Compose qui sera sans aucun doute d'un importance majeur dans la cadre de la recherche.\newline
 
 \newpage
 
