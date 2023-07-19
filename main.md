@@ -301,15 +301,15 @@ Comme vu dans la figure 6, NixOS-Compose permet en plus de déployer les composi
 
 Il existe un certain nombre de flavours disponible avec NixOS-Compose :\newline
 
-- VM, qui créer une image locale utilisable dans un système de machine virtuelle QEMU.
+- **VM**, qui créer une image locale utilisable dans un système de machine virtuelle QEMU.
 
-- Docker, qui créer un système de conteneurisation en utilisant Docker et Docker-Compose.
+- **Docker**, qui créer un système de conteneurisation en utilisant Docker et Docker-Compose.
 
-- G5K-ramdisk, qui va créer une image ramdisk, et donc va stocker en sen sein l'intégralité du store, ce qui rend cette technique très lourde.
+- **G5K-ramdisk**, qui va créer une image ramdisk, et donc va stocker en sen sein l'intégralité du store, ce qui rend cette technique très lourde.
 
-- G5K-nfs-store, qui va utiliser nfs pour faire du partage de paquet dans le store nix et donc limiter la taille globale de l'image.
+- **G5K-nfs-store**, qui va utiliser nfs pour faire du partage de paquet dans le store nix et donc limiter la taille globale de l'image.
 
-- G5K-image, qui va créer une image déployable selon des configurations différentes.\newline
+- **G5K-image**, qui va créer une image déployable selon des configurations différentes.\newline
 
 Les flavours G5K sont celle qui est utilisables dans l'environnement Grid5000 qui utilise Kameleon pour pouvoir créer et déployer de cette architecture.\newline
 
@@ -342,7 +342,33 @@ J'ai été amené à utiliser et à comprendre le fonctionnement de chacune des 
 
 \newpage
 
-## Perspective du projet de NixOS-Compose
+## Perspective du projet NixOS-Compose
+
+NixOS-Compose est un outil très puissant dans l'optique de créer et de simuler des environnements reproductibles. La reproductibilité étant un aspect omniprésent et essentiel de la recherche informatique, et ce, dans tous les domaines, il semble raisonnable de penser que NXC aura un avenir certain dans le monde de la recherche. Cependant, l'outil est encore en développement et de nouvelles fonctionnalités seront à coup sûr ajouté dans le futur.
+
+Après ces quelques mois d'utilisation de l'application et de développement de composition, voici les perspectives que j'envisagerai pour NixOS-Compose.\newline
+
+**Amélioration de certaines fonctionnalités**\newline
+
+NixOS-Compose peut encore voir certaines de ces fonctionnalités améliorer, par exemple, il peut être intéressant de pousser encore plus les fonctionnalités du CLI NXC. Le CLI correspond à toutes les commandes utilisables par l'outil NixOS-Compose, comme `nxc build`, `nxc init`, `nxc connect`, `nxc start`, `nxc driver`. Il serait intéressant de rajouter des fonctionnalités comme la présence d'un `nxc check` qui a été proposé et qui permettrait d'évaluer une composition sans la build, ce qui faciliterait les tests de fonctionnement d'une composition. Avec NixOS-Compose on essai de "cacher" la présence du Nix pour les personnes voulant déployer des environnements. Cependant, on pourrait imaginer pouvoir utiliser les templates Nix directement dans NXC en utilisant l'option `-t` de `nxc init`.\newline
+
+La fonctionnalité principale de NixOS-Compose consiste au déploiement d'architecture de machine distribué dans différent environnement. En ce moment, NXC est capable de déployer en local en utilisant des conteneurs et des vm ou sur Grid5000. Il est donc essentiel pour la pérennité de l'outil de rajouter des flavours afin de pouvoir déployer des environnements reproductible sur des plateformes différentes. On peut, par exemple, imaginer une implémentation d'OpenStack dans le but de pouvoir créer une flavour de déploiement dans Kubernetes. C'est à mon sens l'élément essentiel de développement de NixOs-Compose.\newline
+
+Il pourrait être censé d'imaginer ajouter des outils à NixOS-Compose. Ces outils pourraient être aussi être créé par des équipes de recherche. C'est ce qui est proposé en ce moment avec l'outil enosLib.\newline
+
+Actuellement NixOS-Compose utilise un noeud pour chaque rôle à déployer, une proposition d'amélioration pourrait consister de créer un système de *folding* dans l'outil, similaire à ce que OAR peut déjà faire actuellement. Ce principe de folding consiste à déployer un certain nombre de rôles dans des machines virtuelles situé dans un noeud spécial de "calcul" unique. Cette amélioration pourrait sans doute augmenter les performances et réduire les consommations énergétiques des outils de recherches utilisant NXC.\newline
+
+**Amélioration de la Documentation et des Tutoriaux**\newline
+
+La documentation est une partie essentielle d'un projet informatique. Il permet de solidifier des connaissances et des maîtrises ainsi que facilité l'utilisation des outils par des membres extérieurs. NixOS-Compose possède une [documentation](https://nixos-compose.gitlabpages.inria.fr/nixos-compose/) expliquant le fonctionnement général de l'outil ainsi que le workflow général de l'application. Il serait donc une bonne amélioration de remettre au bout du jour la documentation qui commence peux à peu à être déprécié.\newline
+
+NixOS-Compose possède également des [tutoriaux](https://gitlab.inria.fr/nixos-compose/tuto-nxc), qui permet de facilement pouvoir tester le fonctionnement de l'outil. Ces tutoriaux sont essentiels, il serait donc une bonne chose de les améliorer afin de rentrer encore plus dans les détails et de les mettre à jour. \newline
+
+Enfin, il faudrait à mon sens, dans l'optique de rendre l'utilisation de NixOS-Compose la plus facile possible pour les nouveaux utilisateurs, continuer de faire une documentation complète sur comment réaliser des compositions efficaces. J'ai eu le plaisir de pouvoir commencer ce document. Cependant, je n'ai malheureusement pas pu être exhaustif sur les cas d'utilisation de cet outil à cause de sa complexité.\newline
+
+**Intégration dans l'écosystème Nix**\newline
+
+Finalement, la dernière perspective que je peux imaginer serai de rajouter le NixOS-Compose dans nixpkgs. Actuellement NXC est présent dans NUR. Cependant, en rajoutant l'outil dans nixpkgs, on assurerait une intégration de NixOS-Compose directement dans l'écosystème Nix et donc dans le système d'exploitation NixOS par la même occasion. Cela pourrait permettre de rendre l'utilisation de NXC plus commune et plus simple pour toutes les personnes voulant utiliser cette technologie.\newline
 
 \newpage
 
