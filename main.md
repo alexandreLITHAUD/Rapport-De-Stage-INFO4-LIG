@@ -447,6 +447,14 @@ Je suis reconnaissant d'avoir eu la possibilité de contribué à ce projet en y
 
 \printbibliography
 
-<!-- ANNEXE IMAGE HERE -->
-
 \printglossaries
+
+\newpage
+
+<!-- ANNEXE IMAGES HERE -->
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{annexe/workflowpre.png}
+\caption{Diagramme de séquence du workflow de composition NXC}
+\end{figure}
+
