@@ -1039,8 +1039,61 @@ NixOS-Compose}\label{duxe9veloppement-de-composition-nixos-compose}}
 \subsubsection{Fonctionnement et Composition
 Simple}\label{fonctionnement-et-composition-simple}}
 
-\hypertarget{workflow}{%
-\subsubsection{Workflow}\label{workflow}}
+Une grande partie du début de mon stage a consisté à me former sur Nix.
+En effet, il était essentiel de comprendre le fonctionnement de Nix et
+la configuration système NixOS pour pouvoir réaliser des compositions.
+J'ai donc suivi des tutoriels sur Nix, notamment les
+\href{https://nixos.org/guides/nix-pills/}{Nix Pills}, qui est un
+tutoriel couvrant toutes les fonctionnalités de Nix. Ce tutoriel, bien
+que légèrement daté, a été un point central de ma compréhension de Nix,
+en complément de la
+\href{https://nixos.org/manual/nix/stable/}{documentation officielle de
+Nix}.\newline
+
+J'ai également installé NixOS sur une machine pour mieux comprendre son
+fonctionnement. Finalement, c'est le système d'exploitation que j'ai
+utilisé tout au long de mon expérience professionnelle. J'ai rapidement
+développé un vif intérêt pour la configuration système de NixOS, si bien
+que j'ai consacré un partie de mon temps libre à créer des
+configurations de machines facilitant le déploiement de toutes les
+applications et configurations que j'utilise, via home-manager.
+(\href{https://github.com/alexandreLITHAUD/my-nix-configuration}{LIEN})\newline
+
+Pour créer mes premières compositions, j'utilisais le système de
+templates de NixOS-Compose. En utilisant la commande
+\texttt{nxc\ init\ -t\ \textless{}nom\ du\ template\textgreater{}}, il
+était possible de générer un template simple de composition. J'ai
+réalisé de nombreuses compositions dans le but de tester toutes les
+possibilités offertes par NixOS-Compose, telles que les
+multi-compositions ou les discussions entre nœuds de rôle identique, par
+exemple. J'ai régulièrement demandé des conseils à Quentin GUILLOTEAU,
+l'étudiant en thèse travaillant sur ce sujet. Toutes ces expériences
+m'ont permis de développer rapidement une compréhension du
+fonctionnement de l'outil.\newline
+
+Pour lancer la composition, il faut exécuter la commande
+\texttt{nxc\ build}, en sélectionnant la flavour, pour compiler la
+composition. Ensuite, on utilise la commande \texttt{nxc\ start}, en
+spécifiant le nombre de nœuds par rôle, afin de lancer les différents
+nœuds. Enfin, dans un autre terminal, on se connecte en SSH aux nœuds en
+cours d'exécution en utilisant la commande
+\texttt{nxc\ connect}.\newline
+
+Voici un exemple de composition NXC basée sur le template basique :
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{images/template-hellow.png}
+\caption{Exemple Composition NXC basé sur le template basique}
+\end{figure}
+
+Une commande essentielle pour mon stage a été \texttt{nxc\ driver\ -t},
+qui permet de lancer le script de test. Le ``Test Script'' permet, via
+un code Python, de vérifier le bon fonctionnement d'une composition. Il
+a été largement utilisé pendant mon stage, notamment pour la \emph{CI}
+(Continuous Integration) de mes compositions. La CI permet de lancer les
+tests à chaque commit, assurant ainsi la pérennité du code malgré les
+mises à jour.\newline
 
 \hypertarget{grid5000}{%
 \subsubsection{Grid5000}\label{grid5000}}
@@ -1151,6 +1204,9 @@ d'échapper à quelques contraintes de fonctionnement des flavours
 
 \hypertarget{file-systems}{%
 \subsubsection{File Systems}\label{file-systems}}
+
+\hypertarget{workflow}{%
+\subsubsection{Workflow}\label{workflow}}
 
 \hypertarget{mes-contributions-au-projet}{%
 \subsubsection{Mes contributions au
