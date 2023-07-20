@@ -335,6 +335,55 @@ J'ai été amené à utiliser et à comprendre le fonctionnement de chacune des 
 
 ### Grid5000
 
+Grid5000 (ou G5K) est une infrastructure de recherche expérimentale dédiée aux systèmes distribués. Il a joué un rôle crucial pour moi tout au long du stage. Plus précisément, il s'agit d'un réseau de machines ou clusters hébergés un peu partout en France. Permettant de réserver et d'utiliser des machines hautes performances rapidement en utilisant une connexion ssh. 
+
+Grid5000 est ce qu'on peut appeler un *testbed*, ou banc de test pour la recherche française et internationale.\newline
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{images/shemag5k.png}
+\caption{Schema de Grid5000}
+\end{figure}
+
+Comme visible dans la figure ci-dessus, la connexion ssh de Grid5000 donne l'accès à la machine centrale à tous les utilisateurs du site choisi, cette machine est appelée la frontale. Elle contient en son sein l'intégralité des espaces de stockage de chaque utilisateur. Il est important pour le bon fonctionnement de ne pas demander à la frontale de faire des calculs intensifs, car cela causerait des ralentissements pour tous les utilisateurs. \newline
+
+Comme Grid5000 utilise ssh, j'ai été amenée à utiliser et à comprendre l'outil tmux. Tmux est un multiplexeur de terminal qui permet par son implémentation de sauvegarder des sessions de terminal. C'est un outil très intéressant que j’utilise toujours aujourd'hui sur mon ordinateur personnel. Ce multiplexeur de terminal était particulièrement important avec grid5000, car son système de session permet de récupérer une connexion ssh en utilisant la commande `tmux attach` ou `tmux a` afin de récupérer la session perdue. Cela m'a permis d'éviter de perdre beaucoup de temps lors de l’utilisation de G5K.\newline
+
+Afin d'utiliser Grid5000, il faut utiliser les commande OAR dans le but de demander des noeud au système, le scheduler OAR donnera accès au nombre de machines voulu selon la place restante dans le cluster. Pour réserver des noeuds les utilisateurs utilisent la commande `oarsub`.
+
+Voici un exemple de commande oar qui va réserver 42 noeuds pendant 3h20 :
+
+```
+oarsub -l nodes=42,walltime=3:20:0
+```
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{images/ganttg5k.png}
+\caption{Diagramme de Gantt d'utilisation des noeuds de Grid5000 en temps réel}
+\end{figure}
+
+Durant mon stage, j'ai massivement utilisé le système Grid5000 afin de pouvoir build et surtout déployer mes compositions NixOS-Compose. En effet, certaines compositions que j'ai créées étaient massives et nécessitaient énormément de temps de calcul au build pouvais nécessiter une dizaine de machines. Il était inconcevable de simuler cette architecture sur mon ordinateur possédant uniquement 8 Go de RAM. Mon ordinateur était simplement incapable de simuler de grandes expériences distribuées. J'ai donc utilisé des flavours locale afin de faire des tests simples et j'ai grandement utilisé Grid5000 pour simuler des expériences beaucoup plus poussées sur les technologies que j'ai implémenter sur NXC.\newline
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{images/statg5k.png}
+\caption{Mes Statistiques d'utilisaion de Grid5000}
+\end{figure}
+
+Enfin, certaines des compositions que j'ai créées nécessitait la modification ou l'ajout de système de fichier dans certain des noeuds or cette action n'était possible que dans le système grid5000. En effet, les flavours "locale", comme VM ou Docker n'utilise pas de disque, à la place tout est stocké dans un file system temporaire qui correspondait à la RAM attribuée. C'était un problème, car il était impossible de modifier ou de rajouter de files system.
+
+Cependant, chaque noeuds sur Grid5000 possède plusieurs disques. Certains sont immuables et ne doivent pas être modifié sous risque de voir le noeud s’arrêter. Mais il existe un disque nommé TMP qui était utilisable et modifiable à souhait, car réinitialisé à chaque nouvelle utilisation. C'est justement pour ce cas d'utilisation que ce disque est présent dans chaque machine Grid5000. Il m'a donc suffi de chercher dans les `partlabel` des disques de la machine et de regarder le label du disque TMP.\newline
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{annexe/disk_g5k.png}
+\caption{disk-bypartlabel dans un noeud Grid5000}
+\end{figure}
+
+J'ai donc pu savoir quelle partition j'avais le droit de modifier et ai pu finir le test de mes compositions sans problème.\newline
+
+Grid5000 a donc été une partie essentielle de mon stage, car cela m'a permis de pouvoir faire des expériences à grande échelle et de pouvoir assurer le bon fonctionnement de mes compositions tout en permettant d'échapper à quelques contraintes de fonctionnement des flavours "locale" NixOS-Compose.\newline
+
 ### File Systems
 
 ### Mes contributions au projet
