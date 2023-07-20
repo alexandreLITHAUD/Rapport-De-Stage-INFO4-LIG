@@ -408,6 +408,19 @@ Grid5000 a donc été une partie essentielle de mon stage, car cela m'a permis d
 
 ### Mes contributions au projet
 
+**Compositions de FS Distribué**\newline
+
+Comme indiqué dans les parties précédentes, j'ai créé des compositions, des modules et des drivers permettant d'implémenter différents systèmes de fichiers distribués. NixOS-Compose étant capable de créer des systèmes distribués, il est important d'utiliser un système de fichier distribué. La solution par défaut est le protocole NFS, très répandu. Cependant, bien qu'efficace, NFS n'est pas toujours la solution optimale dans de nombreux cas. L'implémentation de ces DFS (Distributed File Systems) permettra de tester les performances de NFS en comparaison avec d'autres DFS tels que Ceph ou beegfs.\newline
+
+Ces compositions permettront aux chercheurs souhaitant utiliser ces technologies à des fins de recherche de le faire directement dans un environnement reproductible, sans avoir besoin de manipuler du code Nix ni la composition elle-même. Cela facilitera grandement leur travail en leur offrant un cadre préconfiguré et cohérent pour leurs expérimentations avec les différents systèmes de fichiers distribués. Ils pourront ainsi se concentrer pleinement sur leurs recherches sans se préoccuper des détails techniques de la mise en place des environnements de test.\newline
+
+**Documentation**\newline
+
+J'ai également pris plaisir à rédiger une documentation expliquant le fonctionnement du workflow de NixOS-Compose. Cette documentation sera d'une grande aide pour les nouveaux utilisateurs qui souhaitent apprendre les étapes clés nécessaires pour composer une technologie avec NixOS-Compose.\newline
+
+**Version Kernel dans NixOS-Compose**\newline
+
+Enfin, mon passage dans le projet a permis de détecter quelques problèmes dans le fonctionnement de NixOS-Compose, comme le problème de version kernel qui est "fixé" dans l'application. C'est un problème, car certains modules sont très vieux et nécessite l'utilisation de module kernel antérieur. Ce problème ainsi que les autres que j'ai pu découvrir ont été consignés dans des issues git détaillé afin de ne pas perdre la trace et les conditions de reproductions des problèmes.\newline
 
 \newpage
 
