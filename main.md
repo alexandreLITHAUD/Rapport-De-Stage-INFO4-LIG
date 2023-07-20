@@ -422,6 +422,16 @@ J'ai également pris plaisir à rédiger une documentation expliquant le fonctio
 
 Enfin, mon passage dans le projet a permis de détecter quelques problèmes dans le fonctionnement de NixOS-Compose, comme le problème de version kernel qui est "fixé" dans l'application. C'est un problème, car certains modules sont très vieux et nécessite l'utilisation de module kernel antérieur. Ce problème ainsi que les autres que j'ai pu découvrir ont été consignés dans des issues git détaillé afin de ne pas perdre la trace et les conditions de reproductions des problèmes.\newline
 
+**Mise à niveau de  Regale**\newline
+
+Regale est un dépôt qui contient différents outils utiles pour le laboratoire, sous la forme de plusieurs compositions NixOS-Compose. Cependant, il utilisait une version de Nixpkgs qui est devenue plutôt obsolète selon la communauté.\newline
+
+J'ai donc effectué un changement de version de Nixpkgs, passant de 22.05 à 22.11 (car la version 23.05 était trop instable pour le moment). Étant donné que Regale utilise nur-kapack, j'ai dû créer une branche sur ce même dépôt afin de pouvoir utiliser le dernier commit récent d'oar. Ces petites modifications ont entraîné un certain nombre de bugs auxquels j'ai dû remédier en effectuant des ajustements dans la composition ou dans les modules de oar sur nur-kapack.\newline
+
+Ces changements nécessitent une connaissance approfondie du fonctionnement de Nix, de son paradigme, ainsi que des modules qui les composent. La correction des différentes erreurs est une tâche complexe qui m'a permis de mieux comprendre le fonctionnement de Nix, NixOS, NXC et des nombreux autres outils qui les composent.\newline
+
+Enfin, après avoir corrigé ces outils, j'ai pu exécuter leurs tests unitaires (grâce à la bibliothèque mpi) ou simplement en utilisant les tests déjà présents dans les compositions Nix que j'ai utilisées.
+
 \newpage
 
 ## Perspective du projet NixOS-Compose
