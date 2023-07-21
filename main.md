@@ -495,9 +495,26 @@ Je suis reconnaissant d'avoir eu la possibilité de contribué à ce projet en y
 \newpage
 
 <!-- ANNEXE IMAGES HERE -->
-\begin{figure}[h]
+\begin{figure}
 \centering
-\includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{annexe/workflowpre.png}
+\includegraphics[width=0.9\textwidth,height=0.9\textheight,keepaspectratio]{annexe/workflowpre.png}
 \caption{Diagramme de séquence du workflow de composition NXC}
 \end{figure}
 
+\begin{figure}
+\centering
+\includegraphics[width=0.9\textwidth,height=0.9\textheight,keepaspectratio]{annexe/beegfs_service.png}
+\caption{Lancement du service crée pour beegfs}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.9\textwidth,height=0.9\textheight,keepaspectratio]{annexe/beegfs_service_yes.png}
+\caption{Status du service crée pour beegfs}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.9\textwidth,height=0.9\textheight,keepaspectratio]{annexe/ceph_osd_up.png}
+\caption{Noeuds pour le fonctionnement de ceph}
+\end{figure}
