@@ -418,21 +418,35 @@ La première technologie que j'ai eu à implémenter sur NixOS-Compose s'appelai
 
 **GlusterFS**
 
-\begin{figure}[h]
+<!-- \begin{figure}[h]
 \centering
 \includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{images/shema-gluster.png}
 \caption{Architecture de GlusterFS}
-\end{figure}
+\end{figure} -->
 
 **BeegFS**
 
-\begin{figure}[h]
+<!-- \begin{figure}[h]
 \centering
 \includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{images/shema-beegfs.png}
 \caption{Architecture de BeegFS}
-\end{figure}
+\end{figure} -->
 
 **Ceph**
+
+Ceph est une technologie complexe basée sur de nombreuses machines travaillant en collaboration pour assurer la redondance des données. Il est important de ne pas confondre Ceph avec CephFS. Ceph est un système de stockage, mais il ne peut pas être considéré comme un système de fichiers à part entière. Cependant, il est tout à fait possible de créer un système de fichiers à partir de la technologie Ceph, que l'on appelle alors CephFS.\newline
+
+Pour faire fonctionner un système de fichiers Ceph, un certain nombre de nœuds sont nécessaires :\newline
+
+- **Monitor / MON** : Son rôle est de maintenir l'état des maps et du cluster. Les maps sont essentielles car elles conservent l'état des différentes fonctions requises par le démon Ceph pour coordonner. Les moniteurs sont également responsables de l'authentification entre les démons et les clients. (Au moins 3 sont nécessaires pour garantir la redondance et la présence (règle des 9)).
+    
+- **Manager / MGR** : Il est responsable de recueillir les différentes métriques du système et de l'état actuel du cluster Ceph, telles que l'utilisation du stockage, les performances et la charge du système. Les informations sont accessibles via un tableau de bord en ligne et une API REST. (Au moins 2 managers sont nécessaires pour garantir la redondance et la présence (règle des 9)).
+    
+- **Object Storage Daemon / OSD / Data pool** : Il stocke les données, gère les duplications de données, effectue le balancement et fournit des informations de fonctionnement au manager en surveillant l'état des autres OSD.
+    
+- **Metadata Server / MDS / Metadata pool** : Il stocke les métadonnées pour le système de fichiers Ceph. Le serveur de métadonnées permet d'exécuter des commandes de base telles que ls ou find (dans le style POSIX) sans affecter considérablement le cluster Ceph.\newline
+
+Voici un schéma du fonctionnement de CephFS :
 
 \begin{figure}[h]
 \centering
@@ -440,35 +454,13 @@ La première technologie que j'ai eu à implémenter sur NixOS-Compose s'appelai
 \caption{Architecture de CephFS}
 \end{figure}
 
+La création de la composition a posé quelques problèmes, malgré la présence de la technologie dans nixpkgs, car chaque nœud nécessitait un UUID unique ainsi qu'une clé. Étant donné que chaque rôle utilisait la même configuration, il a été nécessaire de modifier manuellement la composition pour chaque rôle afin de faire fonctionner chaque nœud en collaboration.(Voir l'image en Annexe)\newline
+
+Cette composition m'a permis de développer des techniques uniques pour faire fonctionner cette technologie de manière optimale.\newline
+
+Si le stage avait duré plus longtemps, j'aurais apprécié essayer de créer des scripts d'exécution (execo) pour tester les performances de chacune de mes compositions dans différentes conditions extrêmes, en utilisant la plateforme Grid5000. L'objectif aurait été de comparer les performances avec d'autres DFS tels que NFS ou OrangeFS, qui ont également été implémentés.\newline
 
 ### Workflow
-
-
-### Mes contributions au projet
-
-**Compositions de FS Distribué**\newline
-
-Comme indiqué dans les parties précédentes, j'ai créé des compositions, des modules et des drivers permettant d'implémenter différents systèmes de fichiers distribués. NixOS-Compose étant capable de créer des systèmes distribués, il est important d'utiliser un système de fichier distribué. La solution par défaut est le protocole NFS, très répandu. Cependant, bien qu'efficace, NFS n'est pas toujours la solution optimale dans de nombreux cas. L'implémentation de ces DFS (Distributed File Systems) permettra de tester les performances de NFS en comparaison avec d'autres DFS tels que Ceph ou beegfs.\newline
-
-Ces compositions permettront aux chercheurs souhaitant utiliser ces technologies à des fins de recherche de le faire directement dans un environnement reproductible, sans avoir besoin de manipuler du code Nix ni la composition elle-même. Cela facilitera grandement leur travail en leur offrant un cadre préconfiguré et cohérent pour leurs expérimentations avec les différents systèmes de fichiers distribués. Ils pourront ainsi se concentrer pleinement sur leurs recherches sans se préoccuper des détails techniques de la mise en place des environnements de test.\newline
-
-**Documentation**\newline
-
-J'ai également pris plaisir à rédiger une documentation expliquant le fonctionnement du workflow de NixOS-Compose. Cette documentation sera d'une grande aide pour les nouveaux utilisateurs qui souhaitent apprendre les étapes clés nécessaires pour composer une technologie avec NixOS-Compose.\newline
-
-**Version Kernel dans NixOS-Compose**\newline
-
-Enfin, mon passage dans le projet a permis de détecter quelques problèmes dans le fonctionnement de NixOS-Compose, comme le problème de version kernel qui est "fixé" dans l'application. C'est un problème, car certains modules sont très vieux et nécessite l'utilisation de module kernel antérieur. Ce problème ainsi que les autres que j'ai pu découvrir ont été consignés dans des issues git détaillé afin de ne pas perdre la trace et les conditions de reproductions des problèmes.\newline
-
-**Mise à niveau de  Regale**\newline
-
-Regale est un dépôt qui contient différents outils utiles pour le laboratoire, sous la forme de plusieurs compositions NixOS-Compose. Cependant, il utilisait une version de Nixpkgs qui est devenue plutôt obsolète selon la communauté.\newline
-
-J'ai donc effectué un changement de version de Nixpkgs, passant de 22.05 à 22.11 (car la version 23.05 était trop instable pour le moment). Étant donné que Regale utilise nur-kapack, j'ai dû créer une branche sur ce même dépôt afin de pouvoir utiliser le dernier commit récent d'oar. Ces petites modifications ont entraîné un certain nombre de bugs auxquels j'ai dû remédier en effectuant des ajustements dans la composition ou dans les modules de oar sur nur-kapack.\newline
-
-Ces changements nécessitent une connaissance approfondie du fonctionnement de Nix, de son paradigme, ainsi que des modules qui les composent. La correction des différentes erreurs est une tâche complexe qui m'a permis de mieux comprendre le fonctionnement de Nix, NixOS, NXC et des nombreux autres outils qui les composent.\newline
-
-Enfin, après avoir corrigé ces outils, j'ai pu exécuter leurs tests unitaires (grâce à la bibliothèque mpi) ou simplement en utilisant les tests déjà présents dans les compositions Nix que j'ai utilisées.
 
 \newpage
 
