@@ -1243,11 +1243,43 @@ environnement comme Grid5000 est multiple :\newline
 \end{itemize}
 
 La première technologie que j'ai eu à implémenter sur NixOS-Compose
-s'appelait \href{https://www.gluster.org/}{GlusterFS}.\newline
+s'appelait GlusterFS.\newline
 
-\textbf{GlusterFS}
+\textbf{\href{https://www.gluster.org/}{GlusterFS}}
 
-\textbf{BeegFS}
+Gluster a été une bonne première composition. En effet, le paquet était
+déjà présent dans Nixpkgs et possédait de nombreux tests de
+fonctionnement. J'ai pu utiliser ces tests comme base pour essayer de
+faire fonctionner les différents composants de ce DFS.\newline
+
+Schéma de fonctionnement de GlusterFS :
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth,height=0.5\textheight,keepaspectratio]{images/shema-gluster.png}
+\caption{Architecture de GlusterFS}
+\end{figure}
+
+GlusterFS utilise seulement 2 rôles pour fonctionner : le client et le
+serveur. Les serveurs s'occupent des métadonnées et du stockage des
+fichiers, comme illustré dans la figure ci-dessus. Dans Gluster, chaque
+serveur est également appelé ``brick'' et permet la redondance des
+données. Une somme de briques est appelée un volume et sert de base à un
+système de fichiers.\newline
+
+Cette composition a été la première qui m'a obligé à utiliser Grid5000
+pour les tests, même les plus basiques, car elle nécessitait un disque
+supplémentaire pour configurer les briques.\newline
+
+En somme, Gluster a été une très bonne expérience pour ma première
+grosse composition NixOS-Compose. J'y ai découvert mes premières
+difficultés qui m'ont permis de mieux comprendre le fonctionnement et
+les subtilités et surtout le workflow de NixOS-Compose. Cela m'a
+également aidé à me familiariser avec l'environnement de Grid5000 pour
+la mise en place des tests, ce qui a été une étape importante dans mon
+apprentissage.\newline
+
+\textbf{\href{https://www.beegfs.io/c/}{BeegFS}}
 
 La composition Beegfs a posé de nombreux problèmes tout au long de sa
 création. En effet, cette technologie était présente dans nixpkgs lors
@@ -1298,7 +1330,7 @@ m'a donné une opportunité précieuse de croissance professionnelle et m'a
 permis de développer des compétences essentielles dans le domaine de
 l'informatique et de l'ingénierie des systèmes.\newline
 
-\textbf{Ceph}
+\textbf{\href{https://docs.ceph.com/en/quincy/}{Ceph}}
 
 Ceph est une technologie complexe basée sur de nombreuses machines
 travaillant en collaboration pour assurer la redondance des données. Il

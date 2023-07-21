@@ -414,17 +414,27 @@ L'importance d'un Système de Fichier Distribué (DFS) dans un environnement com
     
 - **Accès Transparent aux Données :** Un DFS assure un accès transparent et cohérent aux données, indépendamment de l'emplacement physique du stockage. C'est une caractéristique importante, notamment lors de l'utilisation de Grid5000.\newline
     
-La première technologie que j'ai eu à implémenter sur NixOS-Compose s'appelait [GlusterFS](https://www.gluster.org/).\newline
+La première technologie que j'ai eu à implémenter sur NixOS-Compose s'appelait GlusterFS.\newline
 
-**GlusterFS**
+**[GlusterFS](https://www.gluster.org/)**
 
-<!-- \begin{figure}[h]
+Gluster a été une bonne première composition. En effet, le paquet était déjà présent dans Nixpkgs et possédait de nombreux tests de fonctionnement. J'ai pu utiliser ces tests comme base pour essayer de faire fonctionner les différents composants de ce DFS.\newline
+
+Schéma de fonctionnement de GlusterFS :
+
+\begin{figure}[h]
 \centering
-\includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{images/shema-gluster.png}
+\includegraphics[width=0.5\textwidth,height=0.5\textheight,keepaspectratio]{images/shema-gluster.png}
 \caption{Architecture de GlusterFS}
-\end{figure} -->
+\end{figure}
 
-**BeegFS**
+GlusterFS utilise seulement 2 rôles pour fonctionner : le client et le serveur. Les serveurs s'occupent des métadonnées et du stockage des fichiers, comme illustré dans la figure ci-dessus. Dans Gluster, chaque serveur est également appelé "brick" et permet la redondance des données. Une somme de briques est appelée un volume et sert de base à un système de fichiers.\newline
+
+Cette composition a été la première qui m'a obligé à utiliser Grid5000 pour les tests, même les plus basiques, car elle nécessitait un disque supplémentaire pour configurer les briques.\newline
+
+En somme, Gluster a été une très bonne expérience pour ma première grosse composition NixOS-Compose. J'y ai découvert mes premières difficultés qui m'ont permis de mieux comprendre le fonctionnement et les subtilités et surtout le workflow de NixOS-Compose. Cela m'a également aidé à me familiariser avec l'environnement de Grid5000 pour la mise en place des tests, ce qui a été une étape importante dans mon apprentissage.\newline
+
+**[BeegFS](https://www.beegfs.io/c/)**
 
 La composition Beegfs a posé de nombreux problèmes tout au long de sa création. En effet, cette technologie était présente dans nixpkgs lors de versions antérieures, mais elle a été supprimée en raison d'un manque de maintenance, ce qui a entraîné le paquet d'être cassé. Mon rôle a été de reprendre les sources utilisées, de les mettre à jour et de les faire fonctionner sur une composition utilisant la dernière version de Nix.\newline
 
@@ -446,7 +456,7 @@ Cependant, le travail sur cette technologie m'a permis de développer des pratiq
 
 En fin de compte, bien que le travail sur Beegfs ait été exigeant, cela m'a donné une opportunité précieuse de croissance professionnelle et m'a permis de développer des compétences essentielles dans le domaine de l'informatique et de l'ingénierie des systèmes.\newline
 
-**Ceph**
+**[Ceph](https://docs.ceph.com/en/quincy/)**
 
 Ceph est une technologie complexe basée sur de nombreuses machines travaillant en collaboration pour assurer la redondance des données. Il est important de ne pas confondre Ceph avec CephFS. Ceph est un système de stockage, mais il ne peut pas être considéré comme un système de fichiers à part entière. Cependant, il est tout à fait possible de créer un système de fichiers à partir de la technologie Ceph, que l'on appelle alors CephFS.\newline
 
