@@ -407,7 +407,7 @@ Grid5000 a donc été une partie essentielle de mon stage, car cela m'a permis d
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{annexe/shema-gluster.png}
+\includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{images/shema-gluster.png}
 \caption{Architecture de GlusterFS}
 \end{figure}
 
@@ -415,7 +415,7 @@ Grid5000 a donc été une partie essentielle de mon stage, car cela m'a permis d
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{annexe/shema-beegfs.png}
+\includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{images/shema-beegfs.png}
 \caption{Architecture de BeegFS}
 \end{figure}
 
@@ -423,7 +423,7 @@ Grid5000 a donc été une partie essentielle de mon stage, car cela m'a permis d
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{annexe/shema-cephfs.png}
+\includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{images/shema-cephfs.png}
 \caption{Architecture de CephFS}
 \end{figure}
 
