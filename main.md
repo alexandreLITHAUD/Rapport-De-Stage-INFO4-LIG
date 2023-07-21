@@ -400,7 +400,32 @@ J'ai donc pu savoir quelle partition j'avais le droit de modifier et ai pu finir
 
 Grid5000 a donc été une partie essentielle de mon stage, car cela m'a permis de pouvoir faire des expériences à grande échelle et de pouvoir assurer le bon fonctionnement de mes compositions tout en permettant d'échapper à quelques contraintes de fonctionnement des flavours "locale" NixOS-Compose.\newline
 
-### File Systems
+### Système de Fichier Distribué
+
+
+**GlusterFS**
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{annexe/shema-gluster.png}
+\caption{Architecture de GlusterFS}
+\end{figure}
+
+**BeegFS**
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{annexe/shema-beegfs.png}
+\caption{Architecture de BeegFS}
+\end{figure}
+
+**Ceph**
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{annexe/shema-cephfs.png}
+\caption{Architecture de CephFS}
+\end{figure}
 
 
 ### Workflow
