@@ -402,6 +402,19 @@ Grid5000 a donc été une partie essentielle de mon stage, car cela m'a permis d
 
 ### Système de Fichier Distribué
 
+Un Système de Fichier Distribué (DFS) est une infrastructure de stockage de fichiers qui permet de répartir les données sur plusieurs nœuds de stockage au sein d'un réseau. Contrairement aux systèmes de fichiers classiques qui stockent leurs données sur un serveur centralisé, un DFS permet à plusieurs nœuds de collaborer et de partager leurs ressources pour former un espace de stockage unifié.\newline
+
+Une grande partie de mon stage consistait à créer des compositions NixOS-Compose afin de déployer facilement différents Systèmes de Fichier Distribué sur les différentes flavours proposées, notamment sur Grid5000.\newline
+
+L'importance d'un Système de Fichier Distribué (DFS) dans un environnement comme Grid5000 est multiple :\newline
+
+- **Redondance et Haute Disponibilité :** Dans un DFS, les données peuvent être répliquées sur plusieurs nœuds. C'est un atout majeur car cela améliore la disponibilité en cas de défaillance d'un nœud dans le réseau. La présence de plusieurs serveurs dans un DFS facilite également l'accès aux données stockées, même en cas de panne d'un serveur. La redondance des données permet donc, de manière similaire au RAID-1, d'assurer le bon fonctionnement du système.
+    
+- **Gestion de lourds volumes de données :** Dans le cas d'un DFS, il est possible de faire évoluer le système. Ce genre de système est facilement scalable, ce qui signifie qu'il est possible de gérer tout type d'environnement, même ceux demandant un volume de données élevé.
+    
+- **Accès Transparent aux Données :** Un DFS assure un accès transparent et cohérent aux données, indépendamment de l'emplacement physique du stockage. C'est une caractéristique importante, notamment lors de l'utilisation de Grid5000.\newline
+    
+La première technologie que j'ai eu à implémenter sur NixOS-Compose s'appelait [GlusterFS](https://www.gluster.org/).\newline
 
 **GlusterFS**
 
