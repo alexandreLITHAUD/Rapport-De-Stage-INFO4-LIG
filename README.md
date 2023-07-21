@@ -5,7 +5,7 @@
 ## Recupérer le Rapport avec wget
 
 ```
-wget https://github.com/alexandreLITHAUD/Rapport-De-Stage-INFO4-LIG/blob/10fcff85fe8609abfea03432aae26ac6c36c1b0b/RapportStageINFO4-2023-LITHAUD-Alexandre.pdf
+wget https://raw.githubusercontent.com/alexandreLITHAUD/Rapport-De-Stage-INFO4-LIG/master/RapportStageINFO4-2023-LITHAUD-Alexandre.pdf
 ```
 
 ## Compilation du rapport
