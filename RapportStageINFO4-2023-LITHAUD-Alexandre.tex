@@ -1249,6 +1249,55 @@ s'appelait \href{https://www.gluster.org/}{GlusterFS}.\newline
 
 \textbf{BeegFS}
 
+La composition Beegfs a posé de nombreux problèmes tout au long de sa
+création. En effet, cette technologie était présente dans nixpkgs lors
+de versions antérieures, mais elle a été supprimée en raison d'un manque
+de maintenance, ce qui a entraîné le paquet d'être cassé. Mon rôle a été
+de reprendre les sources utilisées, de les mettre à jour et de les faire
+fonctionner sur une composition utilisant la dernière version de
+Nix.\newline
+
+Voici le schéma de fonctionnement de Beegfs :
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth,height=0.5\textheight,keepaspectratio]{images/shema-beegfs.png}
+\caption{Architecture de BeegFS}
+\end{figure}
+
+Le paquet étant complètement cassé, j'ai dû effectuer de nombreux patchs
+sur les sources pour le remettre en état de fonctionnement dans la
+version 22.11 de Nixpkgs. J'ai également créé des modules capables de
+configurer rapidement chaque rôle, ainsi que des services systemd qui
+sont essentiels pour l'initialisation de la technologie.\newline
+
+Enfin, j'ai dû réparer le module kernel ou driver de l'application afin
+de faire fonctionner la partie client du service. Celle-ci dépendait
+fortement de fonctionnalités du noyau. Cependant, le paquet n'étant pas
+maintenu, la version du kernel était très ancienne (4.14 par rapport à
+la version actuelle 6.4). Pour résoudre ce problème, j'ai dû modifier la
+configuration Nix pour utiliser une ancienne version de nixpkgs avec une
+version du noyau compatible.\newline
+
+Malheureusement, malgré tous les patchs réalisés, j'ai constaté que
+NixOS-Compose utilise massivement des fonctionnalités du kernel de la
+machine courante. Il était donc impossible, dans la version actuelle de
+NixOS-Compose, de régler ce problème et de faire fonctionner la partie
+cliente de Beegfs. Ce problème a été largement documenté par mes soins
+et a été signalé comme une issue git facilement reproductible, afin
+qu'il puisse être corrigé dans le futur.\newline
+
+Cependant, le travail sur cette technologie m'a permis de développer des
+pratiques de débogage ainsi que des méthodes de travail efficaces qui
+m'ont été très utiles malgré les difficultés rencontrées. J'ai
+énormément appris et compris de nombreux concepts système omniprésents
+et essentiels.
+
+En fin de compte, bien que le travail sur Beegfs ait été exigeant, cela
+m'a donné une opportunité précieuse de croissance professionnelle et m'a
+permis de développer des compétences essentielles dans le domaine de
+l'informatique et de l'ingénierie des systèmes.\newline
+
 \textbf{Ceph}
 
 Ceph est une technologie complexe basée sur de nombreuses machines
@@ -1294,7 +1343,7 @@ Voici un schéma du fonctionnement de CephFS :
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{images/shema-cephfs.png}
+\includegraphics[width=0.5\textwidth,height=0.5\textheight,keepaspectratio]{images/shema-cephfs.png}
 \caption{Architecture de CephFS}
 \end{figure}
 
@@ -1307,6 +1356,13 @@ collaboration.(Voir l'image en Annexe)\newline
 
 Cette composition m'a permis de développer des techniques uniques pour
 faire fonctionner cette technologie de manière optimale.\newline
+
+Si le stage avait duré plus longtemps, j'aurais apprécié essayer de
+créer des scripts d'exécution (execo) pour tester les performances de
+chacune de mes compositions dans différentes conditions extrêmes, en
+utilisant la plateforme Grid5000. L'objectif aurait été de comparer les
+performances avec d'autres DFS tels que NFS ou OrangeFS, qui ont
+également été implémentés.\newline
 
 \hypertarget{workflow}{%
 \subsubsection{Workflow}\label{workflow}}
