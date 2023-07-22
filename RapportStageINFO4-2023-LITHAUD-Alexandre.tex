@@ -1399,6 +1399,76 @@ performances avec d'autres DFS tels que NFS ou OrangeFS, qui ont
 \hypertarget{workflow}{%
 \subsubsection{Workflow}\label{workflow}}
 
+La création de ces différentes compositions et les problèmes que j'ai
+rencontrés et résolus m'ont permis d'établir un flux de travail ou
+workflow efficace pour composer un service sur NixOS-Compose. Ce
+workflow a été schématisé et documenté sous forme d'un diagramme de
+séquence durant mon stage (voir annexe). Ce workflow m'a permis de
+drastiquement augmenter ma productivité et donc de pouvoir composer plus
+d'outils importants pour la recherche.\newline
+
+Sans trop rentrer dans les détails, voici les étapes principales de ce
+flux de travail :
+
+\begin{itemize}
+\item
+  \textbf{Étude de la technologie :} La première étape consiste à
+  étudier en détail la technologie que l'on souhaite composer. Il faut
+  comprendre son fonctionnement, ses dépendances et les exigences de
+  l'outil. C'est une partie essentielle car elle va être utile pour
+  évaluer la complexité de la composition que l'on essaie de créer. Cela
+  va aussi être essentiel afin de savoir exactement quand et comment
+  appeler chaque service.
+\item
+  \textbf{Détection des différents rôles :} Après avoir compris le
+  fonctionnement de la technologie, on va séparer chaque partie bien
+  différenciée en rôles. Ces rôles vont correspondre à une configuration
+  de machines. Il est donc très important de savoir combien de rôles
+  seront présents et de savoir quelles différences ils auront entre eux.
+  La séparation en rôles permet de visualiser efficacement comment la
+  communication entre les nœuds aura lieu. En général, plus une
+  composition possède de rôles différents, plus la composition sera
+  longue à écrire.
+\item
+  \textbf{Utilisation ou Création du package :} Suite à cela, on vérifie
+  si la technologie est déjà présente sous forme d'un paquet Nix. Si
+  c'est le cas, on l'utilise directement. Si ce n'est pas le cas, il va
+  falloir créer une dérivation Nix capable de packager l'application sur
+  Nix. Cette tâche peut se révéler très difficile voire impossible selon
+  les cas, mais elle est essentielle pour créer la composition. Il est
+  aussi possible que la technologie ne soit plus présente dans Nix. Dans
+  ce cas, il est possible de reprendre les sources et de les mettre à
+  jour afin de les faire fonctionner dans un environnement Nix récent
+  (comme avec Beegfs).
+\item
+  \textbf{Création de modules ou Services pour automatisation :} Si le
+  paquet fonctionne, il est de bon ton de créer des modules et autres
+  services afin de faciliter la configuration des rôles et
+  l'initialisation du déploiement des machines. Cette partie permet
+  d'automatiser la configuration des rôles afin de rendre la technologie
+  la plus simple possible à utiliser. En créant des modules, on peut
+  paramétrer de manière cohérente et systématique chaque rôle dans la
+  composition, rendant ainsi la gestion globale de la composition plus
+  fluide et efficace.
+\item
+  \textbf{Test de fonctionnement et Calcul de Performance :} Une fois
+  les modules créés et les rôles configurés, il faut procéder à des
+  tests de fonctionnement, notamment sur Grid5000 à moyenne échelle,
+  afin de s'assurer du bon fonctionnement général du système distribué
+  déployé. Il peut être également intéressant de créer des tests
+  unitaires en Python, directement dans les ``TestScript,'' pour
+  vérifier le bon fonctionnement des états de base de l'application. Une
+  fois les tests fonctionnels effectués, on peut tester les performances
+  de l'application grâce à un script Python utilisant la bibliothèque
+  execo, qui va permettre de demander un grand nombre de nœuds sur
+  Grid5000 pour effectuer des tests à grande échelle.\newline
+\end{itemize}
+
+Voici le workflow que j'ai utilisé et documenté tout au long de mon
+stage. Il m'aura permis de me fixer des base solide de travail ainsi que
+de facilement pouvoir estimé l'avancement de chaqune de mes missions
+dans la cadre de mon stage.
+
 \newpage
 
 \hypertarget{perspective-du-projet-nixos-compose}{%
