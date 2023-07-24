@@ -24,7 +24,7 @@
 
 \newglossaryentry{grid5000}
 {
-    name=Grid5000,
+    name=Grid'5000,
     description={Réseaux de noeuds hébergé un peux partout en France destiné à réalisé des essais pour la recherche dans le domaine de l'informatique distribué et parallèle.}
 }
 
@@ -387,7 +387,7 @@ Ce rapport va représenter mon expérience de stage au Laboratoire
 Informatique de Grenoble. Mon stage de 15 semaines à débuter le 17 avril
 2023. Au cours de cette période j'ai eu l'opportunité de travailler sur
 divers projet informatiques en lien avec les technologies de \Gls{nix}
-\cite{nix2017}, \Gls{nixos} \cite{nixos2010} et le \Gls{hpc} (\emph{High
+\cite{nix2004}, \Gls{nixos} \cite{nixos2010} et le \Gls{hpc} (\emph{High
 performance computing}). Ainsi que sur la maintenance et l'amélioration
 de logiciel et recherche tels que \Gls{oar} \cite{oar2005} et EAR. Cette
 opportunité m'a donné l'occasion de travailler avec le système
@@ -400,9 +400,9 @@ au projet \Gls{nixos-compose} \cite{nixoscompose2022}, un outils
 puissant qui facilite le déploiement et la gestion d'environnement de
 développement reproductible spécialisé pour le HPC en déployant
 directement plusieurs machines sur Grid5000 à la manière de Docker
-Compose \cite{dockercompose2021}. Afin de pourvoir réaliser cette tache
-il était important de monter en compétences sur le gestionnaire de
-paquet fonctionnel Nix et le système d'exploitation NixOS. Grâce à cette
+Compose \cite{docker2017}. Afin de pourvoir réaliser cette tache il
+était important de monter en compétences sur le gestionnaire de paquet
+fonctionnel Nix et le système d'exploitation NixOS. Grâce à cette
 expérience, j'ai pu approfondir ma compréhension des principes
 fondamentaux de la gestion des paquets et des environnements isolés, la
 configuration de système basé NixOS, le paradigme de programmation
@@ -421,10 +421,10 @@ développement du laboratoire.\newline
 
 De plus, j'ai eu l'opportunité de travailler en utilisant le système
 Grid5000, qui m'a permis de déployer et de tester mes
-\glspl{composition},c'est-à-dire des descriptions de système distribué
-fait en Nix et ce directement dans un environnement réel et
+\glspl{composition}, c'est-à-dire des descriptions de systèmes
+distribués fait en Nix et ce directement dans un environnement réel et
 reproductible. Cette expérience m'a offert une compréhension bien plus
-poussé sur les méthodes de déploiement de logiciel, à l'importance de
+poussée sur les méthodes de déploiement de logiciel, à l'importance de
 d'évolutivité et à la gestion des ressources et à la fiabilité des
 systèmes distribués.\newline
 
@@ -509,19 +509,19 @@ l'omniprésence d'états qui peuvent être changés d'une exécution à une
 autre. De plus, il peut y avoir des problèmes de version de logiciel,
 disparition de ressource, d'accès au ressources de calcul ou encore la
 présence d'une variable aléatoire. Tous ces problèmes, engendre un
-problème de reproductibilité des logiciels.\newline
+problème de reproductibilité des piles logicielles.\newline
 
 Dans le domaine du \Gls{hpc}, la reproductibilité présente plusieurs
 avantages. Tout d'abord, elle permet de valider les méthodes de
 modélisation et de simulation, garantissant ainsi que les résultats
-obtenus sont fiables et précis, même si il peux être incorrect. Cela
+obtenus sont fiables et précis, même s'il peut être incorrect. Cela
 renforce la confiance dans les résultats de recherche et facilite la
 collaboration et la comparaison des résultats entre différents
 chercheurs et laboratoires. De plus, dans ce genre d'environnement ou
 les chercheurs déploie des simulations complexes avec des quantités
 massives de données à analyser, il est essentiel que ces résultats
-puissent être déterministes, ne serait-ce que pour pouvoir assurer de la
-rigueur de la recherche.\newline
+puissent avoir la même variabilité, ne serait-ce que pour pouvoir
+assurer de la rigueur de la recherche.\newline
 
 C'est dans cette optique que des outils de mise en place de pile
 logicielle comme \Gls{nixos-compose} ont été mis en place dans
@@ -561,15 +561,15 @@ travaux de recherche et optimise l'utilisation des infrastructures
 informatiques. Cet outil est notamment utilisé dans Grid5000 pour la
 réservation et l'allocation des ressources.\newline
 
-Melissa, quant à lui, est un framework pour le développement
-d'applications parallèles et distribuées. Il fournit une infrastructure
-logicielle permettant aux chercheurs de concevoir et d'exécuter des
-applications haute performance sur des environnements hétérogènes et
-distribués. Melissa simplifie le processus de développement en
-fournissant des abstractions de haut niveau pour la programmation
-parallèle, l'orchestration des tâches et la gestion des données
-distribuées. Cet outil permet aux chercheurs de tirer pleinement parti
-des ressources informatiques disponibles et de développer des
+Melissa \cite{melissa2017}, quant à lui, est un framework pour le
+développement d'applications parallèles et distribuées. Il fournit une
+infrastructure logicielle permettant aux chercheurs de concevoir et
+d'exécuter des applications haute performance sur des environnements
+hétérogènes et distribués. Melissa simplifie le processus de
+développement en fournissant des abstractions de haut niveau pour la
+programmation parallèle, l'orchestration des tâches et la gestion des
+données distribuées. Cet outil permet aux chercheurs de tirer pleinement
+parti des ressources informatiques disponibles et de développer des
 applications performantes et évolutives.\newline
 
 NixOS-Compose est un outil conçu pour les expériences dans les systèmes
@@ -606,7 +606,7 @@ d'environnement reproductible. Il permet la gestion des dépendances
 logicielles de manière déclarative et garantit la reproductibilité des
 environnements de développement, et ce, en utilisant son propre langage,
 le \emph{Nix Expression Language}, communément appelé Nix. Le langage
-Nix est fonctionnel, pure à évaluation paresseuse. Comme dit
+Nix est fonctionnel, pure, à évaluation paresseuse. Comme dit
 précédemment, le mot clé de Nix est reproductibilité. Son langage, sa
 gestion des paquets et son architecture fonctionnelle lui permettent
 d'obtenir un résultat toujours identique pour des conditions
@@ -624,8 +624,9 @@ système d'exploitation. À la place, chaque paquet est traité comme une
 fonction pure qui prend en entrée une version spécifique du paquet et de
 ses dépendances et retourne en sortie une version spécifique du paquet.
 Grâce à ce système, on met de côté le problème de \Gls{depedency-hell}
-si commun dans la plupart des gestionnaires de paquet et l'on s'assure
-que chaque paquet ait la version requise et demandée.\newline
+\cite{dll2018} si commun dans la plupart des gestionnaires de paquet et
+l'on s'assure que chaque paquet ait la version requise et
+demandée.\newline
 
 Enfin, Nix est aussi capable de générer des environnements isolés
 configurables. Il est possible de créer des environnements shell
@@ -654,7 +655,7 @@ Le store Nix repose sur 5 principes clés :
   store est identifié par un hachage spécifique parfait basé sur ses
   entrées. Grâce à ce système, deux paquets identiques ne seront stockés
   qu'une seule fois. De plus, il est donc possible de stocker plusieurs
-  versions d'un même paquet.
+  versions d'un même paquet car ils auront des entrées différentes.
 \item
   \textbf{Immutabilité des fichiers} : Les paquets présents dans le
   store sont immuables. Il est impossible d'en effectuer une
@@ -705,12 +706,12 @@ seul store global.\newline
 
 Les flakes sont une fonctionnalité encore expérimentale de Nix qui vise
 à d'autant plus améliorer la reproductibilité, la modularité et la
-gestion des dépendances dans Nix. Il permet de définir une interface
-commune pour importation de ressource extérieure. Bien que toujours en
-phase expérimentale, les flakes sont massivement utilisés par la
-communauté grâce aux ajouts importants qu'il permet. Ils sont
-régulièrement considérés par la communauté des utilisateurs de nix comme
-un ajout essentiel au bon fonctionnement actuel de nix et à sa
+gestion des dépendances dans Nix. Ils permettent de définir une
+interface commune pour importation de ressource extérieure. Bien que
+toujours en phase expérimentale, les flakes sont massivement utilisés
+par la communauté grâce aux ajouts importants qu'ils permettent. Ils
+sont régulièrement considérés par la communauté des utilisateurs de nix
+comme un ajout essentiel au bon fonctionnement actuel de nix et à sa
 prospérité.\newline
 
 Afin de réaliser un flake, il suffit de créer un fichier
@@ -727,8 +728,8 @@ dépôt, la dernière date de modification, etc. Ce fichier permet donc
 d'avoir une trace des versions utilisées et de pouvoir les réutiliser de
 la même manière. Ce système est appelé \gls{pinning}.\newline
 
-En outre, les nix flakes est un élément essentiel à Nix et est une
-technologie que j'ai massivement utilisée lors de mon stage et qui est
+En outre, les nix flakes sont un élément essentiel à Nix et une
+technologie que j'ai massivement utilisé lors de mon stage et qui est
 utilisée dans de nombreux systèmes tels que NixOS-Compose par
 exemple.\newline
 
@@ -743,7 +744,7 @@ exemple.\newline
 Voici un exemple de création d'environnement isolé Nix en utilisant les
 flakes Nix. Ce script ne marche que sur les architectures
 \texttt{x86\_64-linux}, car il ne récupère les dépendances que de cet
-ordinateur. Ce script rajoute dans la PATH du terminal en cours les
+architecture. Ce script rajoute dans la PATH du terminal en cours les
 applications mise dans les \texttt{buildInputs}, c'est-à-dire dans ce
 cas \texttt{pandoc}, \texttt{rubber} et \texttt{biber}. À la fin de
 cette session, le PATH sera remis à défaut. Pour l'exécuter, il faut
@@ -761,7 +762,8 @@ L'intégralité de la configuration est définie par le biais du fichier
 \texttt{configuration.nix}. C'est un principe très agréable, car cela
 permet de très simplement stocker et versionner la configuration du
 système afin de pouvoir par exemple la réutiliser dans une architecture
-similaire.\newline
+similaire. Cela rend aussi la configuration d'une machine plus
+facilement versionnable.\newline
 
 NixOS utilise Nix pour s'occuper de la gestion des paquets. Donc, chaque
 paquet est traité manière fonctionnelle. NixOS suit un modèle de mise à
@@ -791,8 +793,8 @@ une version stable de l'application utilisée.\newline
 \subsubsection{Nixpkgs et Nur-Kapack}\label{nixpkgs-et-nur-kapack}}
 
 Nixpkgs et NUR (Nix User Repository) sont des dépôts de paquets Nix. Ils
-sont utilisés massivement le gestionnaire de paquet, en tant que
-collection de paquet et logiciel installable par les utilisateurs
+sont utilisés massivement le gestionnaire de paquets, en tant que
+collection de paquets et logiciels installables par les utilisateurs
 possédant Nix. Durant mon stage, j'ai eu la possibilité de rajouter des
 paquets dans certain de ces dépôts, afin qu'il soit utilisable par la
 communauté Nix.\newline
@@ -825,10 +827,10 @@ manière fonctionnel. C'est un élément essentiel de la réussite de Nix et
 NixOS.\newline
 
 Durant ce stage, j'ai rajouté des paquets dans des dépôts, afin de les
-rendre utilisable par la communauté. Notamment sur le dépôt
-\href{https://github.com/oar-team/nur-kapack}{Nur-kapack} un sous dépôt
-de NUR, créé par l'équipe DATAMOVE pour y stocké les paquets important
-pour la recherche au laboratoire. J'ai eu l'occasion de comprendre son
+rendre utilisable par la communauté. Notamment sur le dépôt Nur-kapack
+(\href{https://github.com/oar-team/nur-kapack}{LIEN}) un sous dépôt de
+NUR, créé par l'équipe DATAMOVE pour y stocké les paquets important pour
+la recherche au laboratoire. J'ai eu l'occasion de comprendre son
 fonctionnement, tester certain des paquets et donc y rajouter des
 fonctionnalités et des paquets.
 
@@ -933,9 +935,9 @@ server quant à lui initialise le service \texttt{nfs}, de partage de
 fichier, qui est présent dans le langage Nix car créé par la communauté
 dans le dépôt nixpkgs.\newline
 
-Chacun de ces rôles sont configurés en utilisant le Nix et permettent en
-quelques lignes de créer deux noeuds, directement en communication, et
-ce, de manière éphémère et reproductible. Il semble donc évidement de
+Chacun de ces rôles sont configurés en utilisant le NixOS et permettent
+en quelques lignes de créer deux noeuds, directement en communication,
+et ce, de manière éphémère et reproductible. Il semble donc évidement de
 comprendre l'intérêt d'un tel outil dans le monde la recherche. La
 création simple de noeud reproductible et éphémère permet de créer des
 conditions de recherche optimal, et ce, dans de nombreuses
@@ -953,7 +955,7 @@ l'utilisateur de choisir lu nombre de machines utilisant le rôle
 les rôles.\newline
 
 À la base, il faillait directement définir le nombre de noeud voulu dans
-la composition. Cette solution, bien que très fonctionnel, force
+la composition. Cette solution, bien que très fonctionnelle, force
 l'utilisateur de recompiler à chaque changement de cette valeur, ce qui
 est une perte sèche de performance.\newline
 
@@ -994,8 +996,8 @@ Il existe un certain nombre de flavours disponible avec NixOS-Compose
 \end{itemize}
 
 Les flavours G5K sont celle qui est utilisables dans l'environnement
-Grid5000 qui utilise Kameleon pour pouvoir créer et déployer de cette
-architecture.\newline
+Grid5000 qui utilise Kadeploy \cite{kadeploy2011} pour pouvoir créer et
+déployer de cette architecture.\newline
 
 Il est donc possible de tester des compositions sur plusieurs
 environnement afin de pouvoir s'assurer du bon fonctionnement du système
@@ -1011,7 +1013,7 @@ python afin de pouvoir tester le fonctionnement de ce système. Ce type
 de fichier est commun et couramment utilisé dans la communauté Nix. De
 nombreux fichiers de tests unitaires sont disponibles dans le dépôt de
 paquet
-\href{https://github.com/NixOS/nixpkgs/tree/master/nixos/tests}{Nixpkgs}.\newline
+Nixpkgs(\href{https://github.com/NixOS/nixpkgs/tree/master/nixos/tests}{LIEN}).\newline
 
 Les compositions NixOS-Compose réutilisent la structure pré-établie par
 les tests NixOS. Cela permet de facilement passé de Test NixOS à
@@ -1042,11 +1044,11 @@ Simple}\label{fonctionnement-et-composition-simple}}
 Une grande partie du début de mon stage a consisté à me former sur Nix.
 En effet, il était essentiel de comprendre le fonctionnement de Nix et
 la configuration système NixOS pour pouvoir réaliser des compositions.
-J'ai donc suivi des tutoriels sur Nix, notamment les
-\href{https://nixos.org/guides/nix-pills/}{Nix Pills}, qui est un
-tutoriel couvrant toutes les fonctionnalités de Nix. Ce tutoriel, bien
-que légèrement daté, a été un point central de ma compréhension de Nix,
-en complément de la
+J'ai donc suivi des tutoriels sur Nix, notamment les Nix Pills
+(\href{https://nixos.org/guides/nix-pills/}{LIEN}), qui est un tutoriel
+couvrant toutes les fonctionnalités de Nix. Ce tutoriel, bien que
+légèrement daté, a été un point central de ma compréhension de Nix, en
+complément de la
 \href{https://nixos.org/manual/nix/stable/}{documentation officielle de
 Nix}.\newline
 
@@ -1122,16 +1124,16 @@ important pour le bon fonctionnement de ne pas demander à la frontale de
 faire des calculs intensifs, car cela causerait des ralentissements pour
 tous les utilisateurs. \newline
 
-Comme Grid5000 utilise ssh, j'ai été amenée à utiliser et à comprendre
-l'outil tmux. Tmux est un multiplexeur de terminal qui permet par son
-implémentation de sauvegarder des sessions de terminal. C'est un outil
-très intéressant que j'utilise toujours aujourd'hui sur mon ordinateur
-personnel. Ce multiplexeur de terminal était particulièrement important
-avec grid5000, car son système de session permet de récupérer une
-connexion ssh en utilisant la commande \texttt{tmux\ attach} ou
-\texttt{tmux\ a} afin de récupérer la session perdue. Cela m'a permis
-d'éviter de perdre beaucoup de temps lors de l'utilisation de
-G5K.\newline
+Comme Grid5000 utilise ssh, j'ai été amené à utiliser et à comprendre
+l'outil tmux (\href{https://github.com/tmux/tmux/wiki}{LIEN}). Tmux est
+un multiplexeur de terminal qui permet par son implémentation de
+sauvegarder des sessions de terminal. C'est un outil très intéressant
+que j'utilise toujours aujourd'hui sur mon ordinateur personnel. Ce
+multiplexeur de terminal était particulièrement important avec grid5000,
+car son système de session permet de récupérer une connexion ssh en
+utilisant la commande \texttt{tmux\ attach} ou \texttt{tmux\ a} afin de
+récupérer la session perdue. Cela m'a permis d'éviter de perdre beaucoup
+de temps lors de l'utilisation de G5K.\newline
 
 Afin d'utiliser Grid5000, il faut utiliser les commande OAR dans le but
 de demander des noeud au système, le scheduler OAR donnera accès au
@@ -1170,10 +1172,10 @@ implémenter sur NXC.\newline
 \caption{Mes Statistiques d'utilisaion de Grid5000}
 \end{figure}
 
-Enfin, certaines des compositions que j'ai créées nécessitait la
-modification ou l'ajout de système de fichier dans certain des noeuds or
-cette action n'était possible que dans le système grid5000. En effet,
-les flavours ``locale'', comme VM ou Docker n'utilise pas de disque, à
+Enfin, certaines des compositions que j'ai créé nécessitaient la
+modification ou l'ajout de système de fichiers dans certain des noeuds
+or cette action n'était possible que dans le système Grid5000. En effet,
+les flavours ``locales'', comme VM ou Docker n'utilise pas de disque, à
 la place tout est stocké dans un file system temporaire qui
 correspondait à la RAM attribuée. C'était un problème, car il était
 impossible de modifier ou de rajouter de files system.
@@ -1200,7 +1202,7 @@ Grid5000 a donc été une partie essentielle de mon stage, car cela m'a
 permis de pouvoir faire des expériences à grande échelle et de pouvoir
 assurer le bon fonctionnement de mes compositions tout en permettant
 d'échapper à quelques contraintes de fonctionnement des flavours
-``locale'' NixOS-Compose.\newline
+``locales'' NixOS-Compose.\newline
 
 \hypertarget{systuxe8me-de-fichier-distribuuxe9}{%
 \subsubsection{Système de Fichier
@@ -1245,10 +1247,10 @@ environnement comme Grid5000 est multiple :\newline
 La première technologie que j'ai eu à implémenter sur NixOS-Compose
 s'appelait GlusterFS.\newline
 
-\textbf{\href{https://www.gluster.org/}{GlusterFS}}
+\textbf{\href{https://www.gluster.org/}{GlusterFS} \cite{glusterfs2012}}
 
-Gluster a été une bonne première composition. En effet, le paquet était
-déjà présent dans Nixpkgs et possédait de nombreux tests de
+GlusterFS a été une bonne première composition. En effet, le paquet
+était déjà présent dans Nixpkgs et possédait de nombreux tests de
 fonctionnement. J'ai pu utiliser ces tests comme base pour essayer de
 faire fonctionner les différents composants de ce DFS.\newline
 
@@ -1262,16 +1264,16 @@ Schéma de fonctionnement de GlusterFS :
 
 GlusterFS utilise seulement 2 rôles pour fonctionner : le client et le
 serveur. Les serveurs s'occupent des métadonnées et du stockage des
-fichiers, comme illustré dans la figure ci-dessus. Dans Gluster, chaque
-serveur est également appelé ``brick'' et permet la redondance des
-données. Une somme de briques est appelée un volume et sert de base à un
-système de fichiers.\newline
+fichiers, comme illustré dans la figure ci-dessus. Dans GlusterFS,
+chaque serveur est également appelé ``brick'' et permet la redondance
+des données. Une somme de briques est appelée un volume et sert de base
+à un système de fichiers.\newline
 
 Cette composition a été la première qui m'a obligé à utiliser Grid5000
 pour les tests, même les plus basiques, car elle nécessitait un disque
 supplémentaire pour configurer les briques.\newline
 
-En somme, Gluster a été une très bonne expérience pour ma première
+En somme, GlusterFS a été une très bonne expérience pour ma première
 grosse composition NixOS-Compose. J'y ai découvert mes premières
 difficultés qui m'ont permis de mieux comprendre le fonctionnement et
 les subtilités et surtout le workflow de NixOS-Compose. Cela m'a
@@ -1279,7 +1281,7 @@ les subtilités et surtout le workflow de NixOS-Compose. Cela m'a
 la mise en place des tests, ce qui a été une étape importante dans mon
 apprentissage.\newline
 
-\textbf{\href{https://www.beegfs.io/c/}{BeegFS}}
+\textbf{\href{https://www.beegfs.io/c/}{BeegFS} \cite{beegfs2014}}
 
 La composition Beegfs a posé de nombreux problèmes tout au long de sa
 création. En effet, cette technologie était présente dans nixpkgs lors
@@ -1330,7 +1332,7 @@ m'a donné une opportunité précieuse de croissance professionnelle et m'a
 permis de développer des compétences essentielles dans le domaine de
 l'informatique et de l'ingénierie des systèmes.\newline
 
-\textbf{\href{https://docs.ceph.com/en/quincy/}{Ceph}}
+\textbf{\href{https://docs.ceph.com/en/quincy/}{Ceph} \cite{ceph2006}}
 
 Ceph est une technologie complexe basée sur de nombreuses machines
 travaillant en collaboration pour assurer la redondance des données. Il
@@ -1390,11 +1392,12 @@ Cette composition m'a permis de développer des techniques uniques pour
 faire fonctionner cette technologie de manière optimale.\newline
 
 Si le stage avait duré plus longtemps, j'aurais apprécié essayer de
-créer des scripts d'exécution (execo) pour tester les performances de
-chacune de mes compositions dans différentes conditions extrêmes, en
-utilisant la plateforme Grid5000. L'objectif aurait été de comparer les
-performances avec d'autres DFS tels que NFS ou OrangeFS, qui ont
-également été implémentés.\newline
+créer des scripts d'exécution (execo \cite{execo2013}) pour tester les
+performances de chacune de mes compositions dans différentes conditions
+extrêmes, en utilisant la plateforme Grid5000. L'objectif aurait été de
+comparer les performances avec d'autres DFS tels que NFS \cite{nfs1994}
+ou OrangeFS \cite{orangefs2011}, qui ont également été
+implémentés.\newline
 
 \hypertarget{workflow}{%
 \subsubsection{Workflow}\label{workflow}}
@@ -1465,8 +1468,8 @@ flux de travail :
 \end{itemize}
 
 Voici le workflow que j'ai utilisé et documenté tout au long de mon
-stage. Il m'aura permis de me fixer des base solide de travail ainsi que
-de facilement pouvoir estimé l'avancement de chaqune de mes missions
+stage. Il m'aura permis de me fixer des bases solides de travail ainsi
+que de facilement pouvoir estimé l'avancement de chaqune de mes missions
 dans la cadre de mon stage.
 
 \newpage
@@ -1481,7 +1484,7 @@ aspect omniprésent et essentiel de la recherche informatique, et ce,
 dans tous les domaines, il semble raisonnable de penser que NXC aura un
 avenir certain dans le monde de la recherche. Cependant, l'outil est
 encore en développement et de nouvelles fonctionnalités seront à coup
-sûr ajouté dans le futur.
+sûr ajoutées dans le futur.
 
 Après ces quelques mois d'utilisation de l'application et de
 développement de composition, voici les perspectives que j'envisagerai
@@ -1498,7 +1501,7 @@ utilisables par l'outil NixOS-Compose, comme \texttt{nxc\ build},
 fonctionnalités comme la présence d'un \texttt{nxc\ check} qui a été
 proposé et qui permettrait d'évaluer une composition sans la build, ce
 qui faciliterait les tests de fonctionnement d'une composition. Avec
-NixOS-Compose on essai de ``cacher'' la présence du Nix pour les
+NixOS-Compose on essait de ``cacher'' la présence du Nix pour les
 personnes voulant déployer des environnements. Cependant, on pourrait
 imaginer pouvoir utiliser les templates Nix directement dans NXC en
 utilisant l'option \texttt{-t} de \texttt{nxc\ init}.\newline
@@ -1511,20 +1514,21 @@ l'outil de rajouter des flavours afin de pouvoir déployer des
 environnements reproductible sur des plateformes différentes. On peut,
 par exemple, imaginer une implémentation d'OpenStack dans le but de
 pouvoir créer une flavour de déploiement dans Kubernetes. C'est à mon
-sens l'élément essentiel de développement de NixOs-Compose.\newline
+sens l'élément essentiel de développement de NixOS-Compose.\newline
 
-Il pourrait être censé d'imaginer ajouter des outils à NixOS-Compose.
+Il pourrait être sensé d'imaginer ajouter des outils à NixOS-Compose.
 Ces outils pourraient être aussi être créé par des équipes de recherche.
-C'est ce qui est proposé en ce moment avec l'outil enosLib.\newline
+C'est ce qui est proposé en ce moment avec l'outil EnOSlib
+\cite{enoslib2021}.\newline
 
 Actuellement NixOS-Compose utilise un noeud pour chaque rôle à déployer,
 une proposition d'amélioration pourrait consister de créer un système de
-\emph{folding} dans l'outil, similaire à ce que OAR peut déjà faire
-actuellement. Ce principe de folding consiste à déployer un certain
-nombre de rôles dans des machines virtuelles situé dans un noeud spécial
-de ``calcul'' unique. Cette amélioration pourrait sans doute augmenter
-les performances et réduire les consommations énergétiques des outils de
-recherches utilisant NXC.\newline
+\emph{folding} \cite{folding2015} dans l'outil, similaire à ce que OAR
+peut déjà faire actuellement. Ce principe de folding consiste à déployer
+un certain nombre de rôles dans des machines virtuelles situé dans un
+noeud spécial de ``calcul'' unique. Cette amélioration pourrait sans
+doute augmenter les performances et réduire les consommations
+énergétiques des outils de recherches utilisant NXC.\newline
 
 \textbf{Amélioration de la Documentation et des Tutoriaux}\newline
 
@@ -1535,15 +1539,15 @@ NixOS-Compose possède une
 \href{https://nixos-compose.gitlabpages.inria.fr/nixos-compose/}{documentation}
 expliquant le fonctionnement général de l'outil ainsi que le workflow
 général de l'application. Il serait donc une bonne amélioration de
-remettre au bout du jour la documentation qui commence peux à peu à être
+remettre au goût du jour la documentation qui commence peux à peu à être
 déprécié.\newline
 
-NixOS-Compose possède également des
-\href{https://gitlab.inria.fr/nixos-compose/tuto-nxc}{tutoriaux}, qui
-permet de facilement pouvoir tester le fonctionnement de l'outil. Ces
-tutoriaux sont essentiels, il serait donc une bonne chose de les
-améliorer afin de rentrer encore plus dans les détails et de les mettre
-à jour. \newline
+NixOS-Compose possède également un
+\href{https://gitlab.inria.fr/nixos-compose/tuto-nxc}{tutoriel}, qui
+permet de facilement pouvoir tester le fonctionnement de l'outil. Ce
+tutoriel esy essentiels, il serait donc une bonne chose de l'améliorer
+afin de rentrer encore plus dans les détails et de le mettre à
+jour.\newline
 
 Enfin, il faudrait à mon sens, dans l'optique de rendre l'utilisation de
 NixOS-Compose la plus facile possible pour les nouveaux utilisateurs,
@@ -1572,7 +1576,7 @@ technologie.\newline
 \subsection{Bilan personnel}\label{bilan-personnel}}
 
 Ce stage m'a permis de découvrir le monde de la recherche de manière
-poussé. De plus, j'ai développé une méthode de travail efficace. J'ai
+poussée. De plus, j'ai développé une méthode de travail efficace. J'ai
 découvert les problématiques qu'une équipe de recherche telle que
 DATAMOVE peuvent poser.
 
@@ -1587,7 +1591,7 @@ J'ai eu le plaisir de contribué à l'évolution de NixOS-Compose et de
 découvrir des technologies puissantes comme Nix et NixOS qui m'ont
 permis de m'améliorer sur des concepts important dans l'informatique
 actuel comme le calcul de performance, la reproductibilité et le
-déploiement de système distribué.\newline
+déploiement de systèmes distribués.\newline
 
 \hypertarget{bilan-professionnel}{%
 \subsection{Bilan professionnel}\label{bilan-professionnel}}
@@ -1598,7 +1602,7 @@ travail dans une équipe de recherche tel que DATAMOVE.
 
 J'ai grandement apprécié le système de fonctionnement de l'équipe. En
 effet, dans cet environnement de travail, l'entraide et la communication
-était omniprésente. J'ai donc eu le plaisir de développer au sein de
+étaient omniprésentes. J'ai donc eu le plaisir de développer au sein de
 l'équipe des compétences de travail d'équipe et de coordinations avec
 les différents membres du laboratoire. De plus, les différents
 séminaires assistés et tâche réalisés me permirent de développer ma
