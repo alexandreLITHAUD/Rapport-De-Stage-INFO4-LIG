@@ -255,9 +255,9 @@ Voici les projet que j'ai plus particulièrement contribué :
 
 - [Nur-Kapack](https://github.com/oar-team/nur-kapack)
 
-- Rajout de composition de Files System distribué dans le [groupe HPC-IO](https://gitlab.inria.fr/nixos-compose/hpc-io)
+- Rajout de composition de Files System distribué dans le [groupe HPC-IO](https://gitlab.inria.fr/nixos-compose/hpc-io) qui est un groupe qui contient des compositions de DFS.
 
-- [Regale](https://gricad-gitlab.univ-grenoble-alpes.fr/regale/tools/regale-nixos-compose)
+- [Regale](https://gricad-gitlab.univ-grenoble-alpes.fr/regale/tools/regale-nixos-compose) qui est un projet européen ayant pour but de fournir au application HPC des capacité d'évolution. 
 
 - [NixOS-Compose](https://gitlab.inria.fr/nixos-compose/nixos-compose)
 
