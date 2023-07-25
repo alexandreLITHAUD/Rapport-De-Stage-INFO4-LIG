@@ -10,23 +10,23 @@ acknowledgments: |+
 
   Je remercie également Monsieur Olivier RICHARD et Monsieur Nicolas PALIX, respectivement mon tuteur et mon référent de stage pour leurs conseils ainsi que leurs pédagogies qui m'ont permis de réaliser mes missions dans les meilleures conditions possibles et de grandement monter en compétence durant ce stage.\newline
 
-  Je tiens aussi à remercier Pierre NEYRON, pour toute l'aide que j'ai reçu et pour les explications avancé sur le fonctionnement de Grid5000.\newline
+  Je tiens aussi à remercier Pierre NEYRON, pour toute l'aide que j'ai reçu et pour les explications avancé sur le fonctionnement de Grid'5000.\newline
 
   Enfin, je suis reconnaissant envers Quentin GUILLOTEAU et Adrien FAURE, respectivement doctorant et ingénieur au Laboratoire Informatique de Grenoble pour les inestimables conseils et les réponses dispensés lors de mes différentes missions.
 abstract-fr: |+
   En 4ème année d'ingénieur en informatique, j'ai eu l'opportunité de faire un stage de 15 semaines au Laboratoire Informatique de Grenoble (LIG), au sein de l'équipe DATAMOVE.\newline
 
-  Durant ce stage, j'ai eu comme objectif d'utiliser et d'améliorer l'outil NixOS-Compose, ainsi que de créer différentes description d'architecture distribué, nommé compositions dans l'optique de les utiliser à une fin de recherche. NixOS-Compose (ou NXC) est un logiciel créé par l’équipe, permettant de décrire une infrastructure complexe de plusieurs machines, en mettant l’accent sur la reproductibilité et la simplicité de mise en place. De plus, j'ai été amené à contribuer à la maintenance de logiciels tels que OAR et EAR, améliorant leur stabilité par le biais de mise à jour. Le tout en utilisant le système Grid5000 qui m'a permis de tester mes développements dans un environnement réel.\newline
+  Durant ce stage, j'ai eu comme objectif d'utiliser et d'améliorer l'outil NixOS-Compose, ainsi que de créer différentes description d'architecture distribué, nommé compositions dans l'optique de les utiliser à une fin de recherche. NixOS-Compose (ou NXC) est un logiciel créé par l’équipe, permettant de décrire une infrastructure complexe de plusieurs machines, en mettant l’accent sur la reproductibilité et la simplicité de mise en place. De plus, j'ai été amené à contribuer à la maintenance de logiciels tels que OAR et EAR, améliorant leur stabilité par le biais de mise à jour. Le tout en utilisant le système Grid'5000 qui m'a permis de tester mes développements dans un environnement réel.\newline
 
-  Durant ce rapport, vous allez suivre la création des différentes compositions que j'ai créée dans le but de tester les performances de plusieurs systèmes de fichiers distribués dans le réseau de nœud Grid5000.
+  Durant ce rapport, vous allez suivre la création des différentes compositions que j'ai créée dans le but de tester les performances de plusieurs systèmes de fichiers distribués dans le réseau de nœud Grid'5000.
 abstract-en: |+
   In my 4th year as a computer science engineer, I had the opportunity to do a 15-week internship at the IT Laboratory of Grenoble (LIG), in the DATAMOVE team.\newline
 
-  During this placement, my aim was to use and improve the NixOS-Compose tool, and to create various different distributed architecture descriptions, called compositions with a view to using them for research purposes. NixOS-Compose (or NXC) is a piece of software created by the team, enabling a complex infrastructure of several machines to be described, with the emphasis on reproducibility and simplicity of implementation. I also contributed to the maintenance of software such as OAR and EAR, improving their stability through updates. All this was done using the Grid5000 system, which enabled me to test my developments in a real environment.\newline 
+  During this placement, my aim was to use and improve the NixOS-Compose tool, and to create various different distributed architecture descriptions, called compositions with a view to using them for research purposes. NixOS-Compose (or NXC) is a piece of software created by the team, enabling a complex infrastructure of several machines to be described, with the emphasis on reproducibility and simplicity of implementation. I also contributed to the maintenance of software such as OAR and EAR, improving their stability through updates. All this was done using the Grid'5000 system, which enabled me to test my developments in a real environment.\newline 
 
-  In this report, you will follow the creation of the various compositions I created in order to test the performance of several distributed file systems in the Grid5000 node network.
-keywords-fr: "Nix, Reproductibilité, Programmation Fonctionnel, Laboratoire, NixOS, NixOS-Compose, Grid5000, Systèmes de fichiers, Logiciel de Recherche, Maintenance, HPC, Infrastructure Distribué."
-keywords-en: "Nix, Reproductibility, Functional Programming, Laboratory, NixOS, NixOS-Compose, Grid5000, File Systems, Research Softwares, Maintenance, HPC, Distributed Infrastructure"
+  In this report, you will follow the creation of the various compositions I created in order to test the performance of several distributed file systems in the Grid'5000 node network.
+keywords-fr: "Nix, Reproductibilité, Programmation Fonctionnel, Laboratoire, NixOS, NixOS-Compose, Grid'5000, Systèmes de fichiers, Logiciel de Recherche, Maintenance, HPC, Infrastructure Distribué."
+keywords-en: "Nix, Reproductibility, Functional Programming, Laboratory, NixOS, NixOS-Compose, Grid'5000, File Systems, Research Softwares, Maintenance, HPC, Distributed Infrastructure"
 company: Laboratoire d’informatique de Grenoble
 address: "Bâtiment IMAG, 700, AV. Centrale, 38401 Saint Martin d’Hères"
 phone: "07.87.30.90.36"
@@ -52,11 +52,11 @@ tuteur:
 
 Ce rapport va représenter mon expérience de stage au Laboratoire Informatique de Grenoble. Mon stage de 15 semaines à débuter le 17 avril 2023. Au cours de cette période j'ai eu l'opportunité de travailler sur divers projet informatiques en lien avec les technologies de \Gls{nix} \cite{nix2004}, \Gls{nixos} \cite{nixos2010} et le \Gls{hpc} (*High performance computing*). Ainsi que sur la maintenance et l'amélioration de logiciel et recherche tels que \Gls{oar} \cite{oar2005} et EAR. Cette opportunité m'a donné l'occasion de travailler avec le système \Gls{grid5000} \cite{grid5000}, qui offre une plateforme d'expérimentale distribuée pour l’exécution de travaux de recherche à grande échelle.\newline
 
-L'objectif principal de mon stage était, en premier lieu, de contribuer au projet \Gls{nixos-compose} \cite{nixoscompose2022}, un outils puissant qui facilite le déploiement et la gestion d'environnement de développement reproductible spécialisé pour le HPC en déployant directement plusieurs machines sur Grid5000 à la manière de Docker Compose \cite{docker2017}. Afin de pourvoir réaliser cette tache il était important de monter en compétences sur le gestionnaire de paquet fonctionnel Nix et le système d'exploitation NixOS. Grâce à cette expérience, j'ai pu approfondir ma compréhension des principes fondamentaux de la gestion des paquets et des environnements isolés, la configuration de système basé NixOS, le paradigme de programmation fonctionnelle ainsi que le déploiement d'application fonctionnelle dans un environnement d'HPC.\newline
+L'objectif principal de mon stage était, en premier lieu, de contribuer au projet \Gls{nixos-compose} \cite{nixoscompose2022}, un outils puissant qui facilite le déploiement et la gestion d'environnement de développement reproductible spécialisé pour le HPC en déployant directement plusieurs machines sur Grid'5000 à la manière de Docker Compose \cite{docker2017}. Afin de pourvoir réaliser cette tache il était important de monter en compétences sur le gestionnaire de paquet fonctionnel Nix et le système d'exploitation NixOS. Grâce à cette expérience, j'ai pu approfondir ma compréhension des principes fondamentaux de la gestion des paquets et des environnements isolés, la configuration de système basé NixOS, le paradigme de programmation fonctionnelle ainsi que le déploiement d'application fonctionnelle dans un environnement d'HPC.\newline
 
-En parallèle, j'ai participé à la maintenance et à l'amélioration de logiciel de recherche tels que OAR et EAR en les mettant à jour avec la dernière version de Nix par exemple. OAR joue un role crucial dans la planification de travaux de recherche sur des infrastructures distribué comme Grid5000 notamment. EAR quant à lui, permet d’instrumenter et donc de quantifié les performances d'applications distribuées. J'ai pu contribuer à l'amélioration de leur stabilité, de leurs performances et de leurs fonctionnalités, en collaborant étroitement avec l'équipe de développement du laboratoire.\newline
+En parallèle, j'ai participé à la maintenance et à l'amélioration de logiciel de recherche tels que OAR et EAR en les mettant à jour avec la dernière version de Nix par exemple. OAR joue un role crucial dans la planification de travaux de recherche sur des infrastructures distribué comme Grid'5000 notamment. EAR quant à lui, permet d’instrumenter et donc de quantifié les performances d'applications distribuées. J'ai pu contribuer à l'amélioration de leur stabilité, de leurs performances et de leurs fonctionnalités, en collaborant étroitement avec l'équipe de développement du laboratoire.\newline
 
-De plus, j'ai eu l'opportunité de travailler en utilisant le système Grid5000, qui m'a permis de déployer et de tester mes \glspl{composition}, c'est-à-dire des descriptions de systèmes distribués fait en Nix et ce directement dans un environnement réel et reproductible. Cette expérience m'a offert une compréhension bien plus poussée sur les méthodes de déploiement de logiciel, à l'importance de d'évolutivité et à la gestion des ressources et à la fiabilité des systèmes distribués.\newline
+De plus, j'ai eu l'opportunité de travailler en utilisant le système Grid'5000, qui m'a permis de déployer et de tester mes \glspl{composition}, c'est-à-dire des descriptions de systèmes distribués fait en Nix et ce directement dans un environnement réel et reproductible. Cette expérience m'a offert une compréhension bien plus poussée sur les méthodes de déploiement de logiciel, à l'importance de d'évolutivité et à la gestion des ressources et à la fiabilité des systèmes distribués.\newline
 
 Dans ce rapport, je décrirai en détail les différentes tâches et projets auxquels j'ai participé tout au long de mon stage, en mettant l'accent sur les compétences acquises, les résultats obtenus et les leçons apprises. Je présenterai également une analyse critique de mes réalisations, ainsi que des suggestions pour des améliorations futures. Ce rapport témoigne de ma progression en tant que professionnel de l'informatique et des contributions significatives que j'ai apportés au sein du LIG.
 
@@ -126,7 +126,7 @@ Cette équipe est dirigée par Bruno RAFFIN. Olivier RICHARD, Quentin QUILLOTEAU
 
 **Quelques projets phares de l'équipe**\newline
 
-\Gls{oar} est un gestionnaire de ressources distribuées conçu pour les environnements de calcul intensif. Il permet aux chercheurs de planifier, de contrôler, répondre et alloué des ressources demandé par un utilisateur dans des environnements telles que les clusters de calcul, les grilles de calcul et les infrastructures de cloud computing. OAR offre une gestion fine des tâches, des files d'attente et des politiques de priorité, permettant ainsi une utilisation efficace et équitable des ressources. Cet outil facilite la planification des travaux de recherche et optimise l'utilisation des infrastructures informatiques. Cet outil est notamment utilisé dans Grid5000 pour la réservation et l'allocation des ressources.\newline
+\Gls{oar} est un gestionnaire de ressources distribuées conçu pour les environnements de calcul intensif. Il permet aux chercheurs de planifier, de contrôler, répondre et alloué des ressources demandé par un utilisateur dans des environnements telles que les clusters de calcul, les grilles de calcul et les infrastructures de cloud computing. OAR offre une gestion fine des tâches, des files d'attente et des politiques de priorité, permettant ainsi une utilisation efficace et équitable des ressources. Cet outil facilite la planification des travaux de recherche et optimise l'utilisation des infrastructures informatiques. Cet outil est notamment utilisé dans Grid'5000 pour la réservation et l'allocation des ressources.\newline
 
 Melissa \cite{melissa2017}, quant à lui, est un framework pour le développement d'applications parallèles et distribuées. Il fournit une infrastructure logicielle permettant aux chercheurs de concevoir et d'exécuter des applications haute performance sur des environnements hétérogènes et distribués. Melissa simplifie le processus de développement en fournissant des abstractions de haut niveau pour la programmation parallèle, l'orchestration des tâches et la gestion des données distribuées. Cet outil permet aux chercheurs de tirer pleinement parti des ressources informatiques disponibles et de développer des applications performantes et évolutives.\newline
 
@@ -311,7 +311,7 @@ Il existe un certain nombre de flavours disponible avec NixOS-Compose :\newline
 
 - **G5K-image**, qui va créer une image déployable selon des configurations différentes.\newline
 
-Les flavours G5K sont celle qui est utilisables dans l'environnement Grid5000 qui utilise Kadeploy \cite{kadeploy2011} pour pouvoir créer et déployer de cette architecture.\newline
+Les flavours G5K sont celle qui est utilisables dans l'environnement Grid'5000 qui utilise Kadeploy \cite{kadeploy2011} pour pouvoir créer et déployer de cette architecture.\newline
 
 Il est donc possible de tester des compositions sur plusieurs environnement afin de pouvoir s’assurer du bon fonctionnement du système et de calculer les performances dans des conditions différentes. Les flavours sont un point essentiel de l'importance de l'outil NixOS-Compose.\newline
 
@@ -349,23 +349,23 @@ Voici un exemple de composition NXC basée sur le template basique :
 
 Une commande essentielle pour mon stage a été `nxc driver -t`, qui permet de lancer le script de test. Le "Test Script" permet, via un code Python, de vérifier le bon fonctionnement d'une composition. Il a été largement utilisé pendant mon stage, notamment pour la _CI_ (Continuous Integration) de mes compositions. La CI permet de lancer les tests à chaque commit, assurant ainsi la pérennité du code malgré les mises à jour.\newline
 
-### Grid5000
+### Grid'5000
 
-Grid5000 (ou G5K) est une infrastructure de recherche expérimentale dédiée aux systèmes distribués. Il a joué un rôle crucial pour moi tout au long du stage. Plus précisément, il s'agit d'un réseau de machines ou clusters hébergés un peu partout en France. Permettant de réserver et d'utiliser des machines hautes performances rapidement en utilisant une connexion ssh. 
+Grid'5000 (ou G5K) est une infrastructure de recherche expérimentale dédiée aux systèmes distribués. Il a joué un rôle crucial pour moi tout au long du stage. Plus précisément, il s'agit d'un réseau de machines ou clusters hébergés un peu partout en France. Permettant de réserver et d'utiliser des machines hautes performances rapidement en utilisant une connexion ssh. 
 
-Grid5000 est ce qu'on peut appeler un *testbed*, ou banc de test pour la recherche française et internationale.\newline
+Grid'5000 est ce qu'on peut appeler un *testbed*, ou banc de test pour la recherche française et internationale.\newline
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{images/shemag5k.png}
-\caption{Schema de Grid5000}
+\caption{Schema de Grid'5000}
 \end{figure}
 
-Comme visible dans la figure ci-dessus, la connexion ssh de Grid5000 donne l'accès à la machine centrale à tous les utilisateurs du site choisi, cette machine est appelée la frontale. Elle contient en son sein l'intégralité des espaces de stockage de chaque utilisateur. Il est important pour le bon fonctionnement de ne pas demander à la frontale de faire des calculs intensifs, car cela causerait des ralentissements pour tous les utilisateurs. \newline
+Comme visible dans la figure ci-dessus, la connexion ssh de Grid'5000 donne l'accès à la machine centrale à tous les utilisateurs du site choisi, cette machine est appelée la frontale. Elle contient en son sein l'intégralité des espaces de stockage de chaque utilisateur. Il est important pour le bon fonctionnement de ne pas demander à la frontale de faire des calculs intensifs, car cela causerait des ralentissements pour tous les utilisateurs. \newline
 
-Comme Grid5000 utilise ssh, j'ai été amené à utiliser et à comprendre l'outil tmux ([LIEN](https://github.com/tmux/tmux/wiki)). Tmux est un multiplexeur de terminal qui permet par son implémentation de sauvegarder des sessions de terminal. C'est un outil très intéressant que j’utilise toujours aujourd'hui sur mon ordinateur personnel. Ce multiplexeur de terminal était particulièrement important avec grid5000, car son système de session permet de récupérer une connexion ssh en utilisant la commande `tmux attach` ou `tmux a` afin de récupérer la session perdue. Cela m'a permis d'éviter de perdre beaucoup de temps lors de l’utilisation de G5K.\newline
+Comme Grid'5000 utilise ssh, j'ai été amené à utiliser et à comprendre l'outil tmux ([LIEN](https://github.com/tmux/tmux/wiki)). Tmux est un multiplexeur de terminal qui permet par son implémentation de sauvegarder des sessions de terminal. C'est un outil très intéressant que j’utilise toujours aujourd'hui sur mon ordinateur personnel. Ce multiplexeur de terminal était particulièrement important avec grid5000, car son système de session permet de récupérer une connexion ssh en utilisant la commande `tmux attach` ou `tmux a` afin de récupérer la session perdue. Cela m'a permis d'éviter de perdre beaucoup de temps lors de l’utilisation de G5K.\newline
 
-Afin d'utiliser Grid5000, il faut utiliser les commande OAR dans le but de demander des noeud au système, le scheduler OAR donnera accès au nombre de machines voulu selon la place restante dans le cluster. Pour réserver des noeuds les utilisateurs utilisent la commande `oarsub`.
+Afin d'utiliser Grid'5000, il faut utiliser les commande OAR dans le but de demander des noeud au système, le scheduler OAR donnera accès au nombre de machines voulu selon la place restante dans le cluster. Pour réserver des noeuds les utilisateurs utilisent la commande `oarsub`.
 
 Voici un exemple de commande oar qui va réserver 42 noeuds pendant 3h20 :
 
@@ -375,44 +375,44 @@ oarsub -l nodes=42,walltime=3:20:0
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{images/ganttg5k.png}
-\caption{Diagramme de Gantt d'utilisation des noeuds de Grid5000 en temps réel}
+\caption{Diagramme de Gantt d'utilisation des noeuds de Grid'5000 en temps réel}
 \end{figure}
 
-Durant mon stage, j'ai massivement utilisé le système Grid5000 afin de pouvoir build et surtout déployer mes compositions NixOS-Compose. En effet, certaines compositions que j'ai créées étaient massives et nécessitaient énormément de temps de calcul au build pouvais nécessiter une dizaine de machines. Il était inconcevable de simuler cette architecture sur mon ordinateur possédant uniquement 8 Go de RAM. Mon ordinateur était simplement incapable de simuler de grandes expériences distribuées. J'ai donc utilisé des flavours locale afin de faire des tests simples et j'ai grandement utilisé Grid5000 pour simuler des expériences beaucoup plus poussées sur les technologies que j'ai implémenter sur NXC.\newline
+Durant mon stage, j'ai massivement utilisé le système Grid'5000 afin de pouvoir build et surtout déployer mes compositions NixOS-Compose. En effet, certaines compositions que j'ai créées étaient massives et nécessitaient énormément de temps de calcul au build pouvais nécessiter une dizaine de machines. Il était inconcevable de simuler cette architecture sur mon ordinateur possédant uniquement 8 Go de RAM. Mon ordinateur était simplement incapable de simuler de grandes expériences distribuées. J'ai donc utilisé des flavours locale afin de faire des tests simples et j'ai grandement utilisé Grid'5000 pour simuler des expériences beaucoup plus poussées sur les technologies que j'ai implémenter sur NXC.\newline
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{images/statg5k.png}
-\caption{Mes Statistiques d'utilisaion de Grid5000}
+\caption{Mes Statistiques d'utilisaion de Grid'5000}
 \end{figure}
 
-Enfin, certaines des compositions que j'ai créé nécessitaient la modification ou l'ajout de système de fichiers dans certain des noeuds or cette action n'était possible que dans le système Grid5000. En effet, les flavours "locales", comme VM ou Docker n'utilise pas de disque, à la place tout est stocké dans un file system temporaire qui correspondait à la RAM attribuée. C'était un problème, car il était impossible de modifier ou de rajouter de files system.
+Enfin, certaines des compositions que j'ai créé nécessitaient la modification ou l'ajout de système de fichiers dans certain des noeuds or cette action n'était possible que dans le système Grid'5000. En effet, les flavours "locales", comme VM ou Docker n'utilise pas de disque, à la place tout est stocké dans un file system temporaire qui correspondait à la RAM attribuée. C'était un problème, car il était impossible de modifier ou de rajouter de files system.
 
-Cependant, chaque noeuds sur Grid5000 possède plusieurs disques. Certains sont immuables et ne doivent pas être modifié sous risque de voir le noeud s’arrêter. Mais il existe un disque nommé TMP qui était utilisable et modifiable à souhait, car réinitialisé à chaque nouvelle utilisation. C'est justement pour ce cas d'utilisation que ce disque est présent dans chaque machine Grid5000. Il m'a donc suffi de chercher dans les `partlabel` des disques de la machine et de regarder le label du disque TMP.\newline
+Cependant, chaque noeuds sur Grid'5000 possède plusieurs disques. Certains sont immuables et ne doivent pas être modifié sous risque de voir le noeud s’arrêter. Mais il existe un disque nommé TMP qui était utilisable et modifiable à souhait, car réinitialisé à chaque nouvelle utilisation. C'est justement pour ce cas d'utilisation que ce disque est présent dans chaque machine Grid'5000. Il m'a donc suffi de chercher dans les `partlabel` des disques de la machine et de regarder le label du disque TMP.\newline
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{annexe/disk_g5k.png}
-\caption{disk-bypartlabel dans un noeud Grid5000}
+\caption{disk-bypartlabel dans un noeud Grid'5000}
 \end{figure}
 
 J'ai donc pu savoir quelle partition j'avais le droit de modifier et ai pu finir le test de mes compositions sans problème.\newline
 
-Grid5000 a donc été une partie essentielle de mon stage, car cela m'a permis de pouvoir faire des expériences à grande échelle et de pouvoir assurer le bon fonctionnement de mes compositions tout en permettant d'échapper à quelques contraintes de fonctionnement des flavours "locales" NixOS-Compose.\newline
+Grid'5000 a donc été une partie essentielle de mon stage, car cela m'a permis de pouvoir faire des expériences à grande échelle et de pouvoir assurer le bon fonctionnement de mes compositions tout en permettant d'échapper à quelques contraintes de fonctionnement des flavours "locales" NixOS-Compose.\newline
 
 ### Système de Fichier Distribué
 
 Un Système de Fichier Distribué (DFS) est une infrastructure de stockage de fichiers qui permet de répartir les données sur plusieurs nœuds de stockage au sein d'un réseau. Contrairement aux systèmes de fichiers classiques qui stockent leurs données sur un serveur centralisé, un DFS permet à plusieurs nœuds de collaborer et de partager leurs ressources pour former un espace de stockage unifié.\newline
 
-Une grande partie de mon stage consistait à créer des compositions NixOS-Compose afin de déployer facilement différents Systèmes de Fichier Distribué sur les différentes flavours proposées, notamment sur Grid5000.\newline
+Une grande partie de mon stage consistait à créer des compositions NixOS-Compose afin de déployer facilement différents Systèmes de Fichier Distribué sur les différentes flavours proposées, notamment sur Grid'5000.\newline
 
-L'importance d'un Système de Fichier Distribué (DFS) dans un environnement comme Grid5000 est multiple :\newline
+L'importance d'un Système de Fichier Distribué (DFS) dans un environnement comme Grid'5000 est multiple :\newline
 
 - **Redondance et Haute Disponibilité :** Dans un DFS, les données peuvent être répliquées sur plusieurs nœuds. C'est un atout majeur car cela améliore la disponibilité en cas de défaillance d'un nœud dans le réseau. La présence de plusieurs serveurs dans un DFS facilite également l'accès aux données stockées, même en cas de panne d'un serveur. La redondance des données permet donc, de manière similaire au RAID-1, d'assurer le bon fonctionnement du système.
     
 - **Gestion de lourds volumes de données :** Dans le cas d'un DFS, il est possible de faire évoluer le système. Ce genre de système est facilement scalable, ce qui signifie qu'il est possible de gérer tout type d'environnement, même ceux demandant un volume de données élevé.
     
-- **Accès Transparent aux Données :** Un DFS assure un accès transparent et cohérent aux données, indépendamment de l'emplacement physique du stockage. C'est une caractéristique importante, notamment lors de l'utilisation de Grid5000.\newline
+- **Accès Transparent aux Données :** Un DFS assure un accès transparent et cohérent aux données, indépendamment de l'emplacement physique du stockage. C'est une caractéristique importante, notamment lors de l'utilisation de Grid'5000.\newline
     
 La première technologie que j'ai eu à implémenter sur NixOS-Compose s'appelait GlusterFS.\newline
 
@@ -430,9 +430,9 @@ Schéma de fonctionnement de GlusterFS :
 
 GlusterFS utilise seulement 2 rôles pour fonctionner : le client et le serveur. Les serveurs s'occupent des métadonnées et du stockage des fichiers, comme illustré dans la figure ci-dessus. Dans GlusterFS, chaque serveur est également appelé "brick" et permet la redondance des données. Une somme de briques est appelée un volume et sert de base à un système de fichiers.\newline
 
-Cette composition a été la première qui m'a obligé à utiliser Grid5000 pour les tests, même les plus basiques, car elle nécessitait un disque supplémentaire pour configurer les briques.\newline
+Cette composition a été la première qui m'a obligé à utiliser Grid'5000 pour les tests, même les plus basiques, car elle nécessitait un disque supplémentaire pour configurer les briques.\newline
 
-En somme, GlusterFS a été une très bonne expérience pour ma première grosse composition NixOS-Compose. J'y ai découvert mes premières difficultés qui m'ont permis de mieux comprendre le fonctionnement et les subtilités et surtout le workflow de NixOS-Compose. Cela m'a également aidé à me familiariser avec l'environnement de Grid5000 pour la mise en place des tests, ce qui a été une étape importante dans mon apprentissage.\newline
+En somme, GlusterFS a été une très bonne expérience pour ma première grosse composition NixOS-Compose. J'y ai découvert mes premières difficultés qui m'ont permis de mieux comprendre le fonctionnement et les subtilités et surtout le workflow de NixOS-Compose. Cela m'a également aidé à me familiariser avec l'environnement de Grid'5000 pour la mise en place des tests, ce qui a été une étape importante dans mon apprentissage.\newline
 
 **[BeegFS](https://www.beegfs.io/c/) \cite{beegfs2014}**
 
@@ -482,7 +482,7 @@ La création de la composition a posé quelques problèmes, malgré la présence
 
 Cette composition m'a permis de développer des techniques uniques pour faire fonctionner cette technologie de manière optimale.\newline
 
-Si le stage avait duré plus longtemps, j'aurais apprécié essayer de créer des scripts d'exécution (execo \cite{execo2013}) pour tester les performances de chacune de mes compositions dans différentes conditions extrêmes, en utilisant la plateforme Grid5000. L'objectif aurait été de comparer les performances avec d'autres DFS tels que NFS \cite{nfs1994} ou OrangeFS \cite{orangefs2011}, qui ont également été implémentés.\newline
+Si le stage avait duré plus longtemps, j'aurais apprécié essayer de créer des scripts d'exécution (execo \cite{execo2013}) pour tester les performances de chacune de mes compositions dans différentes conditions extrêmes, en utilisant la plateforme Grid'5000. L'objectif aurait été de comparer les performances avec d'autres DFS tels que NFS \cite{nfs1994} ou OrangeFS \cite{orangefs2011}, qui ont également été implémentés.\newline
 
 ### Workflow
 
@@ -498,7 +498,7 @@ Sans trop rentrer dans les détails, voici les étapes principales de ce flux de
 
 - **Création de modules ou Services pour automatisation :** Si le paquet fonctionne, il est de bon ton de créer des modules et autres services afin de faciliter la configuration des rôles et l'initialisation du déploiement des machines. Cette partie permet d'automatiser la configuration des rôles afin de rendre la technologie la plus simple possible à utiliser. En créant des modules, on peut paramétrer de manière cohérente et systématique chaque rôle dans la composition, rendant ainsi la gestion globale de la composition plus fluide et efficace.
 
-- **Test de fonctionnement et Calcul de Performance :** Une fois les modules créés et les rôles configurés, il faut procéder à des tests de fonctionnement, notamment sur Grid5000 à moyenne échelle, afin de s'assurer du bon fonctionnement général du système distribué déployé. Il peut être également intéressant de créer des tests unitaires en Python, directement dans les "TestScript," pour vérifier le bon fonctionnement des états de base de l'application. Une fois les tests fonctionnels effectués, on peut tester les performances de l'application grâce à un script Python utilisant la bibliothèque execo, qui va permettre de demander un grand nombre de nœuds sur Grid5000 pour effectuer des tests à grande échelle.\newline
+- **Test de fonctionnement et Calcul de Performance :** Une fois les modules créés et les rôles configurés, il faut procéder à des tests de fonctionnement, notamment sur Grid'5000 à moyenne échelle, afin de s'assurer du bon fonctionnement général du système distribué déployé. Il peut être également intéressant de créer des tests unitaires en Python, directement dans les "TestScript," pour vérifier le bon fonctionnement des états de base de l'application. Une fois les tests fonctionnels effectués, on peut tester les performances de l'application grâce à un script Python utilisant la bibliothèque execo, qui va permettre de demander un grand nombre de nœuds sur Grid'5000 pour effectuer des tests à grande échelle.\newline
 
 Voici le workflow que j'ai utilisé et documenté tout au long de mon stage. Il m'aura permis de me fixer des bases solides de travail ainsi que de facilement pouvoir estimé l'avancement de chaqune de mes missions dans la cadre de mon stage.
 
@@ -514,7 +514,7 @@ Après ces quelques mois d'utilisation de l'application et de développement de 
 
 NixOS-Compose peut encore voir certaines de ces fonctionnalités améliorer, par exemple, il peut être intéressant de pousser encore plus les fonctionnalités du CLI NXC. Le CLI correspond à toutes les commandes utilisables par l'outil NixOS-Compose, comme `nxc build`, `nxc init`, `nxc connect`, `nxc start`, `nxc driver`. Il serait intéressant de rajouter des fonctionnalités comme la présence d'un `nxc check` qui a été proposé et qui permettrait d'évaluer une composition sans la build, ce qui faciliterait les tests de fonctionnement d'une composition. Avec NixOS-Compose on essait de "cacher" la présence du Nix pour les personnes voulant déployer des environnements. Cependant, on pourrait imaginer pouvoir utiliser les templates Nix directement dans NXC en utilisant l'option `-t` de `nxc init`.\newline
 
-La fonctionnalité principale de NixOS-Compose consiste au déploiement d'architecture de machine distribué dans différent environnement. En ce moment, NXC est capable de déployer en local en utilisant des conteneurs et des vm ou sur Grid5000. Il est donc essentiel pour la pérennité de l'outil de rajouter des flavours afin de pouvoir déployer des environnements reproductible sur des plateformes différentes. On peut, par exemple, imaginer une implémentation d'OpenStack dans le but de pouvoir créer une flavour de déploiement dans Kubernetes. C'est à mon sens l'élément essentiel de développement de NixOS-Compose.\newline
+La fonctionnalité principale de NixOS-Compose consiste au déploiement d'architecture de machine distribué dans différent environnement. En ce moment, NXC est capable de déployer en local en utilisant des conteneurs et des vm ou sur Grid'5000. Il est donc essentiel pour la pérennité de l'outil de rajouter des flavours afin de pouvoir déployer des environnements reproductible sur des plateformes différentes. On peut, par exemple, imaginer une implémentation d'OpenStack dans le but de pouvoir créer une flavour de déploiement dans Kubernetes. C'est à mon sens l'élément essentiel de développement de NixOS-Compose.\newline
 
 Il pourrait être sensé d'imaginer ajouter des outils à NixOS-Compose. Ces outils pourraient être aussi être créé par des équipes de recherche. C'est ce qui est proposé en ce moment avec l'outil EnOSlib \cite{enoslib2021}.\newline
 
@@ -552,7 +552,7 @@ J'ai grandement apprécié le système de fonctionnement de l'équipe. En effet,
 
 Toutes ces expériences me seront à coup sûr très utiles et valorisant dans le projet professionnel de DevOps que je souhaite entreprendre.
 
-Je suis reconnaissant d'avoir eu la possibilité de contribué à ce projet en y rajoutant des compositions qui pourront servir de base recherche sur le calcul de performance de File System Distribués dans une plateforme expérimentale tel que Grid5000. Je suis heureux d'avoir aidé à la maintenance et au bon fonctionnement général de l'outils NixOs-Compose qui sera sans aucun doute d'un importance majeur dans la cadre de la recherche.\newline
+Je suis reconnaissant d'avoir eu la possibilité de contribué à ce projet en y rajoutant des compositions qui pourront servir de base recherche sur le calcul de performance de File System Distribués dans une plateforme expérimentale tel que Grid'5000. Je suis heureux d'avoir aidé à la maintenance et au bon fonctionnement général de l'outils NixOs-Compose qui sera sans aucun doute d'un importance majeur dans la cadre de la recherche.\newline
 
 \newpage
 
