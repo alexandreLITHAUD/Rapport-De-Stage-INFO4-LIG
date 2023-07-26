@@ -542,7 +542,7 @@ Ce stage m'a permis de découvrir le monde de la recherche de manière poussée.
 
 Ce stage m'a permis de rencontrer des experts dans le sujet. Ces interactions ont été essentielles tout au long du stage. Ainsi, elle était le vecteur de nouvelles connaissances et de la découverte de nouveaux outils qui font maintenant partie de mon quotidien d'ingénieur (zsh, obsidian, fzf, tmux, ...) en plus de découvrir des nouvelles méthodes de travail adapté au travail et efficace.
 
-J'ai eu le plaisir de contribué à l'évolution de NixOS-Compose et de découvrir des technologies puissantes comme Nix et NixOS qui m'ont permis de m'améliorer sur des concepts important dans l'informatique actuel comme le calcul de performance, la reproductibilité et le déploiement de systèmes distribués.\newline
+J'ai eu le plaisir de contribué à l'évolution de NixOS-Compose et de découvrir des technologies puissantes comme Nix et NixOS qui m'ont permis de m'améliorer sur des concepts important dans l'informatique actuel comme le calcul de performance, la reproductibilité et le déploiement de systèmes distribués.
 
 ## Bilan professionnel
 
@@ -552,7 +552,11 @@ J'ai grandement apprécié le système de fonctionnement de l'équipe. En effet,
 
 Toutes ces expériences me seront à coup sûr très utiles et valorisant dans le projet professionnel de DevOps que je souhaite entreprendre.
 
-Je suis reconnaissant d'avoir eu la possibilité de contribué à ce projet en y rajoutant des compositions qui pourront servir de base recherche sur le calcul de performance de File System Distribués dans une plateforme expérimentale tel que Grid'5000. Je suis heureux d'avoir aidé à la maintenance et au bon fonctionnement général de l'outils NixOs-Compose qui sera sans aucun doute d'un importance majeur dans la cadre de la recherche.\newline
+Je suis reconnaissant d'avoir eu la possibilité de contribué à ce projet en y rajoutant des compositions qui pourront servir de base recherche sur le calcul de performance de File System Distribués dans une plateforme expérimentale tel que Grid'5000. Je suis heureux d'avoir aidé à la maintenance et au bon fonctionnement général de l'outils NixOs-Compose qui sera sans aucun doute d'un importance majeur dans la cadre de la recherche.
+
+## Bilan des connaissances
+
+Comme décrit tout au long de ce rapport, mon stage m'a permis d’acquérir et de développer de nombreuses compétences qui sont primordiales dans le domaine de l'informatique. J'ai appris à développer des prototypes et de les tester efficacement à l'aide d'outils efficace comme Grid'5000. J'ai également réalisé des spécifications sur les différentes compositions que j'ai créées afin d'assurer leur pérennisation. Enfin, mon utilisation et ma compréhension de NixOS-Compose, on permit d'acquérir une grande compréhension sur les différents outils de gestion de configuration.
 
 \newpage
 
