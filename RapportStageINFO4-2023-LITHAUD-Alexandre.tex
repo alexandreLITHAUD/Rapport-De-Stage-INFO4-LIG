@@ -486,7 +486,8 @@ pu accumuler.
 \hypertarget{luxe9quipe-datamove}{%
 \subsection{L'équipe DATAMOVE}\label{luxe9quipe-datamove}}
 
-L'équipe de recherche \href{https://www.inria.fr/fr/datamove}{DATAMOVE}
+L'équipe de recherche
+DATAMOVE\footnote{Lien des informations de l'équipe : \url{https://www.inria.fr/fr/datamove}}
 du Laboratoire d'Informatique de Grenoble (LIG) se consacre à l'étude et
 au développement de techniques innovantes dans le domaine du traitement
 et de la gestion des données. Leur objectif est de relever les défis
@@ -801,15 +802,15 @@ communauté Nix.\newline
 
 \textbf{Nixpkgs}\newline
 
-\href{https://github.com/NixOS/nixpkgs}{Nixpkgs} est le dépôt principal
-de paquet Nix, il est automatiquement référencé en tant que tel dans une
-machine NixOS. Il contient l'un des plus grands nombres de paquets pour
-un package manager. plus de 80 000. Ces paquets peuvent être des outils
-de développement, des bibliothèques, des applications, etc. Les paquets
-disponibles sont ajoutés et maintenus par la communauté et sont
-constamment mis à jour afin d'assurer que les logiciels soient toujours
-dans une version correcte. Ce qui permet à Nix d'être la distribution la
-plus à jour.\newline
+Nixpkgs\footnote{Lien du dépôt : \url{https://github.com/NixOS/nixpkgs}}
+est le dépôt principal de paquet Nix, il est automatiquement référencé
+en tant que tel dans une machine NixOS. Il contient l'un des plus grands
+nombres de paquets pour un package manager. plus de 80 000. Ces paquets
+peuvent être des outils de développement, des bibliothèques, des
+applications, etc. Les paquets disponibles sont ajoutés et maintenus par
+la communauté et sont constamment mis à jour afin d'assurer que les
+logiciels soient toujours dans une version correcte. Ce qui permet à Nix
+d'être la distribution la plus à jour.\newline
 
 \textbf{NUR}\newline
 
@@ -827,12 +828,12 @@ manière fonctionnel. C'est un élément essentiel de la réussite de Nix et
 NixOS.\newline
 
 Durant ce stage, j'ai rajouté des paquets dans des dépôts, afin de les
-rendre utilisable par la communauté. Notamment sur le dépôt Nur-kapack
-(\href{https://github.com/oar-team/nur-kapack}{LIEN}) un sous dépôt de
-NUR, créé par l'équipe DATAMOVE pour y stocké les paquets important pour
-la recherche au laboratoire. J'ai eu l'occasion de comprendre son
-fonctionnement, tester certain des paquets et donc y rajouter des
-fonctionnalités et des paquets.
+rendre utilisable par la communauté. Notamment sur le dépôt
+Nur-kapack\footnote{Lien du dépôt : \url{https://github.com/oar-team/nur-kapack}}
+un sous dépôt de NUR, créé par l'équipe DATAMOVE pour y stocké les
+paquets important pour la recherche au laboratoire. J'ai eu l'occasion
+de comprendre son fonctionnement, tester certain des paquets et donc y
+rajouter des fonctionnalités et des paquets.
 
 \newpage
 
@@ -1016,7 +1017,7 @@ python afin de pouvoir tester le fonctionnement de ce système. Ce type
 de fichier est commun et couramment utilisé dans la communauté Nix. De
 nombreux fichiers de tests unitaires sont disponibles dans le dépôt de
 paquet
-Nixpkgs(\href{https://github.com/NixOS/nixpkgs/tree/master/nixos/tests}{LIEN}).\newline
+Nixpkgs\footnote{Lien d'exemple de test Nix : \url{https://github.com/NixOS/nixpkgs/tree/master/nixos/tests}}.\newline
 
 Les compositions NixOS-Compose réutilisent la structure pré-établie par
 les tests NixOS. Cela permet de facilement passé de Test NixOS à
@@ -1047,13 +1048,12 @@ Simple}\label{fonctionnement-et-composition-simple}}
 Une grande partie du début de mon stage a consisté à me former sur Nix.
 En effet, il était essentiel de comprendre le fonctionnement de Nix et
 la configuration système NixOS pour pouvoir réaliser des compositions.
-J'ai donc suivi des tutoriels sur Nix, notamment les Nix Pills
-(\href{https://nixos.org/guides/nix-pills/}{LIEN}), qui est un tutoriel
-couvrant toutes les fonctionnalités de Nix. Ce tutoriel, bien que
-légèrement daté, a été un point central de ma compréhension de Nix, en
-complément de la
-\href{https://nixos.org/manual/nix/stable/}{documentation officielle de
-Nix}.\newline
+J'ai donc suivi des tutoriels sur Nix, notamment les Nix
+Pills\footnote{Lien des NixPills : \url{https://nixos.org/guides/nix-pills/}},
+qui est un tutoriel couvrant toutes les fonctionnalités de Nix. Ce
+tutoriel, bien que légèrement daté, a été un point central de ma
+compréhension de Nix, en complément de la documentation officielle de
+Nix\footnote{Lien de la documentation officiel Nix : \url{https://nixos.org/manual/nix/stable/}}.\newline
 
 J'ai également installé NixOS sur une machine pour mieux comprendre son
 fonctionnement. Finalement, c'est le système d'exploitation que j'ai
@@ -1061,8 +1061,8 @@ utilisé tout au long de mon expérience professionnelle. J'ai rapidement
 développé un vif intérêt pour la configuration système de NixOS, si bien
 que j'ai consacré un partie de mon temps libre à créer des
 configurations de machines facilitant le déploiement de toutes les
-applications et configurations que j'utilise, via home-manager.
-(\href{https://github.com/alexandreLITHAUD/my-nix-configuration}{LIEN})\newline
+applications et configurations que j'utilise, via
+home-manager\footnote{Lien de ma configuration Nix : \url{https://github.com/alexandreLITHAUD/my-nix-configuration}}.\newline
 
 Pour créer mes premières compositions, j'utilisais le système de
 templates de NixOS-Compose. En utilisant la commande
@@ -1128,9 +1128,10 @@ faire des calculs intensifs, car cela causerait des ralentissements pour
 tous les utilisateurs. \newline
 
 Comme Grid'5000 utilise ssh, j'ai été amené à utiliser et à comprendre
-l'outil tmux (\href{https://github.com/tmux/tmux/wiki}{LIEN}). Tmux est
-un multiplexeur de terminal qui permet par son implémentation de
-sauvegarder des sessions de terminal. C'est un outil très intéressant
+l'outil
+tmux\footnote{Lien du dépôt de tmux : \url{https://github.com/tmux/tmux/wiki}}.
+Tmux est un multiplexeur de terminal qui permet par son implémentation
+de sauvegarder des sessions de terminal. C'est un outil très intéressant
 que j'utilise toujours aujourd'hui sur mon ordinateur personnel. Ce
 multiplexeur de terminal était particulièrement important avec grid5000,
 car son système de session permet de récupérer une connexion ssh en
@@ -1539,15 +1540,15 @@ La documentation est une partie essentielle d'un projet informatique. Il
 permet de solidifier des connaissances et des maîtrises ainsi que
 facilité l'utilisation des outils par des membres extérieurs.
 NixOS-Compose possède une
-\href{https://nixos-compose.gitlabpages.inria.fr/nixos-compose/}{documentation}
+documentation\footnote{Lien de la documentation NixOS-Compose : \url{https://nixos-compose.gitlabpages.inria.fr/nixos-compose/}}
 expliquant le fonctionnement général de l'outil ainsi que le workflow
 général de l'application. Il serait donc une bonne amélioration de
 remettre au goût du jour la documentation qui commence peux à peu à être
 déprécié.\newline
 
 NixOS-Compose possède également un
-\href{https://gitlab.inria.fr/nixos-compose/tuto-nxc}{tutoriel}, qui
-permet de facilement pouvoir tester le fonctionnement de l'outil. Ce
+tutoriel\footnote{Lien du tutoriel NixOS-Compose : \url{https://gitlab.inria.fr/nixos-compose/tuto-nxc}},
+qui permet de facilement pouvoir tester le fonctionnement de l'outil. Ce
 tutoriel esy essentiels, il serait donc une bonne chose de l'améliorer
 afin de rentrer encore plus dans les détails et de le mettre à
 jour.\newline
@@ -1669,6 +1670,14 @@ configuration.
 \centering
 \includegraphics[width=0.9\textwidth,height=0.9\textheight,keepaspectratio]{annexe/ceph_osd_up.png}
 \caption{Noeuds pour le fonctionnement de ceph}
+\end{figure}
+
+\newpage
+
+\begin{figure}
+\centering
+\includegraphics[width=0.9\textwidth,height=0.9\textheight,keepaspectratio]{annexe/schema_workflow.png}
+\caption{Schéma du workflow de l'implementaton de services dans NXC}
 \end{figure}
 
 \begin{titlingpage}
