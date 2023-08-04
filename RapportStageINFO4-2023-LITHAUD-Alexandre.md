@@ -6,7 +6,7 @@ date-end: "28 Juillet 2023"
 school-year: "2022/2023"
 references: references.bib
 acknowledgments: |+
-  Je tiens à tout d'abord à remercier le Laboratoire Informatique de Grenoble et tous ces membres pour l’accueil chaleureux que j'ai reçu à mon arrivée au laboratoire ainsi que pour l'ambiance générale du stage qui a été exemplaire.\newline
+  Je tiens en premier lieu à remercier le Laboratoire Informatique de Grenoble et tous ces membres pour l’accueil chaleureux que j'ai reçu à mon arrivée au laboratoire ainsi que pour l'ambiance générale du stage qui a été exemplaire.\newline
 
   Je remercie également Monsieur Olivier RICHARD et Monsieur Nicolas PALIX, respectivement mon tuteur et mon référent de stage pour leurs conseils ainsi que leurs pédagogies qui m'ont permis de réaliser mes missions dans les meilleures conditions possibles et de grandement monter en compétence durant ce stage.\newline
 
@@ -16,9 +16,9 @@ acknowledgments: |+
 abstract-fr: |+
   En 4ème année d'ingénieur en informatique, j'ai eu l'opportunité de faire un stage de 15 semaines au Laboratoire Informatique de Grenoble (LIG), au sein de l'équipe DATAMOVE.\newline
 
-  Durant ce stage, j'ai eu comme objectif d'utiliser et d'améliorer l'outil NixOS-Compose, ainsi que de créer différentes description d'architecture distribué, nommé compositions dans l'optique de les utiliser à une fin de recherche. NixOS-Compose (ou NXC) est un logiciel créé par l’équipe, permettant de décrire une infrastructure complexe de plusieurs machines, en mettant l’accent sur la reproductibilité et la simplicité de mise en place. De plus, j'ai été amené à contribuer à la maintenance de logiciels tels que OAR et EAR, améliorant leur stabilité par le biais de mise à jour. Le tout en utilisant le système Grid'5000 qui m'a permis de tester mes développements dans un environnement réel.\newline
+  Durant ce stage, j'ai eu comme objectif d'utiliser et d'améliorer l'outil NixOS-Compose, ainsi que de créer différentes descriptions d'architecture distribuée, nommé compositions, dans l'optique de les utiliser à une fin de recherche. NixOS-Compose (ou NXC) est un logiciel créé par l’équipe, permettant de décrire une infrastructure complexe de plusieurs machines, en mettant l’accent sur la reproductibilité et la simplicité de mise en place. De plus, j'ai été amené à contribuer à la maintenance de logiciels tels que OAR et EAR, améliorant leur stabilité par le biais de mise à jour. Le tout en utilisant le système Grid'5000 qui m'a permis de tester mes développements dans un environnement réel.\newline
 
-  Durant ce rapport, vous allez suivre la création des différentes compositions que j'ai créée dans le but de tester les performances de plusieurs systèmes de fichiers distribués dans le réseau de nœud Grid'5000.
+  Durant ce rapport, vous allez suivre la création des différentes compositions que j'ai créé dans le but de tester les performances de plusieurs systèmes de fichiers distribués dans le réseau de nœud Grid'5000.
 abstract-en: |+
   In my 4th year as a computer science engineer, I had the opportunity to do a 15-week internship at the IT Laboratory of Grenoble (LIG), in the DATAMOVE team.\newline
 
@@ -50,15 +50,15 @@ tuteur:
 
 # Introduction
 
-Ce rapport va représenter mon expérience de stage au Laboratoire Informatique de Grenoble. Mon stage de 15 semaines à débuter le 17 avril 2023. Au cours de cette période j'ai eu l'opportunité de travailler sur divers projet informatiques en lien avec les technologies de \Gls{nix} \cite{nix2004}, \Gls{nixos} \cite{nixos2010} et le \Gls{hpc} (*High performance computing*). Ainsi que sur la maintenance et l'amélioration de logiciel et recherche tels que \Gls{oar} \cite{oar2005} et EAR. Cette opportunité m'a donné l'occasion de travailler avec le système \Gls{grid5000} \cite{grid5000}, qui offre une plateforme d'expérimentale distribuée pour l’exécution de travaux de recherche à grande échelle.\newline
+Ce rapport va représenter mon expérience de stage au Laboratoire Informatique de Grenoble. Mon stage de 15 semaines a débuté le 17 avril 2023. Au cours de cette période j'ai eu l'opportunité de travailler sur divers projet informatiques en lien avec les technologies de \Gls{nix} \cite{nix2004}, \Gls{nixos} \cite{nixos2010} et le \Gls{hpc} (*High performance computing*). Ainsi que sur la maintenance et l'amélioration de logiciel et recherche tels que \Gls{oar} \cite{oar2005} et EAR. Cette opportunité m'a donné l'occasion de travailler avec le système \Gls{grid5000} \cite{grid5000}, qui offre une plateforme expérimentale distribuée pour l’exécution de travaux de recherche à grande échelle.\newline
 
-L'objectif principal de mon stage était, en premier lieu, de contribuer au projet \Gls{nixos-compose} \cite{nixoscompose2022}, un outils puissant qui facilite le déploiement et la gestion d'environnement de développement reproductible spécialisé pour le HPC en déployant directement plusieurs machines sur Grid'5000 à la manière de Docker Compose \cite{docker2017}. Afin de pourvoir réaliser cette tache il était important de monter en compétences sur le gestionnaire de paquet fonctionnel Nix et le système d'exploitation NixOS. Grâce à cette expérience, j'ai pu approfondir ma compréhension des principes fondamentaux de la gestion des paquets et des environnements isolés, la configuration de système basé NixOS, le paradigme de programmation fonctionnelle ainsi que le déploiement d'application fonctionnelle dans un environnement d'HPC.\newline
+L'objectif principal de mon stage était, en premier lieu, de contribuer au projet \Gls{nixos-compose} \cite{nixoscompose2022}, un outil puissant qui facilite le déploiement et la gestion d'environnement de développement reproductible spécialisé pour le HPC en déployant directement plusieurs machines sur Grid'5000 à la manière de Docker Compose \cite{docker2017}. Afin de pouvoir réaliser cette tâche, il était important de monter en compétences sur le gestionnaire de paquet fonctionnel Nix et le système d'exploitation NixOS. Grâce à cette expérience, j'ai pu approfondir ma compréhension des principes fondamentaux de la gestion des paquets et des environnements isolés, la configuration de système basé NixOS, le paradigme de programmation fonctionnelle ainsi que le déploiement d'application fonctionnelle dans un environnement d'HPC.\newline
 
-En parallèle, j'ai participé à la maintenance et à l'amélioration de logiciel de recherche tels que OAR et EAR en les mettant à jour avec la dernière version de Nix par exemple. OAR joue un role crucial dans la planification de travaux de recherche sur des infrastructures distribué comme Grid'5000 notamment. EAR quant à lui, permet d’instrumenter et donc de quantifié les performances d'applications distribuées. J'ai pu contribuer à l'amélioration de leur stabilité, de leurs performances et de leurs fonctionnalités, en collaborant étroitement avec l'équipe de développement du laboratoire.\newline
+En parallèle, j'ai participé à la maintenance et à l'amélioration de logiciel de recherche tel que OAR et EAR en les mettant à jour avec la dernière version de Nix par exemple. OAR joue un rôle crucial dans la planification de travaux de recherche sur des infrastructures distribué comme Grid'5000 notamment. EAR quant à lui, permet d’instrumenter et donc de quantifier les performances d'applications distribuées. J'ai pu contribuer à l'amélioration de leur stabilité, de leurs performances et de leurs fonctionnalités, en collaborant étroitement avec l'équipe de développement du laboratoire.\newline
 
-De plus, j'ai eu l'opportunité de travailler en utilisant le système Grid'5000, qui m'a permis de déployer et de tester mes \glspl{composition}, c'est-à-dire des descriptions de systèmes distribués fait en Nix et ce directement dans un environnement réel et reproductible. Cette expérience m'a offert une compréhension bien plus poussée sur les méthodes de déploiement de logiciel, à l'importance de d'évolutivité et à la gestion des ressources et à la fiabilité des systèmes distribués.\newline
+De plus, j'ai eu l'opportunité de travailler en utilisant le système Grid'5000, qui m'a permis de déployer et de tester mes \glspl{composition}, c'est-à-dire des descriptions de systèmes distribués faites en Nix, et ce, directement dans un environnement réel et reproductible. Cette expérience m'a offert une compréhension bien plus poussée sur les méthodes de déploiement de logiciel, à l'importance de l’évolutivité, à la gestion des ressources et à la fiabilité des systèmes distribués.\newline
 
-Dans ce rapport, je décrirai en détail les différentes tâches et projets auxquels j'ai participé tout au long de mon stage, en mettant l'accent sur les compétences acquises, les résultats obtenus et les leçons apprises. Je présenterai également une analyse critique de mes réalisations, ainsi que des suggestions pour des améliorations futures. Ce rapport témoigne de ma progression en tant que professionnel de l'informatique et des contributions significatives que j'ai apportés au sein du LIG.
+Dans ce rapport, je décrirai en détail les différentes tâches et projets auxquels j'ai participé tout au long de mon stage, en mettant l'accent sur les compétences acquises, les résultats obtenus et les leçons apprises. Je présenterai également une analyse critique de mes réalisations, ainsi que des suggestions pour des améliorations futures. Ce rapport témoigne de ma progression en tant que professionnel de l'informatique et des contributions significatives que j'ai apporté au sein du LIG.
 
 \newpage
 
@@ -77,21 +77,21 @@ Dans ce rapport, je décrirai en détail les différentes tâches et projets aux
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{images/imag.png}
-\caption{bâtiment IMAG}
+\caption{Bâtiment IMAG}
 \end{figure}
 
-Mon stage s'est déroulé au LIG ou laboratoire informatique de Grenoble, ce laboratoire ainsi que certains autres sont situés dans le bâtiment IMAG, situé au centre de Saint-martin-d'Heres. Il est le réceptacle de nombreux projets de recherches et de recherche.
-Durant mon temps au LIG, j'ai eu la possibilité de rencontrer de nombreux professionnels, représentant des différents laboratoires présent dans le bâtiment.\newline
+Mon stage s'est déroulé au LIG ou laboratoire informatique de Grenoble, ce laboratoire ainsi que certains autres sont situés dans le bâtiment IMAG, localisé au centre de Saint-martin-d'Hères. Il est le réceptacle de nombreux projets de recherches et d'équipe de recherche.
+Durant mon temps au LIG, j'ai eu la possibilité de rencontrer de nombreux professionnels, représentant les différents laboratoires présent dans le bâtiment.\newline
 
 Le bâtiment est organisé de la sorte :
 
 - 1er étage : AMIES, LJK, MAIMOSINE : **Mathématique**
 
-- 2ème étage : GRICAD, LIG, VERIMAG : **Informatique** 
+- 2ème étage : GRICAD, LIG, VERIMAG : **Informatiques** 
 
 - 3ème et 4ème étages: LIG : **Informatiques**\newline
 
-Durant mon stage j'ai eu l'occasion d'assister à de nombreuses conférences réalisées par des professionnels du sujet, comme une conférence sur les FPGA ou sur les stratégies de test dans le monde du HPC. 
+Durant mon stage, j'ai eu l'occasion d'assister à de nombreuses conférences réalisées par des professionnels du sujet, comme une conférence sur les *FPGA* ou sur les stratégies de test dans le monde du HPC. 
 J'ai aussi eu la chance d’animer un cours d'informatique débranché destiné à deux classes de seconde, afin de les faire réfléchir sur des problématiques d'informatique sans l’interférence d'un ordinateur.\newline
 
 En outre, mon stage au laboratoire ma permis de faire de nombreuses découvertes et expériences en plus de toutes les connaissances que j'ai pu accumuler.
@@ -102,12 +102,12 @@ L'équipe de recherche DATAMOVE\footnote{Lien des informations de l'équipe : \u
 
 L'équipe est spécialisée dans les piles logicielles distribuées et l'ordonnancement, généralement dans un environnement de High Performance Computing. Dans ce laboratoire, le sujet de la \gls{reproductibilité} est majeur grâce à la complexité des piles logiciels créées.\newline
 
-La reproductibilité est une notion essentielle en recherche \cite{reproductibility2017}, en effet cela consiste à pouvoir réaliser une expérience à l'identique de la version d'origine afin d’obtenir le même résultat. Cette approche permet de garantir l'intégrité et la crédibilité des résultats scientifique.
-Il n'est cependant pas aisé de rendre une expérience reproductible en informatique à cause de l'omniprésence d'états qui peuvent être changés d'une exécution à une autre. De plus, il peut y avoir des problèmes de version de logiciel, disparition de ressource, d’accès au ressources de calcul ou encore la présence d'une variable aléatoire. Tous ces problèmes, engendre un problème de reproductibilité des piles logicielles.\newline
+La reproductibilité est une notion essentielle en recherche \cite{reproductibility2017}. En effet, cela consiste à pouvoir réaliser une expérience à l'identique de la version d'origine afin d’obtenir le même résultat. Cette approche permet de garantir l'intégrité et la crédibilité des résultats scientifique.
+Il n'est cependant pas aisé de rendre une expérience reproductible en informatique à cause de l'omniprésence d'états qui peuvent être changés d'une exécution à une autre. De plus, il peut y avoir des problèmes de version de logiciel, disparition de ressources, d’accès aux ressources de calcul ou encore la présence d'une variable aléatoire. Tous ces problèmes, engendre un problème de reproductibilité des piles logicielles.\newline
 
-Dans le domaine du \Gls{hpc}, la reproductibilité présente plusieurs avantages. Tout d'abord, elle permet de valider les méthodes de modélisation et de simulation, garantissant ainsi que les résultats obtenus sont fiables et précis, même s'il peut être incorrect. Cela renforce la confiance dans les résultats de recherche et facilite la collaboration et la comparaison des résultats entre différents chercheurs et laboratoires. De plus, dans ce genre d’environnement ou les chercheurs déploie des simulations complexes avec des quantités massives de données à analyser, il est essentiel que ces résultats puissent avoir la même variabilité, ne serait-ce que pour pouvoir assurer de la rigueur de la recherche.\newline
+Dans le domaine du \Gls{hpc}, la reproductibilité présente plusieurs avantages. Tout d'abord, elle permet de valider les méthodes de modélisation et de simulation, garantissant ainsi que les résultats obtenus sont fiables et précis, même s'ils peuvent être incorrects. Cela renforce la confiance dans les résultats de recherche et facilite la collaboration et la comparaison des résultats entre différents chercheurs et laboratoires. De plus, dans ce genre d’environnement ou les chercheurs déploient des simulations complexes avec des quantités massives de données à analyser, il est essentiel que ces résultats puissent avoir la même variabilité, ne serait-ce que pour pouvoir assurer de la rigueur de la recherche.\newline
 
-C'est dans cette optique que des outils de mise en place de pile logicielle comme \Gls{nixos-compose} ont été mis en place dans l'équipe.\newline
+C'est dans cette optique que des outils de mise en place de piles logicielles comme \Gls{nixos-compose} ont été mis en place dans l'équipe.\newline
 
 **L'équipe**\newline
 
@@ -126,7 +126,7 @@ Cette équipe est dirigée par Bruno RAFFIN. Olivier RICHARD, Quentin QUILLOTEAU
 
 **Quelques projets phares de l'équipe**\newline
 
-\Gls{oar} est un gestionnaire de ressources distribuées conçu pour les environnements de calcul intensif. Il permet aux chercheurs de planifier, de contrôler, répondre et alloué des ressources demandé par un utilisateur dans des environnements telles que les clusters de calcul, les grilles de calcul et les infrastructures de cloud computing. OAR offre une gestion fine des tâches, des files d'attente et des politiques de priorité, permettant ainsi une utilisation efficace et équitable des ressources. Cet outil facilite la planification des travaux de recherche et optimise l'utilisation des infrastructures informatiques. Cet outil est notamment utilisé dans Grid'5000 pour la réservation et l'allocation des ressources.\newline
+\Gls{oar} est un gestionnaire de ressources distribuées conçu pour les environnements de calcul intensif. Il permet aux chercheurs de planifier, de contrôler, répondre et alloué des ressources demandées par un utilisateur dans des environnements telles que les clusters de calcul, les grilles de calcul et les infrastructures de cloud computing. OAR offre une gestion fine des tâches, des files d'attente et des politiques de priorité, permettant ainsi une utilisation efficace et équitable des ressources. Cet outil facilite la planification des travaux de recherche et optimise l'utilisation des infrastructures informatiques. Cet outil est notamment utilisé dans Grid'5000 pour la réservation et l'allocation des ressources.\newline
 
 Melissa \cite{melissa2017}, quant à lui, est un framework pour le développement d'applications parallèles et distribuées. Il fournit une infrastructure logicielle permettant aux chercheurs de concevoir et d'exécuter des applications haute performance sur des environnements hétérogènes et distribués. Melissa simplifie le processus de développement en fournissant des abstractions de haut niveau pour la programmation parallèle, l'orchestration des tâches et la gestion des données distribuées. Cet outil permet aux chercheurs de tirer pleinement parti des ressources informatiques disponibles et de développer des applications performantes et évolutives.\newline
 
@@ -201,7 +201,7 @@ En outre, les nix flakes sont un élément essentiel à Nix et une technologie q
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{images/flakebasenix.png}
-\caption{Script nix de creation d'environnement latex}
+\caption{Script nix de création d'environnement latex}
 \end{figure}
 
 Voici un exemple de création d'environnement isolé Nix en utilisant les flakes Nix. Ce script ne marche que sur les architectures `x86_64-linux`, car il ne récupère les dépendances que de cet architecture. Ce script rajoute dans la PATH du terminal en cours les applications mise dans les `buildInputs`, c'est-à-dire dans ce cas `pandoc`, `rubber` et `biber`. À la fin de cette session, le PATH sera remis à défaut. Pour l'exécuter, il faut effectuer la commande `nix develop .` ou "." est le chemin vers le flake. C'est ce genre de configuration que j'ai été amené à utiliser et à créer afin d'avoir un environnement et un résultat reproductible.\newline
@@ -344,7 +344,7 @@ Voici un exemple de composition NXC basée sur le template basique :
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{images/template-hellow.png}
-\caption{Exemple Composition NXC basé sur le template basique}
+\caption{Exemple Composition NXC basée sur le template basique}
 \end{figure}
 
 Une commande essentielle pour mon stage a été `nxc driver -t`, qui permet de lancer le script de test. Le "Test Script" permet, via un code Python, de vérifier le bon fonctionnement d'une composition. Il a été largement utilisé pendant mon stage, notamment pour la _CI_ (Continuous Integration) de mes compositions. La CI permet de lancer les tests à chaque commit, assurant ainsi la pérennité du code malgré les mises à jour.\newline
@@ -358,7 +358,7 @@ Grid'5000 est ce qu'on peut appeler un *testbed*, ou banc de test pour la recher
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{images/shemag5k.png}
-\caption{Schema de Grid'5000}
+\caption{Schéma de Grid'5000}
 \end{figure}
 
 Comme visible dans la figure ci-dessus, la connexion ssh de Grid'5000 donne l'accès à la machine centrale à tous les utilisateurs du site choisi, cette machine est appelée la frontale. Elle contient en son sein l'intégralité des espaces de stockage de chaque utilisateur. Il est important pour le bon fonctionnement de ne pas demander à la frontale de faire des calculs intensifs, car cela causerait des ralentissements pour tous les utilisateurs. \newline
@@ -383,7 +383,7 @@ Durant mon stage, j'ai massivement utilisé le système Grid'5000 afin de pouvoi
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{images/statg5k.png}
-\caption{Mes Statistiques d'utilisaion de Grid'5000}
+\caption{Mes Statistiques d'utilisation de Grid'5000}
 \end{figure}
 
 Enfin, certaines des compositions que j'ai créé nécessitaient la modification ou l'ajout de système de fichiers dans certain des noeuds or cette action n'était possible que dans le système Grid'5000. En effet, les flavours "locales", comme VM ou Docker n'utilise pas de disque, à la place tout est stocké dans un file system temporaire qui correspondait à la RAM attribuée. C'était un problème, car il était impossible de modifier ou de rajouter de files system.
@@ -393,7 +393,7 @@ Cependant, chaque noeuds sur Grid'5000 possède plusieurs disques. Certains sont
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{annexe/disk_g5k.png}
-\caption{disk-bypartlabel dans un noeud Grid'5000}
+\caption{Dossier disk-bypartlabel dans un noeud Grid'5000}
 \end{figure}
 
 J'ai donc pu savoir quelle partition j'avais le droit de modifier et ai pu finir le test de mes compositions sans problème.\newline
@@ -578,13 +578,13 @@ Comme décrit tout au long de ce rapport, mon stage m'a permis d’acquérir et 
 \begin{figure}
 \centering
 \includegraphics[width=0.9\textwidth,height=0.9\textheight,keepaspectratio]{annexe/beegfs_service.png}
-\caption{Lancement du service crée pour beegfs}
+\caption{Lancement du service créé pour beegfs}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[width=0.9\textwidth,height=0.9\textheight,keepaspectratio]{annexe/beegfs_service_yes.png}
-\caption{Status du service crée pour beegfs}
+\caption{Status du service créé pour beegfs}
 \end{figure}
 
 \begin{figure}
